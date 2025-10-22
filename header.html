@@ -1,0 +1,286 @@
+<header class="bg-[#15346D] relative z-[102]">
+	<div class="max-w-[1420px] mx-auto px-[10px] flex w-full">
+			<div class="navbar">
+				<div class="menu_icon" onclick="openNavbar(this,'res-navbar')">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+				<div class="left_header flex_align">
+
+					<a href="/" class="logo_head">Logo</a>
+					<ul>
+						<li class="toggle_list">
+							<button class="drop_btn">
+								<span>Seek</span>
+								<img src="/assets/images/chevron-down.svg" alt="down logo">
+							</button>
+							<div class="btn_list">
+								<ul>
+									<li><a href="">Used cars / new cars</a></li>
+									<li><a href="">Price rating</a></li>
+									<li><a href="">Motorcycle</a></li>
+									<li><a href="">Caravan/Mobile</a></li>
+									<li><a href="">Truck/Commercial vehicle</a></li>
+									<li><a href="">Dealer</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="toggle_list">
+							<button class="drop_btn">
+								<span>Sell</span>
+								<img src="/assets/images/chevron-down.svg" alt="down logo">
+							</button>
+							<div class="btn_list">
+								<ul>
+									<li><a href="">Automobile <sup>for free</sup></a></li>
+									<li><a href="">Motorcycle <sup>for free</sup></a></li>
+									<li><a href="">Truck/Commercial vehicle</a></li>
+									<li><a href="">Vehicle valution</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="toggle_list">
+							<button class="drop_btn">
+								<span>Inform</span>
+								<img src="/assets/images/chevron-down.svg" alt="down logo">
+							</button>
+							<div class="btn_list max_content">
+								<div class="inner_wrap">
+									<ul>
+										<li>
+											<h4>Buying &amp; selling</h4>
+										</li>
+										<li><a href="">Car contract</a></li>
+										<li><a href="">Vehicle valuation</a></li>
+										<li><a href="">Price rating</a></li>
+									</ul>
+									<ul>
+										<li>
+											<h4>Buying advice</h4>
+										</li>
+										<li><a href="">New hits</a></li>
+										<li><a href="">Testing</a></li>
+									</ul>
+									<ul>
+										<li>
+											<h4>Car catalog</h4>
+										</li>
+										<li><a href="">Motorcycle catalog</a></li>
+									</ul>
+								</div>
+
+
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="right_header flex_align">
+					<ul>
+						<li class="notify">
+							<a href="#!">
+								<img src="/assets/images/notification.svg" alt="notification">
+								<div>1</div>
+							</a>
+							<!-- if no notification the class add n-grid-->
+							<div class="notify-box n-grid">
+								<!-- if notification then this -->
+								<!-- minimum 3 notification show here -->
+								<div style="display:none">
+									<div>
+										<div>
+											<h4>Search request 06.20.20</h4>
+											<span class="n-box">100</span>
+										</div>
+										<span>(Location)</span>
+									</div>
+									<div>
+										<div>
+											<h4>Search request 06.20.20</h4>
+											<span class="n-box">100</span>
+										</div>
+										<span>(Location)</span>
+									</div>
+									<div>
+										<div>
+											<h4>Search request 06.20.20</h4>
+											<span class="n-box">100</span>
+										</div>
+										<span>(Location)</span>
+									</div>
+								</div>
+								<!-- otherwise show this div -->
+								<img src="/assets/images/no-notify.svg" alt="">
+								<h3>No Notifications</h3>
+							</div>
+						</li>
+						<li>
+							<a href="/profile/my_notepad/">
+								<img src="/assets/images/heart.svg" alt="">
+							</a>
+						</li>
+						<li>
+															<button onclick="
+																						openPopup('login_popup')
+												">
+									<img src="/assets/images/mdi_user.svg" alt="user logo">
+								</button>
+													</li>
+					</ul>
+					<a href="/your_advt/" class="btn_bg medium_btn">Post and ad</a>
+					<div class="language toggle_list">
+						<button class="drop_btn"><img src="/assets/images/flag_austria.svg" alt=""></button>
+						<div class="btn_list">
+							<ul>
+								<li>
+									<a href="">
+										<img src="/assets/images/flag_austria.svg" alt="">
+										<span>Austria</span>
+									</a>
+								</li>
+								<li><a href="">
+
+										<img src="/assets/images/germeny_flag.svg" alt="">
+										<span>Germany</span>
+									</a>
+								</li>
+								<li><a href="">
+
+										<img src="/assets/images/itly_flag.svg" alt="">
+										<span>Italy</span>
+									</a>
+								</li>
+								<li><a href="">
+
+										<img src="/assets/images/netherland_flag.svg" alt="">
+										<span>Netherlands</span>
+									</a>
+								</li>
+								<li><a href="">
+
+										<img src="/assets/images/ger-glaf.svg" alt="">
+										<span>Belgium</span>
+									</a>
+								</li>
+								<li><a href="">
+
+										<img src="/assets/images/spain.svg" alt="">
+										<span>Spain</span>
+									</a>
+								</li>
+								<li><a href="">
+
+										<img src="/assets/images/france.svg" alt="">
+										<span>France</span>
+									</a>
+								</li>
+								<li><a href="">
+
+										<img src="/assets/images/lexumberg.svg" alt="">
+										<span>Luxembourg</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="responsive_navbar" data-navbar="res-navbar">
+				<div class="inner_res">
+					<ul class="dropdown_ul">
+						<li>
+							<a href="#!" class="res_dropdown">Seek</a>
+							<ul class="inner_dropdown" data-dropdown="seek">
+								<li><a href="">Buy used cars</a></li>
+								<li><a href="">Price rating</a></li>
+								<li><a href="">Motorcycle</a></li>
+								<li><a href="">Caravan/mobile</a></li>
+								<li><a href="">Truck/commercial</a></li>
+								<li><a href="">Dealer</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#!" class="res_dropdown">Sell</a>
+							<ul class="inner_dropdown" data-dropdown="sell">
+								<li><a href="">Car <sup>free of charge</sup></a></li>
+								<li><a href="">Motorcycle <sup>free of charge</sup></a></li>
+								<li><a href="">Truck/commercial vehicle</a></li>
+								<li><a href="">Vehicle valuation</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#!" class="res_dropdown">Inform</a>
+							<ul class="inner_dropdown" data-dropdown="inform">
+								<li><a href="">Buying and selling</a></li>
+								<li><a href="">Car contract</a></li>
+								<li><a href="">Vehicle valuation</a></li>
+								<li><a href="">Price rating</a></li>
+								<li><a href="">Buying advice</a></li>
+								<li><a href="">New hits</a></li>
+								<li><a href="">Testing</a></li>
+								<li><a href="">Car catalog</a></li>
+								<li><a href="">Motorcycle catalog</a></li>
+							</ul>
+						</li>
+					</ul>
+					<ul class="overview_ul">
+						<li>
+							<a href="/profile/my_ads/">My ads</a>
+						</li>
+						<li>
+							<a href="/profile/my_notepad/">
+								<span>My favorites</span>
+							</a>
+						</li>
+						<li>
+							<a href="/profile/saved_searches/">
+								<span>Saved searches</span>
+							</a>
+						</li>
+						<li>
+							<a href="/profile/my_notification/">
+								<span>My Notifications</span>
+							</a>
+						</li>
+
+						<li>
+							<a href="/profile/">
+								<span>My Profile</span>
+							</a>
+						</li>
+						<li>
+							<a href="/profile/change_password/">
+								<span>Change password</span>
+							</a>
+						</li>
+						<li>
+							<a href="/logout/">
+								<span>Logout</span>
+							</a>
+						</li>
+
+					</ul>
+					<ul class="country_ul">
+						<li>
+							<a href="#!" class="res_dropdown">Austria</a>
+							<ul class="inner_dropdown" data-dropdown="language">
+								<li><a href="">Austria</a></li>
+								<li><a href="">Germany</a></li>
+								<li><a href="">Spain</a></li>
+								<li><a href="">France</a></li>
+								<li><a href="">Netherlands</a></li>
+								<li><a href="">Belgium</a></li>
+								<li><a href="">Itlay</a></li>
+								<li><a href="">Luxembourg</a></li>
+								<li><a href="">English</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<div class="post_btn">
+					<a href="" class="medium_btn btn_bg">Post an ad</a>
+				</div>
+			</div>
+	</div>
+</header>
