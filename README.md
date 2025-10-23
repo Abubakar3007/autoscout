@@ -4,6 +4,7 @@ color : {
     #f9f9f9 ~ instead of this color use neutral-50 or gray-50
     #347DFF ~ instead of this color use bg-blue-500
     #fafafa ~ instead of this color use neutral-50 or gray-50
+    #666 ~ instead of this color use gray-500,
 }
 
 padding : {
