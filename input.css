@@ -4,30 +4,34 @@
 
 @layer components {
     .wrapper {
-        @apply max-w-[1100px] w-full mx-auto sxl:px-0 px-3;
+        @apply max-w-[1100px] w-full mx-auto sxl:px-0 px-4;
     }
 
     .primary-btn {
         @apply h-12 px-6 text-base font-semibold transition-all duration-300 ease-in-out bg-blue-500 rounded-md leading-12 text-neutral-50 shadow-btn-shadow hover:bg-blue-700 hover:rounded-3xl;
     }
 
-    .secondary-btn{
+    .secondary-btn {
         @apply h-12 px-6 text-base font-semibold text-blue-500 transition-all duration-300 ease-in-out bg-transparent border border-blue-500 rounded-md leading-12 hover:bg-blue-500 hover:rounded-3xl hover:text-white;
     }
 
-    .primary-lg-btn{
-         @apply px-6 text-lg font-semibold transition-all duration-300 ease-in-out bg-blue-500 rounded-md h-[54px] leading-[54px] text-neutral-50 shadow-btn-shadow hover:bg-blue-700 hover:rounded-3xl;
+    .primary-lg-btn {
+        @apply px-6 text-lg font-semibold transition-all duration-300 ease-in-out bg-blue-500 rounded-md h-[54px] leading-[54px] text-neutral-50 shadow-btn-shadow hover:bg-blue-700 hover:rounded-3xl;
     }
 
     .input {
         @apply w-full px-4 py-3 text-sm border border-neutral-400 rounded-md h-h-50 bg-neutral-50 outline-none transition-all ease-in-out duration-200 focus:border-blue-500
     }
 
-    .select{
+    .select {
         @apply w-full px-4 py-3 text-sm border border-neutral-400 bg-white rounded-md h-h-50 bg-neutral-50 bg-[url('/assets/images/dropdown-arrow.svg')] bg-no-repeat bg-right pr-10 bg-[position:calc(100%-13px)_center] outline-none transition-all ease-in-out duration-200 focus:border-blue-500
     }
 
-    .select-dropdown{
-        @apply absolute z-10 invisible w-full overflow-y-auto transition-all border border-neutral-400 ease-in-out opacity-0 max-h-0 duration-300 bg-white mt-1 rounded-md shadow-box
+    .select-dropdown {
+        @apply absolute z-10 invisible w-full mt-1 overflow-y-auto transition-all duration-300 ease-in-out bg-white border rounded-md opacity-0 border-neutral-400 max-h-0 shadow-box;
+    }
+
+    .checkbox {
+        @apply w-6 h-6 border appearance-none cursor-pointer flex-shrink-0 rounded-xs border-neutral-400 bg-neutral-50 checked:bg-blue-500 checked:border-blue-500 checked:bg-no-repeat checked:bg-center checked:bg-[url('/assets/images/checked.svg')];
     }
 }

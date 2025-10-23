@@ -67,24 +67,45 @@
             -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
             background-color: #347DFF;
         }
+
+        .scroll-top-btn.visible{
+            display:block
+        }
+
+        .success{
+            color:#2E7D31;
+            border-color:#2E7D31;
+            background-color:#DCF8DD;
+        }
+
+        .info-msg.show{
+            transform:translate(-50%,0);
+            visibility:visible;
+        }
+
+        .error{
+            color:#E53835;
+            border-color:#E53835;
+            background-color:#FEF3ED;
+        }
    </style>
 </head>
 
-<body class="font-nunito text-[#303033] bg-gray-50">
+<body class="text-gray-800 font-nunito bg-gray-50">
     <!-- header -->
-    <header class="bg-[#15346D] relative z-[102] lg:min-h-[72px] min-h-14">
-        <div class="flex justify-between items-center min-h-[inherit] wrapper">
+    <header class="relative z-50 bg-blue-950 lg:min-h-72 min-h-14">
+        <div class="flex items-center justify-between min-h-inherit wrapper">
             <!-- Menu button on responsive mode -->
-            <button id="menu-btn" class="lg:hidden space-y-[6px] [&>span]:w-6 [&>span]:h-[2.5px] [&>span]:block [&>span]:bg-[#FAFAFA] [&>span]:rounded-[3px]">
+            <button id="menu-btn" class="lg:hidden space-y-1.5 [&>span]:w-6 [&>span]:h-2.5 [&>span]:block [&>span]:bg-neutral-50 [&>span]:rounded-sm">
                 <span></span>
                 <span></span>
                 <span></span>
            </button>
             <!-- Left header wrapper -->
-            <div class="flex items-center gap-10 lg:w-auto lg:max-w-[100%] max-w-[100px] w-full lg:justify-start justify-end">
+            <div class="flex items-center justify-end w-full gap-10 lg:w-auto lg:max-w-full max-w-100 lg:justify-start">
                 <!-- logo -->
-                <a href="index.html" title="Go to homepage" class="text-[#FAFAFA] lg:text-[30px] text-2xl font-medium">
-                    <img src="assets/images/logo.png" alt="Logo" class="lg:w-[75px] w-16">
+                <a href="index.html" title="Go to homepage">
+                    <img src="assets/images/logo.png" alt="Logo" class="w-16 lg:w-75">
                </a>
                 <!-- Navigation -->
                 <nav class="hidden lg:block">
@@ -92,15 +113,13 @@
                         <!-- Seek -->
                         <li class="inline-block group">
                             <!-- button -->
-                            <div
-                                class="h-14 py-2 px-4 flex justify-center items-center gap-3 text-white text-[18px] font-medium border border-transparent rounded-t-[5px] transitiona-all ease duration-300 cursor-pointer group-hover:border-[#FAFAFA]">
+                            <div class="flex items-center justify-center gap-3 px-4 py-2 text-lg font-medium text-white duration-300 border border-transparent cursor-pointer h-14 rounded-t-md transitiona-all ease group-hover:border-neutral-50">
                                 <span>Seek</span>
                                 <img src="assets/images/chevron-down.svg" alt="Dropdown" class="inline-block">
                            </div>
                             <!-- dropdown -->
-                            <div
-                                class="min-w-[250px] opacity-0 invisible absolute border border-[#FAFAFA] bg-white transition-all ease duration-500 z-[100] shadow-[0px_4px_8px_#0000000d] overflow-hidden group-hover:opacity-100 group-hover:visible">
-                                <ul class="[&>li>a]:py-3 [&>li>a]:px-4 [&>li>a]:leading-6 [&>li>a]:block">
+                            <div class="absolute z-50 invisible overflow-hidden transition-all duration-500 bg-white border opacity-0 min-w-250 border-neutral-50 ease shadow-dropdown-shadow group-hover:opacity-100 group-hover:visible">
+                                <ul class="[&>li>a]:py-3 [&>li>a]:px-4 [&>li>a]:leading-6 [&>li>a]:block [&>li>a:hover]:text-blue-500">
                                     <li><a href="">Used cars / new cars</a></li>
                                     <li><a href="">Price rating</a></li>
                                     <li><a href="">Motorcycle</a></li>
@@ -113,14 +132,12 @@
                         <!-- Sell -->
                         <li class="inline-block group">
                             <!-- button -->
-                            <div
-                                class="h-14 py-2 px-4 flex justify-center items-center gap-3 text-white text-[18px] font-medium border border-transparent rounded-t-[5px] transitiona-all ease duration-300 cursor-pointer group-hover:border-[#FAFAFA]">
+                            <div class="flex items-center justify-center gap-3 px-4 py-2 text-lg font-medium text-white duration-300 border border-transparent cursor-pointer h-14 rounded-t-md transitiona-all ease group-hover:border-neutral-50">
                                 <span>Sell</span>
                                 <img src="assets/images/chevron-down.svg" alt="Dropdown" class="inline-block">
                            </div>
-                            <div
-                                class="min-w-[250px] opacity-0 invisible absolute border border-[#FAFAFA] bg-white transition-all ease duration-500 z-[100] shadow-[0px_4px_8px_#0000000d] overflow-hidden group-hover:opacity-100 group-hover:visible">
-                                <ul class="[&>li>a]:py-3 [&>li>a]:px-4 [&>li>a]:leading-6 [&>li>a]:block">
+                            <div class="absolute z-50 invisible overflow-hidden transition-all duration-500 bg-white border opacity-0 min-w-250 border-neutral-50 ease shadow-dropdown-shadow group-hover:opacity-100 group-hover:visible">
+                                <ul class="[&>li>a]:py-3 [&>li>a]:px-4 [&>li>a]:leading-6 [&>li>a]:block [&>li>a:hover]:text-blue-500">
                                     <li><a href="">Automobile <sup>for free</sup></a></li>
                                     <li><a href="">Motorcycle <sup>for free</sup></a></li>
                                     <li><a href="">Truck/Commercial vehicle</a></li>
@@ -130,26 +147,24 @@
                        </li>
                         <!-- Inform -->
                         <li class="inline-block group">
-                            <div
-                                class="h-14 py-2 px-4 flex justify-center items-center gap-3 text-white text-[18px] font-medium border border-transparent rounded-t-[5px] transitiona-all ease duration-300 cursor-pointer group-hover:border-[#FAFAFA]">
+                            <div class="flex items-center justify-center gap-3 px-4 py-2 text-lg font-medium text-white duration-300 border border-transparent cursor-pointer h-14 rounded-t-md transitiona-all ease group-hover:border-neutral-50">
                                 <span>Inform</span>
                                 <img src="assets/images/chevron-down.svg" alt="Dropdown" class="inline-block">
                            </div>
-                            <div
-                                class="min-w-[537px] opacity-0 invisible absolute border border-[#FAFAFA] bg-white transition-all ease duration-500 z-[100] shadow-[0px_4px_8px_#0000000d] overflow-hidden group-hover:opacity-100 group-hover:visible">
+                            <div class="absolute z-50 invisible overflow-hidden transition-all duration-500 bg-white border opacity-0 min-w-537 border-neutral-50 ease shadow-dropdown-shadow group-hover:opacity-100 group-hover:visible">
                                 <div class="flex gap-4">
-                                    <ul class="flex-1 [&>li>a]:py-3 [&>li>a]:px-4 [&>li>a]:leading-6 [&>li>a]:block">
+                                    <ul class="flex-1 [&>li>a]:py-3 [&>li>a]:px-4 [&>li>a]:leading-6 [&>li>a]:block [&>li>a:hover]:text-blue-500">
                                         <li><strong class="block px-4 py-3 font-semibold">Buying & selling</strong></li>
                                         <li><a href="">Car contract</a></li>
                                         <li><a href="">Vehicle valuation</a></li>
                                         <li><a href="">Price rating</a></li>
                                    </ul>
-                                    <ul class="flex-1 [&>li>a]:py-3 [&>li>a]:px-4 [&>li>a]:leading-6 [&>li>a]:block">
+                                    <ul class="flex-1 [&>li>a]:py-3 [&>li>a]:px-4 [&>li>a]:leading-6 [&>li>a]:block [&>li>a:hover]:text-blue-500">
                                         <li><strong class="block px-4 py-3 font-semibold">Buying advice</strong></li>
                                         <li><a href="">New hits</a></li>
                                         <li><a href="">Testing</a></li>
                                    </ul>
-                                    <ul class="flex-1 [&>li>a]:py-3 [&>li>a]:px-4 [&>li>a]:leading-6 [&>li>a]:block">
+                                    <ul class="flex-1 [&>li>a]:py-3 [&>li>a]:px-4 [&>li>a]:leading-6 [&>li>a]:block [&>li>a:hover]:text-blue-500">
                                         <li><a href="">Car catalog</a></li>
                                         <li><a href="">Motorcycle catalog</a></li>
                                    </ul>
@@ -165,12 +180,12 @@
                 <div class="flex items-center gap-2 lg:gap-4">
                     <!-- notification -->
                     <div class="relative hidden group lg:block">
-                        <a href="notification.html" title="Notification" target="_blank" class="relative w-10 h-10 rounded-full leading-[40px] grid place-items-center">
+                        <a href="notification.html" title="Notification" target="_blank" class="relative grid w-10 h-10 rounded-full leading-40 place-items-center">
                             <img src="assets/images/notification-box.svg" alt="Notification-box">
-                            <div class="absolute text-white rounded-full bg-[#E53835] text-[10px] top-[3px] right-[2px] h-4 grid place-items-center w-4 leading-[8px] text-center font-bold">4</div>
+                            <div class="absolute grid w-4 h-4 font-bold leading-3 text-center text-white rounded-full bg-red-color text-10 top-1 right-1 place-items-center">4</div>
                        </a>
                         <!-- if no notification the class add n-grid-->
-                        <div class="flex items-center justify-center flex-col gap-4 overflow-hidden absolute w-[300px] p-3 top-[100%] left-[50%] -translate-x-1/2 bg-white min-h-[200px] opacity-0 invisible transition-all rounded-[10px] duration-300 ease shadow-[0px_4px_8px_#0000000d] group-hover:opacity-100 group-hover:visible">
+                        <div class="absolute flex flex-col items-center justify-center invisible gap-4 p-3 overflow-hidden transition-all duration-300 -translate-x-1/2 bg-white opacity-0 w-300 top-full left-1/2 min-h-200 rounded-xl ease shadow-dropdown-shadow group-hover:opacity-100 group-hover:visible">
                             <!-- if notification then this -->
                             <!-- minimum 3 notification show here -->
                             <div style="display:none">
@@ -199,33 +214,33 @@
                             <!-- otherwise show this div -->
                             <div>
                                 <img src="assets/images/no-notification.svg" alt="No notification" class="mx-auto">
-                                <h4 class="text-[#666666] text-xl font-semibold mt-4">No Notifications</h4>
+                                <h4 class="mt-4 text-lg font-semibold text-gray-500">No Notifications</h4>
                            </div>
                        </div>
                    </div>
                     <!-- favorite button -->
-                    <a href="favorite.html" title="Favorite list" target="_blank" class="relative w-10 h-10 rounded-full leading-[40px] grid place-items-center">
+                    <a href="favorite.html" title="Favorite list" target="_blank" class="relative grid w-10 h-10 rounded-full leading-40 place-items-center">
                         <img src="assets/images/heart-logo.svg" alt="Heart icon" class="mx-auto">
-                        <div class="absolute bg-white rounded-full text-[10px] top-[3px] right-[2px] h-4 grid place-items-center w-4 leading-[8px] text-center font-bold">5</div>
+                        <div class="absolute grid w-4 h-4 font-bold leading-3 text-center bg-white rounded-full text-10 top-1 right-1 place-items-center">5</div>
                    </a>
                     <!-- login popup button -->
                     <div>
-                        <button aria-label="Login" title="Login to your account" class="grid w-10 h-10 border border-transparent rounded-full place-items-center hover:border-[#FAFAFA] transition-all ease duration-300">
+                        <button aria-label="Login" title="Login to your account" class="grid w-10 h-10 transition-all duration-300 border border-transparent rounded-full place-items-center hover:border-neutral-50 ease">
                             <img src="assets/images/user-icon.svg" alt="User logo">
                        </button>
                    </div>
                </div>
                 <!-- post ad button -->
-                <a href="post-ad.html" title="Post an ad" target="_blank" class="leading-[48px] lg:block hidden h-12 rounded-[5px] bg-[#347DFF] shadow-[0px_4px_14px_0px_rgba(0,0,0,0.15)] text-[#FAFAFA] px-6 text-base font-medium transition-all ease duration-300 hover:bg-[#1F4D9D] hover:rounded-[25px]">Post and ad</a>
+                <a href="post-ad.html" title="Post an ad" target="_blank" class="hidden primary-btn lg:block">Post and ad</a>
                 <!-- Select language dropdown -->
                 <div class="relative hidden language group lg:block">
                     <!-- select language button -->
-                    <button class="grid w-12 h-12 p-1 border border-transparent place-items-center rounded-t-[5px] group-hover:border-[#FAFAFA] transition-all ease duration-300">
+                    <button class="grid w-12 h-12 p-1 transition-all duration-300 border border-transparent place-items-center rounded-t-md group-hover:border-neutral-50 ease">
                         <img src="assets/images/austria-flag.svg" alt="Flag logo" class="w-[25px] h-[18px] rounded-[5px]">
                    </button>
                     <!-- Select language dropdown -->
-                    <div class="right-0 min-w-[250px] absolute z-[100] shadow-[0px_4px_8px_#0000000d] bg-white invisible opacity-0 transition-all ease duration-300 overflow-hidden border border-[#FAFAFA] group-hover:opacity-100 group-hover:visible">
-                        <ul class="text-base [&>li>a]:block [&>li>a]:leading-6 [&>li>a]:py-3 [&>li>a]:px-4 [&>li>a>img]:w-[25px] [&>li>a>img]:h-[18px] [&>li>a>img]:rounded-[5px] [&>li>a>img]:inline-block [&>li>a>img]:mr-2 [&>li>a>span]:align-middle">
+                    <div class="absolute right-0 z-50 invisible overflow-hidden transition-all duration-300 bg-white border opacity-0 min-w-250 shadow-dropdown-shadow ease border-neutral-50 group-hover:opacity-100 group-hover:visible">
+                        <ul class="text-base [&>li>a]:block [&>li>a]:leading-6 [&>li>a]:py-3 [&>li>a]:px-4 [&>li>a>img]:w-6 [&>li>a>img]:h-18 [&>li>a>img]:rounded-sm [&>li>a>img]:inline-block [&>li>a>img]:mr-2 [&>li>a>span]:align-middle">
                             <li>
                                 <a href="">
                                     <img src="assets/images/austria-flag.svg" alt="Austria flag">
@@ -282,16 +297,16 @@
         <!-- Responsive header content -->
         <div class="lg:hidden">
             <!-- header bg -->
-            <div class="header-bg opacity-0 invisible overflow-hidden fixed top-0 backdrop-blur-md z-[1] right-0 w-full h-full bg-black/40 opacity-0 z-[1] transition-[backdrop-filter,opacity] duration-300 ease-in-out"></div>
+            <div class="header-bg opacity-0 invisible overflow-hidden fixed top-0 backdrop-blur-md z-10 right-0 w-full h-full bg-black/40 opacity-0 transition-[backdrop-filter,opacity] duration-300 ease-in-out"></div>
             <!-- header close button -->
-            <button id="menu-close" class="absolute top-[30px] right-[3vw] z-[1] invisible opacity-0">
+            <button id="menu-close" class="absolute top-30 right-[3vw] z-20 invisible opacity-0">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="#fff" width="30" viewBox="0 0 24 24">
                     <path d="M0 0h24v24H0V0z" fill="none"></path>
                     <path d="M18.3 5.71c-.39-.39-1.02-.39-1.41 0L12 10.59 7.11 5.7c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41L10.59 12 5.7 16.89c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0L12 13.41l4.89 4.89c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L13.41 12l4.89-4.89c.38-.38.38-1.02 0-1.4z"></path>
                </svg>
            </button>
             <!-- Header menu content -->
-            <div id="menu-content" class="menu-content fixed top-0 h-[100dvh] -left-[100%] transition-all ease duration-300 max-w-[21em] w-[80vw] z-[2] bg-white h-full shadow-[0px_4px_24px_0px_rgba(0,0,0,0.08)]">
+            <div id="menu-content" class="menu-content fixed top-0 h-[100dvh] -left-[100%] transition-all ease duration-300 max-w-[21em] w-[80vw] z-20 bg-white h-full shadow-[0px_4px_24px_0px_rgba(0,0,0,0.08)]">
                 <!-- header navigation -->
                 <div class="bg-[#15346D] p-3 flex items-center justify-between">
                     <a href="index.html" title="Go to homepage">
@@ -499,18 +514,30 @@
                </div>
            </div>
        </div>
+       <!-- success message popup -->
+       <!-- add show class for visible -->
+       <!-- add class for success success and for error error -->
+        <div class="fixed top-0 z-50 invisible w-full transition-all duration-300 ease-in-out -translate-x-1/2 -translate-y-20 border-b-4 border-transparent lg:w-1/2 info-msg error left-1/2">
+            <div class="flex items-center gap-4 px-4 py-3">
+                <!-- if success then show this image -->
+                <!-- <img src="assets/images/success-badge.png" alt="success icon"> -->
+                <!-- if warning or error then show this image -->
+                <img src="assets/images/warning.png" alt="warning icon">
+                <p class="text-base leading-6">Your car successfully add in favorite. <a href="favorite.html" class="text-gray-800 underline">Go to favorite</a></p>
+            </div>
+        </div>
    </header>
     <!-- main -->
     <main>
         <!-- hero section -->
-        <div class="relative grid banner place-items-center bg-neutral-100 min-h-943">
+        <div class="relative grid py-14 banner place-items-center bg-neutral-100 mid:min-h-943 mid:py-0">
             <!-- banner image -->
-            <div class="absolute top-0 left-0 banner-logo">
+            <div class="absolute bottom-0 left-0 mid:top-0 banner-logo mid:bottom-auto">
                 <img src="assets/images/banner-logo.png" alt="Banner car image" loading="lazy">
            </div>
             <!-- Banner search form container -->
-            <div class="relative z-10 flex justify-between w-full gap-10 mx-auto banner-form max-w-1160">
-                <h1 class="pt-12 text-4xl font-semibold max-w-711 h-max leading-60">Drive into the Future with Confidence – Your Trusted Partner for Buying and Selling Cars / Bikes Online</h1>
+            <div class="relative z-10 flex flex-col justify-between w-full gap-6 px-4 mx-auto mid:gap-10 banner-form max-w-1160 sxl:px-0 mid:flex-row">
+                <h1 class="flex-1 font-semibold text-xxl mid:text-4xl mid:pt-12 lg:max-w-711 h-max mid:leading-60">Drive into the Future with Confidence – Your Trusted Partner for Buying and Selling Cars / Bikes Online</h1>
                 <!-- form wrapper -->
                 <div class="w-full max-w-408">
                     <div class="flex justify-center w-full gap-10 mx-auto mb-10 border-b border-neutral-400 max-w-360">
@@ -1152,6 +1179,7 @@
                                        </div>
                                    </div>
                                </div>
+                               <!-- city -->
                                 <div>
                                     <label for="city" class="block mb-2 text-sm font-medium leading-6">City / Zip code</label>
                                     <div class="relative">
@@ -1198,11 +1226,11 @@
            </div>
        </div>
         <!-- demand section -->
-        <section class="py-12 md:py-20">
+        <section class="py-14 md:py-20">
             <div class="wrapper">
-                <h2 class="pb-2 mb-10 font-semibold leading-9 border-b border-blue-500 text-xxl w-fit">Currently in demand</h2>
+                <h2 class="pb-2 mb-10 text-2xl font-semibold leading-9 border-b border-blue-500 sm:text-xxl w-fit">Currently in demand</h2>
                 <!-- types of cards -->
-                <div class="grid gap-6 grid-cols-car-grid">
+                <div class="grid grid-cols-2 gap-3 sm:gap-6 sm:grid-cols-car-grid">
                     <!-- car -->
                     <a href="listing.html" target="_blank" title="Find city car" class="relative z-10 w-full h-full overflow-hidden rounded-md max-h-260 before:absolute before:content-[''] before:inset-0 before:w-full before:h-full before:bg-gradient-overlay group">
                         <img src="assets/images/city-car-demand.png" alt="demand image" class="w-full transition-transform duration-300 group-hover:scale-105 ease group-hover:-rotate-2">
@@ -1227,30 +1255,30 @@
            </div>
        </section>
         <!-- sell car section -->
-        <section class="py-10 bg-right bg-no-repeat bg-[url('/assets/images/sell-car.png')] bg-sell-bg min-h-350">
+        <section class="py-14 bg-right bg-no-repeat lg:bg-[url('/assets/images/sell-car.png')] bg-sell-bg lg:min-h-350">
             <div class="wrapper">
                 <!-- content -->
-                <div class="w-full max-w-721">
-                    <h2 class="mb-10 text-4xl font-semibold leading-60">Fast-track your car-selling journey – Experience a quick and seamless sale for your vehicle</h2>
+                <div class="w-full text-center lg:max-w-721 lg:text-left">
+                    <h2 class="mb-6 text-2xl font-semibold sm:mb-10 mid:text-4xl mid:leading-60">Fast-track your car-selling journey – Experience a quick and seamless sale for your vehicle</h2>
                     <a href="/your_advt/" class="inline-block primary-lg-btn">Sell my car</a>
                </div>
            </div>
 	   </section>
         <!-- Recently cars -->
-        <section class="pt-12 md:pt-20">
+        <section class="pt-14 md:pt-20">
             <div class="wrapper">
-                <h2 class="pb-2 mb-10 font-semibold leading-9 border-b border-blue-500 text-xxl w-fit">Recently added cars</h2>
+                <h2 class="pb-2 mb-10 text-2xl font-semibold leading-9 border-b border-blue-500 sm:text-xxl w-fit">Recently added cars</h2>
                 <!-- cards -->
-                <div class="grid gap-6 grid-cols-card-grid">
+                <div class="grid gap-6 sm:grid-cols-card-grid">
                     <!-- car card -->
                     <div class="overflow-hidden transition-all ease-in-out rounded-md card duration-400 shadow-card-shadow group">
                         <!-- car images -->
-                        <div class="relative overflow-hidden h-257">
-                            <a href="object-details.html" class="block" title="Audi A4 <span>Avant 2.0TDI QUATTRO SPORT">
+                        <div class="relative overflow-hidden sm:h-257 min-h-220">
+                            <a href="object-details.html" class="block h-full" title="Audi A4 <span>Avant 2.0TDI QUATTRO SPORT">
                                 <img src="assets/images/car-image.png" alt="Car image" loading="lazy" class="object-cover w-full h-full">
                            </a>
                             <!-- favorite button -->
-                            <button aria-label="Add to favorites" title="Add to favorite" class="absolute grid w-8 h-8 transition-all duration-300 ease-in-out translate-y-20 rounded-full group-hover:translate-y-0 heart right-4 bottom-4 place-items-center bg-neutral-50">
+                            <button aria-label="Add to favorites" title="Add to favorite" class="absolute grid w-8 h-8 transition-all duration-300 ease-in-out rounded-full mid:translate-y-20 mid:group-hover:translate-y-0 heart right-4 mid:bottom-4 place-items-center bg-neutral-50 mid:top-auto top-4">
                                 <!-- when not add favorite then show this -->
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                     <path d="M10.0012 3.77415C11.9587 2.01665 14.9837 2.07498 16.8695 3.96415C18.7545 5.85415 18.8195 8.86415 17.0662 10.8275L9.9995 17.9042L2.9345 10.8275C1.18116 8.86415 1.247 5.84915 3.13116 3.96415C5.01866 2.07748 8.03783 2.01415 10.0012 3.77415ZM15.6895 5.14165C14.4395 3.88998 12.4228 3.83915 11.1145 5.01415L10.002 6.01248L8.88866 5.01498C7.57616 3.83832 5.56366 3.88998 4.31033 5.14332C3.06866 6.38498 3.00616 8.37248 4.15033 9.68582L10.0003 15.545L15.8503 9.68665C16.9953 8.37248 16.9328 6.38748 15.6895 5.14165Z" fill="#347DFF"></path>
@@ -1279,89 +1307,7 @@
                             <!-- price -->
                             <div class="flex items-center justify-between mt-4">
                                 <div class="text-xl font-semibold leading-8 text-blue-500 textl-xl">€ 14,950</div>
-                                <span class="px-2 py-1 text-gray-500 bg-neutral-100">Private</span>
-                           </div>
-                       </div>
-                   </div>
-                    <!-- car card -->
-                    <div class="overflow-hidden transition-all ease-in-out rounded-md card duration-400 shadow-card-shadow group">
-                        <!-- car images -->
-                        <div class="relative overflow-hidden h-257">
-                            <a href="object-details.html" class="block" title="Audi A4 <span>Avant 2.0TDI QUATTRO SPORT">
-                                <img src="assets/images/car-image.png" alt="Car image" loading="lazy" class="object-cover w-full h-full">
-                           </a>
-                            <!-- favorite button -->
-                            <button aria-label="Add to favorites" title="Add to favorite" class="absolute grid w-8 h-8 transition-all duration-300 ease-in-out translate-y-20 rounded-full group-hover:translate-y-0 heart right-4 bottom-4 place-items-center bg-neutral-50">
-                                <!-- when not add favorite then show this -->
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                                    <path d="M10.0012 3.77415C11.9587 2.01665 14.9837 2.07498 16.8695 3.96415C18.7545 5.85415 18.8195 8.86415 17.0662 10.8275L9.9995 17.9042L2.9345 10.8275C1.18116 8.86415 1.247 5.84915 3.13116 3.96415C5.01866 2.07748 8.03783 2.01415 10.0012 3.77415ZM15.6895 5.14165C14.4395 3.88998 12.4228 3.83915 11.1145 5.01415L10.002 6.01248L8.88866 5.01498C7.57616 3.83832 5.56366 3.88998 4.31033 5.14332C3.06866 6.38498 3.00616 8.37248 4.15033 9.68582L10.0003 15.545L15.8503 9.68665C16.9953 8.37248 16.9328 6.38748 15.6895 5.14165Z" fill="#347DFF"></path>
-                               </svg>
-                                <!-- otherwise show this -->
-                                <!-- <img src="assets/images/fill-heart.svg" alt="heart icon">-->
-                           </button>
-                       </div>
-                        <!-- car content -->
-                        <div class="p-4">
-                            <!-- title -->
-                            <h3 class="mb-2 text-xl font-semibold leading-8 line-clamp-1 text-ellipsis"><a href="/object_view/6/">Audi A4 <span class="text-sm text-gray-500">Avant 2.0TDI QUATTRO SPORT</span></a></h3>
-                            <!-- features -->
-                            <ul class="mb-2 line-clamp-1 text-ellipsis [&>li]:inline-block text-sm">
-                                <li>01/2019 |</li>
-                                <li>Electric/petrol |</li>
-                                <li>39,900 km |</li>
-                                <li>Automatic |</li>
-                                <li>More</li>
-                           </ul>
-                            <!-- location -->
-                            <div class="flex items-center gap-2 text-sm text-gray-500">
-                                <img src="assets/images/location.svg" alt="location icon">
-                                <span>AT 8753 Fohnsdorf</span>
-                           </div>
-                            <!-- price -->
-                            <div class="flex items-center justify-between mt-4">
-                                <div class="text-xl font-semibold leading-8 text-blue-500 textl-xl">€ 14,950</div>
-                                <span class="px-2 py-1 text-gray-500 bg-neutral-100">Private</span>
-                           </div>
-                       </div>
-                   </div>
-                    <!-- car card -->
-                    <div class="overflow-hidden transition-all ease-in-out rounded-md card duration-400 shadow-card-shadow group">
-                        <!-- car images -->
-                        <div class="relative overflow-hidden h-257">
-                            <a href="object-details.html" class="block" title="Audi A4 <span>Avant 2.0TDI QUATTRO SPORT">
-                                <img src="assets/images/car-image.png" alt="Car image" loading="lazy" class="object-cover w-full h-full">
-                           </a>
-                            <!-- favorite button -->
-                            <button aria-label="Add to favorites" title="Add to favorite" class="absolute grid w-8 h-8 transition-all duration-300 ease-in-out translate-y-20 rounded-full group-hover:translate-y-0 heart right-4 bottom-4 place-items-center bg-neutral-50">
-                                <!-- when not add favorite then show this -->
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                                    <path d="M10.0012 3.77415C11.9587 2.01665 14.9837 2.07498 16.8695 3.96415C18.7545 5.85415 18.8195 8.86415 17.0662 10.8275L9.9995 17.9042L2.9345 10.8275C1.18116 8.86415 1.247 5.84915 3.13116 3.96415C5.01866 2.07748 8.03783 2.01415 10.0012 3.77415ZM15.6895 5.14165C14.4395 3.88998 12.4228 3.83915 11.1145 5.01415L10.002 6.01248L8.88866 5.01498C7.57616 3.83832 5.56366 3.88998 4.31033 5.14332C3.06866 6.38498 3.00616 8.37248 4.15033 9.68582L10.0003 15.545L15.8503 9.68665C16.9953 8.37248 16.9328 6.38748 15.6895 5.14165Z" fill="#347DFF"></path>
-                               </svg>
-                                <!-- otherwise show this -->
-                                <!-- <img src="assets/images/fill-heart.svg" alt="heart icon">-->
-                           </button>
-                       </div>
-                        <!-- car content -->
-                        <div class="p-4">
-                            <!-- title -->
-                            <h3 class="mb-2 text-xl font-semibold leading-8 line-clamp-1 text-ellipsis"><a href="/object_view/6/">Audi A4 <span class="text-sm text-gray-500">Avant 2.0TDI QUATTRO SPORT</span></a></h3>
-                            <!-- features -->
-                            <ul class="mb-2 line-clamp-1 text-ellipsis [&>li]:inline-block text-sm">
-                                <li>01/2019 |</li>
-                                <li>Electric/petrol |</li>
-                                <li>39,900 km |</li>
-                                <li>Automatic |</li>
-                                <li>More</li>
-                           </ul>
-                            <!-- location -->
-                            <div class="flex items-center gap-2 text-sm text-gray-500">
-                                <img src="assets/images/location.svg" alt="location icon">
-                                <span>AT 8753 Fohnsdorf</span>
-                           </div>
-                            <!-- price -->
-                            <div class="flex items-center justify-between mt-4">
-                                <div class="text-xl font-semibold leading-8 text-blue-500 textl-xl">€ 14,950</div>
-                                <span class="px-2 py-1 text-gray-500 bg-neutral-100">Private</span>
+                                <span class="px-2 py-1 text-sm text-gray-500 bg-neutral-100">Private</span>
                            </div>
                        </div>
                    </div>
@@ -1372,21 +1318,21 @@
                </div>
            </div>
        </section>
-        <!-- Similar property -->
-        <section class="pt-12 md:pt-20">
+        <!-- Similar cars -->
+        <section class="pt-14 md:pt-20">
             <div class="wrapper">
-                <h2 class="pb-2 mb-10 font-semibold leading-9 border-b border-blue-500 text-xxl w-fit">This might also interest you</h2>
+                <h2 class="pb-2 mb-10 text-2xl font-semibold leading-9 border-b border-blue-500 sm:text-xxl w-fit">This might also interest you</h2>
                 <!-- cards -->
-                <div class="grid gap-6 grid-cols-card-grid">
+                <div class="grid gap-6 sm:grid-cols-card-grid">
                     <!-- car card -->
                     <div class="overflow-hidden transition-all ease-in-out rounded-md card duration-400 shadow-card-shadow group">
                         <!-- car images -->
-                        <div class="relative overflow-hidden h-257">
-                            <a href="object-details.html" class="block" title="Audi A4 <span>Avant 2.0TDI QUATTRO SPORT">
+                        <div class="relative overflow-hidden sm:h-257 min-h-220">
+                            <a href="object-details.html" class="block h-full" title="Audi A4 <span>Avant 2.0TDI QUATTRO SPORT">
                                 <img src="assets/images/car-image.png" alt="Car image" loading="lazy" class="object-cover w-full h-full">
                            </a>
                             <!-- favorite button -->
-                            <button aria-label="Add to favorites" title="Add to favorite" class="absolute grid w-8 h-8 transition-all duration-300 ease-in-out translate-y-20 rounded-full group-hover:translate-y-0 heart right-4 bottom-4 place-items-center bg-neutral-50">
+                            <button aria-label="Add to favorites" title="Add to favorite" class="absolute grid w-8 h-8 transition-all duration-300 ease-in-out rounded-full mid:translate-y-20 mid:group-hover:translate-y-0 heart right-4 mid:bottom-4 place-items-center bg-neutral-50 mid:top-auto top-4">
                                 <!-- when not add favorite then show this -->
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                     <path d="M10.0012 3.77415C11.9587 2.01665 14.9837 2.07498 16.8695 3.96415C18.7545 5.85415 18.8195 8.86415 17.0662 10.8275L9.9995 17.9042L2.9345 10.8275C1.18116 8.86415 1.247 5.84915 3.13116 3.96415C5.01866 2.07748 8.03783 2.01415 10.0012 3.77415ZM15.6895 5.14165C14.4395 3.88998 12.4228 3.83915 11.1145 5.01415L10.002 6.01248L8.88866 5.01498C7.57616 3.83832 5.56366 3.88998 4.31033 5.14332C3.06866 6.38498 3.00616 8.37248 4.15033 9.68582L10.0003 15.545L15.8503 9.68665C16.9953 8.37248 16.9328 6.38748 15.6895 5.14165Z" fill="#347DFF"></path>
@@ -1415,89 +1361,7 @@
                             <!-- price -->
                             <div class="flex items-center justify-between mt-4">
                                 <div class="text-xl font-semibold leading-8 text-blue-500 textl-xl">€ 14,950</div>
-                                <span class="px-2 py-1 text-gray-500 bg-neutral-100">Private</span>
-                           </div>
-                       </div>
-                   </div>
-                    <!-- car card -->
-                    <div class="overflow-hidden transition-all ease-in-out rounded-md card duration-400 shadow-card-shadow group">
-                        <!-- car images -->
-                        <div class="relative overflow-hidden h-257">
-                            <a href="object-details.html" class="block" title="Audi A4 <span>Avant 2.0TDI QUATTRO SPORT">
-                                <img src="assets/images/car-image.png" alt="Car image" loading="lazy" class="object-cover w-full h-full">
-                           </a>
-                            <!-- favorite button -->
-                            <button aria-label="Add to favorites" title="Add to favorite" class="absolute grid w-8 h-8 transition-all duration-300 ease-in-out translate-y-20 rounded-full group-hover:translate-y-0 heart right-4 bottom-4 place-items-center bg-neutral-50">
-                                <!-- when not add favorite then show this -->
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                                    <path d="M10.0012 3.77415C11.9587 2.01665 14.9837 2.07498 16.8695 3.96415C18.7545 5.85415 18.8195 8.86415 17.0662 10.8275L9.9995 17.9042L2.9345 10.8275C1.18116 8.86415 1.247 5.84915 3.13116 3.96415C5.01866 2.07748 8.03783 2.01415 10.0012 3.77415ZM15.6895 5.14165C14.4395 3.88998 12.4228 3.83915 11.1145 5.01415L10.002 6.01248L8.88866 5.01498C7.57616 3.83832 5.56366 3.88998 4.31033 5.14332C3.06866 6.38498 3.00616 8.37248 4.15033 9.68582L10.0003 15.545L15.8503 9.68665C16.9953 8.37248 16.9328 6.38748 15.6895 5.14165Z" fill="#347DFF"></path>
-                               </svg>
-                                <!-- otherwise show this -->
-                                <!-- <img src="assets/images/fill-heart.svg" alt="heart icon">-->
-                           </button>
-                       </div>
-                        <!-- car content -->
-                        <div class="p-4">
-                            <!-- title -->
-                            <h3 class="mb-2 text-xl font-semibold leading-8 line-clamp-1 text-ellipsis"><a href="/object_view/6/">Audi A4 <span class="text-sm text-gray-500">Avant 2.0TDI QUATTRO SPORT</span></a></h3>
-                            <!-- features -->
-                            <ul class="mb-2 line-clamp-1 text-ellipsis [&>li]:inline-block text-sm">
-                                <li>01/2019 |</li>
-                                <li>Electric/petrol |</li>
-                                <li>39,900 km |</li>
-                                <li>Automatic |</li>
-                                <li>More</li>
-                           </ul>
-                            <!-- location -->
-                            <div class="flex items-center gap-2 text-sm text-gray-500">
-                                <img src="assets/images/location.svg" alt="location icon">
-                                <span>AT 8753 Fohnsdorf</span>
-                           </div>
-                            <!-- price -->
-                            <div class="flex items-center justify-between mt-4">
-                                <div class="text-xl font-semibold leading-8 text-blue-500 textl-xl">€ 14,950</div>
-                                <span class="px-2 py-1 text-gray-500 bg-neutral-100">Private</span>
-                           </div>
-                       </div>
-                   </div>
-                    <!-- car card -->
-                    <div class="overflow-hidden transition-all ease-in-out rounded-md card duration-400 shadow-card-shadow group">
-                        <!-- car images -->
-                        <div class="relative overflow-hidden h-257">
-                            <a href="object-details.html" class="block" title="Audi A4 <span>Avant 2.0TDI QUATTRO SPORT">
-                                <img src="assets/images/car-image.png" alt="Car image" loading="lazy" class="object-cover w-full h-full">
-                           </a>
-                            <!-- favorite button -->
-                            <button aria-label="Add to favorites" title="Add to favorite" class="absolute grid w-8 h-8 transition-all duration-300 ease-in-out translate-y-20 rounded-full group-hover:translate-y-0 heart right-4 bottom-4 place-items-center bg-neutral-50">
-                                <!-- when not add favorite then show this -->
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                                    <path d="M10.0012 3.77415C11.9587 2.01665 14.9837 2.07498 16.8695 3.96415C18.7545 5.85415 18.8195 8.86415 17.0662 10.8275L9.9995 17.9042L2.9345 10.8275C1.18116 8.86415 1.247 5.84915 3.13116 3.96415C5.01866 2.07748 8.03783 2.01415 10.0012 3.77415ZM15.6895 5.14165C14.4395 3.88998 12.4228 3.83915 11.1145 5.01415L10.002 6.01248L8.88866 5.01498C7.57616 3.83832 5.56366 3.88998 4.31033 5.14332C3.06866 6.38498 3.00616 8.37248 4.15033 9.68582L10.0003 15.545L15.8503 9.68665C16.9953 8.37248 16.9328 6.38748 15.6895 5.14165Z" fill="#347DFF"></path>
-                               </svg>
-                                <!-- otherwise show this -->
-                                <!-- <img src="assets/images/fill-heart.svg" alt="heart icon">-->
-                           </button>
-                       </div>
-                        <!-- car content -->
-                        <div class="p-4">
-                            <!-- title -->
-                            <h3 class="mb-2 text-xl font-semibold leading-8 line-clamp-1 text-ellipsis"><a href="/object_view/6/">Audi A4 <span class="text-sm text-gray-500">Avant 2.0TDI QUATTRO SPORT</span></a></h3>
-                            <!-- features -->
-                            <ul class="mb-2 line-clamp-1 text-ellipsis [&>li]:inline-block text-sm">
-                                <li>01/2019 |</li>
-                                <li>Electric/petrol |</li>
-                                <li>39,900 km |</li>
-                                <li>Automatic |</li>
-                                <li>More</li>
-                           </ul>
-                            <!-- location -->
-                            <div class="flex items-center gap-2 text-sm text-gray-500">
-                                <img src="assets/images/location.svg" alt="location icon">
-                                <span>AT 8753 Fohnsdorf</span>
-                           </div>
-                            <!-- price -->
-                            <div class="flex items-center justify-between mt-4">
-                                <div class="text-xl font-semibold leading-8 text-blue-500 textl-xl">€ 14,950</div>
-                                <span class="px-2 py-1 text-gray-500 bg-neutral-100">Private</span>
+                                <span class="px-2 py-1 text-sm text-gray-500 bg-neutral-100">Private</span>
                            </div>
                        </div>
                    </div>
@@ -1509,10 +1373,10 @@
            </div>
        </section>
         <!-- Choose us -->
-        <section class="py-12 md:py-20 relative overflow-hidden after:content-[url('/assets/images/choose-banner.png')] after:absolute after:-right-350 after:-top-165 -z-10">
+        <section class="py-14 md:py-20 relative overflow-hidden md:after:content-[url('/assets/images/choose-banner.png')] md:after:absolute md:after:-right-350 md:after:-top-165 -z-10">
             <div class="wrapper">
-                <h2 class="pb-2 mb-10 font-semibold leading-9 border-b border-blue-500 text-xxl w-fit">Why choose us?</h2>
-                <div class="grid w-full grid-cols-2 gap-6 max-w-724 [&>.box]:p-4 [&>.box]:bg-gray-50 [&>.box]:shadow-box-shadow [&>.box]:rounded-md relative z-10">
+                <h2 class="pb-2 mb-10 text-2xl font-semibold leading-9 border-b border-blue-500 sm:text-xxl w-fit">Why choose us?</h2>
+                <div class="grid w-full sm:grid-cols-2 sm:gap-6 gap-4 md:max-w-724 [&>.box]:p-4 [&>.box]:bg-gray-50 [&>.box]:shadow-box-shadow [&>.box]:rounded-md relative z-10 sm:text-left text-center [&>div>img]:sm:mx-0 [&>div>img]:mx-auto">
                     <div class="box">
                         <img src="assets/images/choose-icon-1.svg" class="mb-4" alt="choose">
                         <h3 class="text-xl font-semibold leading-8">Market-driven pricing</h3>
@@ -1537,13 +1401,14 @@
            </div>
        </section>
         <!-- links -->
-        <div class="py-12 md:py-20">
+        <section class="py-14 md:py-20 bg-neutral-100">
             <div class="wrapper">
-                <h2 class="pb-2 mx-auto mb-10 font-semibold leading-9 text-center border-b border-blue-500 text-xxl w-fit">Looking for a used car?</h2>
-                <div class="grid grid-cols-car-grid gap-y-10 gap-x-6 [&>div>h4]:text-lg [&>div>h4]:mb-6 [&>div>h4]:font-medium [&>div>h4]:leading-7">
+                <h2 class="pb-2 mx-auto mb-10 text-2xl font-semibold leading-9 text-center border-b border-blue-500 sm:text-xxl w-fit">Looking for a used car?</h2>
+                <!-- link list -->
+                <div class="grid grid-cols-2 sm:grid-cols-car-grid gap-y-6 sm:gap-y-10 gap-x-3 sm:gap-x-6 [&>div>h4]:text-lg [&>div>h4]:sm:mb-6 [&>div>h4]:mb-4 [&>div>h4]:font-medium [&>div>h4]:leading-7">
                     <div>
                         <h4>Audi</h4>
-                        <ul data-dropdown="audi" class="space-y-2 [&>li>a]:text-blue-500 [&>li>a]:border-b [&>li>a]:border-transparent [&>li>a]:text-base [&>li>a:hover]:border-blue-500 [&>li>a]:leading-6">
+                        <ul data-dropdown="audi" class="space-y-2 [&>li>a]:text-blue-500 [&>li>a]:border-b [&>li>a]:border-transparent [&>li>a]:sm:text-base [&>li>a]:text-sm [&>li>a:hover]:border-blue-500 [&>li>a]:leading-6">
                             <li>
                                 <a href="/lst/audi/a1" title="Audi A1">Audi A1</a>
                            </li>
@@ -1566,7 +1431,7 @@
                    </div>
                     <div>
                         <h4>BMW</h4>
-                        <ul data-dropdown="bmw" class="space-y-2 [&>li>a]:text-blue-500 [&>li>a]:border-b [&>li>a]:border-transparent [&>li>a]:text-base [&>li>a:hover]:border-blue-500 [&>li>a]:leading-6">
+                        <ul data-dropdown="bmw" class="space-y-2 [&>li>a]:text-blue-500 [&>li>a]:border-b [&>li>a]:border-transparent [&>li>a]:sm:text-base [&>li>a]:text-sm [&>li>a:hover]:border-blue-500 [&>li>a]:leading-6">
                             <li>
                                 <a href="" title="BMW 1 Series">BMW 1 Series</a>
                            </li>
@@ -1589,7 +1454,7 @@
                    </div>
                     <div>
                         <h4>VW</h4>
-                        <ul data-dropdown="vw" class="space-y-2 [&>li>a]:text-blue-500 [&>li>a]:border-b [&>li>a]:border-transparent [&>li>a]:text-base [&>li>a:hover]:border-blue-500 [&>li>a]:leading-6">
+                        <ul data-dropdown="vw" class="space-y-2 [&>li>a]:text-blue-500 [&>li>a]:border-b [&>li>a]:border-transparent [&>li>a]:sm:text-base [&>li>a]:text-sm [&>li>a:hover]:border-blue-500 [&>li>a]:leading-6">
                             <li>
                                 <a href="" title="VW Caddy">VW Caddy</a>
                            </li>
@@ -1612,7 +1477,7 @@
                    </div>
                     <div>
                         <h4>Mercedes</h4>
-                        <ul data-dropdown="mercedes" class="space-y-2 [&>li>a]:text-blue-500 [&>li>a]:border-b [&>li>a]:border-transparent [&>li>a]:text-base [&>li>a:hover]:border-blue-500 [&>li>a]:leading-6">
+                        <ul data-dropdown="mercedes" class="space-y-2 [&>li>a]:text-blue-500 [&>li>a]:border-b [&>li>a]:border-transparent [&>li>a]:sm:text-base [&>li>a]:text-sm [&>li>a:hover]:border-blue-500 [&>li>a]:leading-6">
                             <li>
                                 <a href="" title="Mercedes A-Class">Mercedes A-Class</a>
                            </li>
@@ -1635,7 +1500,7 @@
                    </div>
                     <div>
                         <h4>Other brands</h4>
-                        <ul data-dropdown="other" class="space-y-2 [&>li>a]:text-blue-500 [&>li>a]:border-b [&>li>a]:border-transparent [&>li>a]:text-base [&>li>a:hover]:border-blue-500 [&>li>a]:leading-6">
+                        <ul data-dropdown="other" class="space-y-2 [&>li>a]:text-blue-500 [&>li>a]:border-b [&>li>a]:border-transparent [&>li>a]:sm:text-base [&>li>a]:text-sm [&>li>a:hover]:border-blue-500 [&>li>a]:leading-6">
                             <li>
                                 <a href="" title="ford">Ford</a>
                            </li>
@@ -1658,7 +1523,7 @@
                    </div>
                     <div>
                         <h4>Structure types</h4>
-                        <ul data-dropdown="structure" class="space-y-2 [&>li>a]:text-blue-500 [&>li>a]:border-b [&>li>a]:border-transparent [&>li>a]:text-base [&>li>a:hover]:border-blue-500 [&>li>a]:leading-6">
+                        <ul data-dropdown="structure" class="space-y-2 [&>li>a]:text-blue-500 [&>li>a]:border-b [&>li>a]:border-transparent [&>li>a]:sm:text-base [&>li>a]:text-sm [&>li>a:hover]:border-blue-500 [&>li>a]:leading-6">
                             <li>
                                 <a href="/cabrio/" title="Convertible">Convertible</a>
                            </li>
@@ -1681,7 +1546,7 @@
                    </div>
                     <div>
                         <h4>Regional</h4>
-                        <ul data-dropdown="regional" class="space-y-2 [&>li>a]:text-blue-500 [&>li>a]:border-b [&>li>a]:border-transparent [&>li>a]:text-base [&>li>a:hover]:border-blue-500 [&>li>a]:leading-6">
+                        <ul data-dropdown="regional" class="space-y-2 [&>li>a]:text-blue-500 [&>li>a]:border-b [&>li>a]:border-transparent [&>li>a]:sm:text-base [&>li>a]:text-sm [&>li>a:hover]:border-blue-500 [&>li>a]:leading-6">
                             <li>
                                 <a href="/steiermark/graz/" title="Graz">Graz</a>
                            </li>
@@ -1704,9 +1569,100 @@
                    </div>
                </div>
            </div>
-       </div>
+        </section>
    </main>
     <!-- footer -->
+    <footer class="py-12 bg-blue-950 md:py-20">
+        <div class="wrapper">
+            <!-- footer top -->
+            <div class="flex flex-col justify-between gap-6 pb-6 mb-6 border-b mid:gap-12 border-neutral-50 mid:flex-row">
+                <!-- logo -->
+                <div class="w-full max-w-120">
+                    <a href="index.html" title="Go to homepage" class="text-[#FAFAFA] lg:text-[30px] text-2xl font-medium">
+                        <img src="assets/images/logo.png" alt="Logo" class="lg:w-[75px] w-20">
+                    </a>
+               </div>
+                <div class="sm:flex grid grid-cols-2 justify-between sm:gap-x-0 sm:gap-y-0 gap-x-4 gap-y-8 w-full text-gray-50 [&>div>h4]:text-lg [&>div>h4]:leading-7 [&>div>h4]:font-medium [&>div>h4]:border-b-2 [&>div>h4]:border-gray-50 [&>div>h4]:mb-6 [&>div>h4]:w-fit [&>div>h4]:pb-2">
+                    <div>
+                        <h4>Pursue</h4>
+                        <ul class="space-y-2 text-base [&>li>a]:border-b [&>li>a]:border-transparent [&>li>a:hover]:border-gray-50">
+                            <li>
+                                <a href="/about_us/">About us</a>
+                            </li>
+                            <li>
+                                <a href="/your_advt/">Advertising</a>
+                            </li>
+                            <li>
+                                <a href="/terms/">Conditions</a>
+                            </li>
+                            <li>
+                                <a href="/data_protection/">Data protection</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Service</h4>
+                        <ul class="space-y-2 text-base [&>li>a]:border-b [&>li>a]:border-transparent [&>li>a:hover]:border-gray-50">
+                            <li>
+                                <a href="">Help</a>
+                            </li>
+                            <li>
+                                <a href="/contact/">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Dealer</h4>
+                        <ul class="space-y-2 text-base [&>li>a]:border-b [&>li>a]:border-transparent [&>li>a:hover]:border-gray-50">
+                            <li>
+                                <a href="/register/">Register</a>
+                            </li>
+                            <li>
+                                <a href="">Advantages</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Stay in contact</h4>
+                        <div>
+                            <a href="" title="Visit facebook channel">
+                                <img src="assets/images/facebook.svg" alt="facebook">
+                            </a>
+                            <select class="mt-5 text-gray-800 appearance-none cursor-pointer select sm:mt-9">
+                                <option value="de/">Germany</option>
+                                <option value="be/"> Belgium/Belgique </option>
+                                <option value="es/"> Spain </option>
+                                <option value="fr/"> France </option>
+                                <option value="it/"> Italy </option>
+                                <option value="lu/"> Luxembourg </option>
+                                <option value="nl/"> Netherlands </option>
+                                <option value="at/" selected=""> Austria </option>
+                                <option value="bg/"> Български </option>
+                                <option value="cz/"> Česky </option>
+                                <option value="com/"> English </option>
+                                <option value="hr/"> Hrvatski </option>
+                                <option value="pl/"> Polski </option>
+                                <option value="ro/"> Română </option>
+                                <option value="ru/"> Russian </option>
+                                <option value="se/"> Svenska </option>
+                                <option value="com.tr/"> Türkçe </option>
+                                <option value="com.ua/"> Українська </option>
+                                <option value="hu/"> Magyar </option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- footer bottom -->
+            <div class="text-xs text-center copyright text-gray-50 mid:text-left">
+                <p>© Copyright 2023 AutoScout24 GmbH. All rights reserved. </p>
+            </div>
+        </div>
+        <!-- scroll top button -->
+        <button class="fixed z-50 grid visible hidden w-12 h-12 rounded-full scroll-top-btn mid:h-14 mid:w-14 bottom-8 right-6 mid:bottom-10 mid:right-10 place-items-center bg-blue-50 shadow-box-shadow">
+            <img src="assets/images/scroll-blue.svg" alt="Scroll top" class="w-5 mid:w-auto">
+        </button>
+    </footer>
     <script src="assets/js/index.js"></script>
 </body>
 

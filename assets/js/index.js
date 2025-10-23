@@ -140,6 +140,7 @@ class CustomSelect {
 
     if (input) input.value = value;
     button.textContent = option.textContent.trim();
+    button.classList.add("active");
 
     this._toggleDropdown(select, false);
   }
@@ -151,6 +152,7 @@ class CustomSelect {
     if (match) {
       match.classList.add("selected");
       button.textContent = match.textContent.trim();
+      button.classList.add("active");
     }
   }
 
@@ -205,6 +207,74 @@ class CustomSelect {
 // Initialize after DOM loads
 document.addEventListener("DOMContentLoaded", () => {
   new CustomSelect(".custom-select");
+});
+
+// scroll top js
+document.addEventListener("DOMContentLoaded", () => {
+  class ScrollToTop {
+    constructor(selector = ".scroll-top-btn", threshold = 0.5) {
+      this.button = document.querySelector(selector);
+      if (!this.button) return;
+
+      this.threshold = threshold;
+      this.lastScrollY = window.scrollY; // find last scroll position
+      this.ticking = false;
+      this._init();
+    }
+
+    _init() {
+      this._setupAccessibility();
+      this._bindEvents();
+    }
+
+    _setupAccessibility() {
+      this.button.setAttribute("role", "button");
+      this.button.setAttribute("aria-label", "Scroll to top");
+      this.button.setAttribute("tabindex", "0");
+    }
+
+    _bindEvents() {
+      window.addEventListener("scroll", () => this._onScroll(), { passive: true });
+      this.button.addEventListener("click", () => this._scrollToTop());
+      this.button.addEventListener("keydown", e => this._onKeydown(e));
+    }
+
+    _onScroll() {
+      if (!this.ticking) {
+        window.requestAnimationFrame(() => {
+          this._updateVisibility();
+          this.ticking = false;
+        });
+        this.ticking = true;
+      }
+    }
+
+    _updateVisibility() {
+      const currentY = window.scrollY;
+      const showThreshold = window.innerHeight * this.threshold;
+
+      if (currentY > showThreshold && currentY < this.lastScrollY) {
+        this.button.classList.add("visible");
+      } else if (currentY <= showThreshold || currentY > this.lastScrollY) {
+        this.button.classList.remove("visible");
+      }
+
+      this.lastScrollY = currentY;
+    }
+
+    _scrollToTop() {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    _onKeydown(e) {
+      if (["Enter", " "].includes(e.key)) {
+        e.preventDefault();
+        this._scrollToTop();
+      }
+    }
+  }
+
+  new ScrollToTop(".scroll-top-btn", 0.5);
 });
 
 
