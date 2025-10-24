@@ -73,6 +73,8 @@ module.exports = {
         '100': '100px',
         'full': '100%',
         '816':'816px',
+        '257':'257px',
+        '335':'335px',
       },
       lineHeight: {
         '60': '60px',
@@ -98,7 +100,10 @@ module.exports = {
         'h-50': '50px',
         '257': '257px',
         '2.5': '2.5px',
-        '18' :'18px'
+        '18' :'18px',
+        '92':'92px',
+        '222':'222px',
+        '42':'42px',
       },
       gridTemplateColumns: {
         'car-grid': 'repeat(auto-fit, minmax(257px, 1fr))',
@@ -119,6 +124,9 @@ module.exports = {
       width: {
         '75': '75px',
         '300': '300px',
+        '55':'55px',
+        '1':'1px',
+        '230':'230px',
       },
       borderRadius:{
         'xs':'2px',

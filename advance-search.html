@@ -563,1344 +563,1344 @@
                 </div>
                 <!-- basic info -->
                 <div class="p-5 mb-6 rounded-md sm:mb-10 sm:p-6 bg-neutral-50 shadow-box-shadow">
-                    <h2 class="pb-2 mb-6 text-xl font-semibold leading-8 border-b border-blue-500 w-fit">Basic data & location</h2>
-                    <div class="grid gap-4 sm:grid-cols-card-grid">
-                        <!-- brand -->
-                        <div>
-                            <label for="brand" class="block mb-1 text-sm font-medium leading-6">Brand</label>
-                            <div class="relative custom-select">
-                                <!-- select button -->
-                                <button type="button" class="text-left select-btn select" aria-label="Select car">Choose</button>
-                                <!-- when user select value from dropdown data will store in input value -->
-                                <input id="brand" type="text" name="brand" value="" class="select-input" hidden>
-                                <!-- dropdown list -->
-                                <ul class="select-dropdown text-sm [&>li]:py-3 [&>li]:px-4 [&>li]:cursor-pointer [&>li:hover]:bg-blue-500/10" data-dropdown="brand">
-                                    <li data-value="1">Abarth</li>
-                                    <li data-value="2">AC</li>
-                                    <li data-value="3">Acura</li>
-                                    <li data-value="4">Aiways</li>
-                                    <li data-value="5">Aixam</li>
-                                    <li data-value="6">Alfa Romeo</li>
-                                    <li data-value="7">ALPINA</li>
-                                    <li data-value="8">Artega</li>
-                                    <li data-value="9">Asia Motors</li>
-                                    <li data-value="10">Aston Martin</li>
-                                    <li data-value="11">Audi</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- model -->
-                        <div>
-                            <label for="model" class="block mb-1 text-sm font-medium leading-6">Model</label>
-                            <div class="relative custom-select">
-                                <!-- select button -->
-                                <button type="button" class="text-left select-btn select">Choose</button>
-                                <!-- when user select value from dropdown data will store in input value -->
-                                <input id="model" type="text" name="model" value="" class="select-input" hidden>
-                                <!-- dropdown list -->
-                                <ul class="select-dropdown text-sm [&>li]:py-3 [&>li]:px-4 [&>li]:cursor-pointer [&>li:hover]:bg-blue-500/10" data-dropdown="model">
-                                    <li>First Select Brand</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- variant -->
-                        <div>
-                            <label for="city" class="block mb-1 text-sm font-medium leading-6">Variant</label>
-                            <input type="text" name="city" value="" class="input" placeholder="e.g.  B. Plus, GTI, 218, etc.">
-                        </div>
-                        <!-- body type -->
-                        <div>
-                            <label for="body-type" class="block mb-1 text-sm font-medium leading-6">Body type</label>
-                            <div class="relative custom-select">
-                                <!-- select button -->
-                                <button type="button" class="text-left select-btn select">Choose</button>
-                                <!-- when user select value from dropdown data will store in input value -->
-                                <input id="body-type" type="text" name="model" value="" class="select-input" hidden>
-                                <!-- dropdown list -->
-                                <ul class="select-dropdown text-sm [&>li]:py-3 [&>li]:px-4 [&>li]:cursor-pointer [&>li:hover]:bg-blue-500/10 [&>li]:flex [&>li]:items-center [&>li]:gap-2" data-dropdown="model">
-									<li>
-									    <input type="checkbox" name="structure[]" id="struct_1" class="checkbox">
-									    <label for="struct_1">Convertible</label>
-								    </li>
-								    <li>
-                                        <input type="checkbox" name="structure[]" id="struct_2" class="checkbox">
-                                        <label for="struct_2">Coupe</label>
-								    </li>
-								    <li>
-									    <input type="checkbox" name="structure[]" id="struct_3" class="checkbox">
-									    <label for="struct_3">Small car</label>
-								    </li>
-								    <li>
-									    <input type="checkbox" name="structure[]" id="struct_4" class="checkbox">
-									    <label for="struct_4">Combi</label>
-								    </li>
-									<li>
-									    <input type="checkbox" name="structure[]" id="struct_5" class="checkbox">
-									    <label for="struct_5">Limousine</label>
-								    </li>
-									<li>
-									    <input type="checkbox" name="structure[]" id="struct_6" class="checkbox">
-									    <label for="struct_6">SUV/off-road vehicle/pickup truck</label>
-								    </li>
-									<li>
-									    <input type="checkbox" name="structure[]" id="struct_7" class="checkbox">
-									    <label for="struct_7">Transporter</label>
-								    </li>
-									<li>
-									    <input type="checkbox" name="structure[]" id="struct_8" class="checkbox">
-									    <label for="struct_8">Van/minibus</label>
-								    </li>
-									<li>
-									    <input type="checkbox" name="structure[]" id="struct_9" class="checkbox">
-									    <label for="struct_9">Other</label>
-								    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- fuel -->
-                        <div>
-                            <label for="fuel-type" class="block mb-1 text-sm font-medium leading-6">Fuel type</label>
-                            <div class="relative custom-select">
-                                <!-- select button -->
-                                <button type="button" class="text-left select-btn select">Choose</button>
-                                <!-- when user select value from dropdown data will store in input value -->
-                                <input id="fuel-type" type="text" name="model" value="" class="select-input" hidden>
-                                <!-- dropdown list -->
-                                <ul class="select-dropdown text-sm [&>li]:py-3 [&>li]:px-4 [&>li]:cursor-pointer [&>li:hover]:bg-blue-500/10 [&>li]:flex [&>li]:items-center [&>li]:gap-2" data-dropdown="fuel">
-									<li>
-									    <input type="checkbox" name="structure[]" id="fuel_1" class="checkbox">
-									    <label for="fuel_1">Petrol</label>
-								    </li>
-									<li>
-									    <input type="checkbox" name="structure[]" id="fuel_2" class="checkbox">
-									    <label for="fuel_2">Diesel</label>
-								    </li>
-									<li>
-									    <input type="checkbox" name="structure[]" id="fuel_3" class="checkbox">
-									    <label for="fuel_3">Electric</label>
-								    </li>
-									<li>
-									    <input type="checkbox" name="structure[]" id="fuel_4" class="checkbox">
-									    <label for="fuel_4">LPG</label>
-								    </li>
-									<li>
-									    <input type="checkbox" name="structure[]" id="fuel_5" class="checkbox">
-									    <label for="fuel_5">Natural Gas</label>
-								    </li>
-									<li>
-									    <input type="checkbox" name="structure[]" id="fuel_6" class="checkbox">
-									    <label for="fuel_6">Hybrid (petrol/electric)</label>
-								    </li>
-									<li>
-									    <input type="checkbox" name="structure[]" id="fuel_7" class="checkbox">
-									    <label for="fuel_7">Hybrid (diesel/electric)</label>
-								    </li>
-									<li>
-									    <input type="checkbox" name="structure[]" id="fuel_8" class="checkbox">
-									    <label for="fuel_8">Ethanol (FFV, E85, etc.)</label>
-								    </li>
-									<li>
-									    <input type="checkbox" name="structure[]" id="fuel_9" class="checkbox">
-									    <label for="fuel_9">Hydrogen</label>
-								    </li>
-									<li>
-									    <input type="checkbox" name="structure[]" id="fuel_10" class="checkbox">
-									    <label for="fuel_10">Other</label>
-								    </li>
-								</ul>
-                            </div>
-                        </div>
-                        <!-- Registration -->
-                        <div>
-                                    <label for="registration-from" class="block mb-1 text-sm font-medium leading-6">Initial registration</label>
-                                    <div class="flex gap-2">
-                                        <div class="relative flex-1 custom-select">
-                                            <button type="button" class="text-left select-btn input select">From</button>
-                                            <!-- when user select value from dropdown data will store in input value -->
-                                            <input id="registration-from" type="text" value="" class="select-input" name="registration" hidden>
-                                            <!-- dropdown list -->
-                                            <ul class="select-dropdown text-sm [&>li]:py-3 [&>li]:px-4 [&>li]:cursor-pointer [&>li:hover]:bg-blue-500/10" data-dropdown="regis_from">
-                                                <li data-value="2024">2024</li>
-                                                <li data-value="2024">2023</li>
-                                                <li data-value="2024">2022</li>
-                                                <li data-value="2024">2021</li>
-                                                <li data-value="2024">2020</li>
-                                                <li data-value="2024">2019</li>
-                                                <li data-value="2024">2018</li>
-                                                <li data-value="2024">2017</li>
-                                                <li data-value="2024">2016</li>
-                                           </ul>
-                                       </div>
-                                        <div class="relative flex-1 custom-select">
-                                            <button type="button" class="text-left select-btn select">To</button>
-                                            <!-- when user select value from dropdown data will store in input value -->
-                                            <input id="registration-to" type="text" class="select-input" name="registration" value="" hidden>
-                                            <!-- dropdown list -->
-                                            <ul class="select-dropdown text-sm [&>li]:py-3 [&>li]:px-4 [&>li]:cursor-pointer [&>li:hover]:bg-blue-500/10" data-dropdown="regis_to">
-                                                <li data-value="2024">2024</li>
-                                                <li data-value="2024">2023</li>
-                                                <li data-value="2024">2022</li>
-                                                <li data-value="2024">2021</li>
-                                                <li data-value="2024">2020</li>
-                                                <li data-value="2024">2019</li>
-                                                <li data-value="2024">2018</li>
-                                                <li data-value="2024">2017</li>
-                                                <li data-value="2024">2016</li>
-                                           </ul>
-                                       </div>
-                                   </div>
-                        </div>
-                        <!-- Price -->
-                        <div>
-                                    <label for="price-from" class="block mb-1 text-sm font-medium leading-6">Price</label>
-                                    <div class="flex gap-2">
-                                        <div class="relative flex-1 custom-select">
-                                            <button type="button" class="text-left select-btn select">From</button>
-                                            <!-- when user select value from dropdown data will store in input value -->
-                                            <input id="price-from" type="text" value="" class="select-input" name="price" hidden>
-                                            <!-- dropdown list -->
-                                            <ul class="select-dropdown text-sm [&>li]:py-3 [&>li]:px-4 [&>li]:cursor-pointer [&>li:hover]:bg-blue-500/10" data-dropdown="price_from">
-                                                <li data-value="500">€ 500</li>
-                                                <li data-value="1000">€ 1000</li>
-                                                <li data-value="1500">€ 1500</li>
-                                                <li data-value="2000">€ 2000</li>
-                                                <li data-value="2500">€ 2500</li>
-                                                <li data-value="3000">€ 3000</li>
-                                                <li data-value="3500">€ 3500</li>
-                                                <li data-value="4000">€ 4000</li>
-                                                <li data-value="4500">€ 4500</li>
-                                                <li data-value="5000">€ 5000</li>
-                                                <li data-value="5500">€ 5500</li>
-                                                <li data-value="6000">€ 6000</li>
-                                                <li data-value="6500">€ 6500</li>
-                                                <li data-value="7000">€ 7000</li>
-                                                <li data-value="7500">€ 7500</li>
-                                                <li data-value="8000">€ 8000</li>
-                                                <li data-value="8500">€ 8500</li>
-                                                <li data-value="9000">€ 9000</li>
-                                                <li data-value="9500">€ 9500</li>
-                                                <li data-value="10000">€ 10000</li>
-                                                <li data-value="10500">€ 10500</li>
-                                                <li data-value="11000">€ 11000</li>
-                                                <li data-value="11500">€ 11500</li>
-                                                <li data-value="12000">€ 12000</li>
-                                                <li data-value="12500">€ 12500</li>
-                                                <li data-value="13000">€ 13000</li>
-                                                <li data-value="13500">€ 13500</li>
-                                                <li data-value="14000">€ 14000</li>
-                                                <li data-value="14500">€ 14500</li>
-                                                <li data-value="15000">€ 15000</li>
-                                                <li data-value="15500">€ 15500</li>
-                                                <li data-value="16000">€ 16000</li>
-                                                <li data-value="16500">€ 16500</li>
-                                                <li data-value="17000">€ 17000</li>
-                                                <li data-value="17500">€ 17500</li>
-                                                <li data-value="18000">€ 18000</li>
-                                                <li data-value="18500">€ 18500</li>
-                                                <li data-value="19000">€ 19000</li>
-                                                <li data-value="19500">€ 19500</li>
-                                                <li data-value="20000">€ 20000</li>
-                                                <li data-value="20500">€ 20500</li>
-                                                <li data-value="21000">€ 21000</li>
-                                                <li data-value="21500">€ 21500</li>
-                                                <li data-value="22000">€ 22000</li>
-                                                <li data-value="22500">€ 22500</li>
-                                                <li data-value="23000">€ 23000</li>
-                                                <li data-value="23500">€ 23500</li>
-                                                <li data-value="24000">€ 24000</li>
-                                                <li data-value="24500">€ 24500</li>
-                                                <li data-value="25000">€ 25000</li>
-                                                <li data-value="25500">€ 25500</li>
-                                                <li data-value="26000">€ 26000</li>
-                                                <li data-value="26500">€ 26500</li>
-                                                <li data-value="27000">€ 27000</li>
-                                                <li data-value="27500">€ 27500</li>
-                                                <li data-value="28000">€ 28000</li>
-                                                <li data-value="28500">€ 28500</li>
-                                                <li data-value="29000">€ 29000</li>
-                                                <li data-value="29500">€ 29500</li>
-                                                <li data-value="30000">€ 30000</li>
-                                                <li data-value="30500">€ 30500</li>
-                                                <li data-value="31000">€ 31000</li>
-                                                <li data-value="31500">€ 31500</li>
-                                                <li data-value="32000">€ 32000</li>
-                                                <li data-value="32500">€ 32500</li>
-                                                <li data-value="33000">€ 33000</li>
-                                                <li data-value="33500">€ 33500</li>
-                                                <li data-value="34000">€ 34000</li>
-                                                <li data-value="34500">€ 34500</li>
-                                                <li data-value="35000">€ 35000</li>
-                                                <li data-value="35500">€ 35500</li>
-                                                <li data-value="36000">€ 36000</li>
-                                                <li data-value="36500">€ 36500</li>
-                                                <li data-value="37000">€ 37000</li>
-                                                <li data-value="37500">€ 37500</li>
-                                                <li data-value="38000">€ 38000</li>
-                                                <li data-value="38500">€ 38500</li>
-                                                <li data-value="39000">€ 39000</li>
-                                                <li data-value="39500">€ 39500</li>
-                                                <li data-value="40000">€ 40000</li>
-                                                <li data-value="40500">€ 40500</li>
-                                                <li data-value="41000">€ 41000</li>
-                                                <li data-value="41500">€ 41500</li>
-                                                <li data-value="42000">€ 42000</li>
-                                                <li data-value="42500">€ 42500</li>
-                                                <li data-value="43000">€ 43000</li>
-                                                <li data-value="43500">€ 43500</li>
-                                                <li data-value="44000">€ 44000</li>
-                                                <li data-value="44500">€ 44500</li>
-                                                <li data-value="45000">€ 45000</li>
-                                                <li data-value="45500">€ 45500</li>
-                                                <li data-value="46000">€ 46000</li>
-                                                <li data-value="46500">€ 46500</li>
-                                                <li data-value="47000">€ 47000</li>
-                                                <li data-value="47500">€ 47500</li>
-                                                <li data-value="48000">€ 48000</li>
-                                                <li data-value="48500">€ 48500</li>
-                                                <li data-value="49000">€ 49000</li>
-                                                <li data-value="49500">€ 49500</li>
-                                                <li data-value="50000">€ 50000</li>
-                                                <li data-value="50500">€ 50500</li>
-                                                <li data-value="51000">€ 51000</li>
-                                                <li data-value="51500">€ 51500</li>
-                                                <li data-value="52000">€ 52000</li>
-                                                <li data-value="52500">€ 52500</li>
-                                                <li data-value="53000">€ 53000</li>
-                                                <li data-value="53500">€ 53500</li>
-                                                <li data-value="54000">€ 54000</li>
-                                                <li data-value="54500">€ 54500</li>
-                                                <li data-value="55000">€ 55000</li>
-                                                <li data-value="55500">€ 55500</li>
-                                                <li data-value="56000">€ 56000</li>
-                                                <li data-value="56500">€ 56500</li>
-                                                <li data-value="57000">€ 57000</li>
-                                                <li data-value="57500">€ 57500</li>
-                                                <li data-value="58000">€ 58000</li>
-                                                <li data-value="58500">€ 58500</li>
-                                                <li data-value="59000">€ 59000</li>
-                                                <li data-value="59500">€ 59500</li>
-                                                <li data-value="60000">€ 60000</li>
-                                                <li data-value="60500">€ 60500</li>
-                                                <li data-value="61000">€ 61000</li>
-                                                <li data-value="61500">€ 61500</li>
-                                                <li data-value="62000">€ 62000</li>
-                                                <li data-value="62500">€ 62500</li>
-                                                <li data-value="63000">€ 63000</li>
-                                                <li data-value="63500">€ 63500</li>
-                                                <li data-value="64000">€ 64000</li>
-                                                <li data-value="64500">€ 64500</li>
-                                                <li data-value="65000">€ 65000</li>
-                                                <li data-value="65500">€ 65500</li>
-                                                <li data-value="66000">€ 66000</li>
-                                                <li data-value="66500">€ 66500</li>
-                                                <li data-value="67000">€ 67000</li>
-                                                <li data-value="67500">€ 67500</li>
-                                                <li data-value="68000">€ 68000</li>
-                                                <li data-value="68500">€ 68500</li>
-                                                <li data-value="69000">€ 69000</li>
-                                                <li data-value="69500">€ 69500</li>
-                                                <li data-value="70000">€ 70000</li>
-                                                <li data-value="70500">€ 70500</li>
-                                                <li data-value="71000">€ 71000</li>
-                                                <li data-value="71500">€ 71500</li>
-                                                <li data-value="72000">€ 72000</li>
-                                                <li data-value="72500">€ 72500</li>
-                                                <li data-value="73000">€ 73000</li>
-                                                <li data-value="73500">€ 73500</li>
-                                                <li data-value="74000">€ 74000</li>
-                                                <li data-value="74500">€ 74500</li>
-                                                <li data-value="75000">€ 75000</li>
-                                                <li data-value="75500">€ 75500</li>
-                                                <li data-value="76000">€ 76000</li>
-                                                <li data-value="76500">€ 76500</li>
-                                                <li data-value="77000">€ 77000</li>
-                                                <li data-value="77500">€ 77500</li>
-                                                <li data-value="78000">€ 78000</li>
-                                                <li data-value="78500">€ 78500</li>
-                                                <li data-value="79000">€ 79000</li>
-                                                <li data-value="79500">€ 79500</li>
-                                                <li data-value="80000">€ 80000</li>
-                                                <li data-value="80500">€ 80500</li>
-                                                <li data-value="81000">€ 81000</li>
-                                                <li data-value="81500">€ 81500</li>
-                                                <li data-value="82000">€ 82000</li>
-                                                <li data-value="82500">€ 82500</li>
-                                                <li data-value="83000">€ 83000</li>
-                                                <li data-value="83500">€ 83500</li>
-                                                <li data-value="84000">€ 84000</li>
-                                                <li data-value="84500">€ 84500</li>
-                                                <li data-value="85000">€ 85000</li>
-                                                <li data-value="85500">€ 85500</li>
-                                                <li data-value="86000">€ 86000</li>
-                                                <li data-value="86500">€ 86500</li>
-                                                <li data-value="87000">€ 87000</li>
-                                                <li data-value="87500">€ 87500</li>
-                                                <li data-value="88000">€ 88000</li>
-                                                <li data-value="88500">€ 88500</li>
-                                                <li data-value="89000">€ 89000</li>
-                                                <li data-value="89500">€ 89500</li>
-                                                <li data-value="90000">€ 90000</li>
-                                                <li data-value="90500">€ 90500</li>
-                                                <li data-value="91000">€ 91000</li>
-                                                <li data-value="91500">€ 91500</li>
-                                                <li data-value="92000">€ 92000</li>
-                                                <li data-value="92500">€ 92500</li>
-                                                <li data-value="93000">€ 93000</li>
-                                                <li data-value="93500">€ 93500</li>
-                                                <li data-value="94000">€ 94000</li>
-                                                <li data-value="94500">€ 94500</li>
-                                                <li data-value="95000">€ 95000</li>
-                                                <li data-value="95500">€ 95500</li>
-                                                <li data-value="96000">€ 96000</li>
-                                                <li data-value="96500">€ 96500</li>
-                                                <li data-value="97000">€ 97000</li>
-                                                <li data-value="97500">€ 97500</li>
-                                                <li data-value="98000">€ 98000</li>
-                                                <li data-value="98500">€ 98500</li>
-                                                <li data-value="99000">€ 99000</li>
-                                                <li data-value="99500">€ 99500</li>
-                                           </ul>
-                                       </div>
-                                        <div class="relative flex-1 custom-select">
-                                            <button type="button" class="text-left select-btn select">To</button>
-                                            <!-- when user select value from dropdown data will store in input value -->
-                                            <input id="price-to" type="text" value="" name="price" class="select-input" hidden>
-                                            <ul class="select-dropdown text-sm [&>li]:py-3 [&>li]:px-4 [&>li]:cursor-pointer [&>li:hover]:bg-blue-500/10" data-dropdown="price_to">
-                                                <li data-value="500">€ 500</li>
-                                                <li data-value="1000">€ 1000</li>
-                                                <li data-value="1500">€ 1500</li>
-                                                <li data-value="2000">€ 2000</li>
-                                                <li data-value="2500">€ 2500</li>
-                                                <li data-value="3000">€ 3000</li>
-                                                <li data-value="3500">€ 3500</li>
-                                                <li data-value="4000">€ 4000</li>
-                                                <li data-value="4500">€ 4500</li>
-                                                <li data-value="5000">€ 5000</li>
-                                                <li data-value="5500">€ 5500</li>
-                                                <li data-value="6000">€ 6000</li>
-                                                <li data-value="6500">€ 6500</li>
-                                                <li data-value="7000">€ 7000</li>
-                                                <li data-value="7500">€ 7500</li>
-                                                <li data-value="8000">€ 8000</li>
-                                                <li data-value="8500">€ 8500</li>
-                                                <li data-value="9000">€ 9000</li>
-                                                <li data-value="9500">€ 9500</li>
-                                                <li data-value="10000">€ 10000</li>
-                                                <li data-value="10500">€ 10500</li>
-                                                <li data-value="11000">€ 11000</li>
-                                                <li data-value="11500">€ 11500</li>
-                                                <li data-value="12000">€ 12000</li>
-                                                <li data-value="12500">€ 12500</li>
-                                                <li data-value="13000">€ 13000</li>
-                                                <li data-value="13500">€ 13500</li>
-                                                <li data-value="14000">€ 14000</li>
-                                                <li data-value="14500">€ 14500</li>
-                                                <li data-value="15000">€ 15000</li>
-                                                <li data-value="15500">€ 15500</li>
-                                                <li data-value="16000">€ 16000</li>
-                                                <li data-value="16500">€ 16500</li>
-                                                <li data-value="17000">€ 17000</li>
-                                                <li data-value="17500">€ 17500</li>
-                                                <li data-value="18000">€ 18000</li>
-                                                <li data-value="18500">€ 18500</li>
-                                                <li data-value="19000">€ 19000</li>
-                                                <li data-value="19500">€ 19500</li>
-                                                <li data-value="20000">€ 20000</li>
-                                                <li data-value="20500">€ 20500</li>
-                                                <li data-value="21000">€ 21000</li>
-                                                <li data-value="21500">€ 21500</li>
-                                                <li data-value="22000">€ 22000</li>
-                                                <li data-value="22500">€ 22500</li>
-                                                <li data-value="23000">€ 23000</li>
-                                                <li data-value="23500">€ 23500</li>
-                                                <li data-value="24000">€ 24000</li>
-                                                <li data-value="24500">€ 24500</li>
-                                                <li data-value="25000">€ 25000</li>
-                                                <li data-value="25500">€ 25500</li>
-                                                <li data-value="26000">€ 26000</li>
-                                                <li data-value="26500">€ 26500</li>
-                                                <li data-value="27000">€ 27000</li>
-                                                <li data-value="27500">€ 27500</li>
-                                                <li data-value="28000">€ 28000</li>
-                                                <li data-value="28500">€ 28500</li>
-                                                <li data-value="29000">€ 29000</li>
-                                                <li data-value="29500">€ 29500</li>
-                                                <li data-value="30000">€ 30000</li>
-                                                <li data-value="30500">€ 30500</li>
-                                                <li data-value="31000">€ 31000</li>
-                                                <li data-value="31500">€ 31500</li>
-                                                <li data-value="32000">€ 32000</li>
-                                                <li data-value="32500">€ 32500</li>
-                                                <li data-value="33000">€ 33000</li>
-                                                <li data-value="33500">€ 33500</li>
-                                                <li data-value="34000">€ 34000</li>
-                                                <li data-value="34500">€ 34500</li>
-                                                <li data-value="35000">€ 35000</li>
-                                                <li data-value="35500">€ 35500</li>
-                                                <li data-value="36000">€ 36000</li>
-                                                <li data-value="36500">€ 36500</li>
-                                                <li data-value="37000">€ 37000</li>
-                                                <li data-value="37500">€ 37500</li>
-                                                <li data-value="38000">€ 38000</li>
-                                                <li data-value="38500">€ 38500</li>
-                                                <li data-value="39000">€ 39000</li>
-                                                <li data-value="39500">€ 39500</li>
-                                                <li data-value="40000">€ 40000</li>
-                                                <li data-value="40500">€ 40500</li>
-                                                <li data-value="41000">€ 41000</li>
-                                                <li data-value="41500">€ 41500</li>
-                                                <li data-value="42000">€ 42000</li>
-                                                <li data-value="42500">€ 42500</li>
-                                                <li data-value="43000">€ 43000</li>
-                                                <li data-value="43500">€ 43500</li>
-                                                <li data-value="44000">€ 44000</li>
-                                                <li data-value="44500">€ 44500</li>
-                                                <li data-value="45000">€ 45000</li>
-                                                <li data-value="45500">€ 45500</li>
-                                                <li data-value="46000">€ 46000</li>
-                                                <li data-value="46500">€ 46500</li>
-                                                <li data-value="47000">€ 47000</li>
-                                                <li data-value="47500">€ 47500</li>
-                                                <li data-value="48000">€ 48000</li>
-                                                <li data-value="48500">€ 48500</li>
-                                                <li data-value="49000">€ 49000</li>
-                                                <li data-value="49500">€ 49500</li>
-                                                <li data-value="50000">€ 50000</li>
-                                                <li data-value="50500">€ 50500</li>
-                                                <li data-value="51000">€ 51000</li>
-                                                <li data-value="51500">€ 51500</li>
-                                                <li data-value="52000">€ 52000</li>
-                                                <li data-value="52500">€ 52500</li>
-                                                <li data-value="53000">€ 53000</li>
-                                                <li data-value="53500">€ 53500</li>
-                                                <li data-value="54000">€ 54000</li>
-                                                <li data-value="54500">€ 54500</li>
-                                                <li data-value="55000">€ 55000</li>
-                                                <li data-value="55500">€ 55500</li>
-                                                <li data-value="56000">€ 56000</li>
-                                                <li data-value="56500">€ 56500</li>
-                                                <li data-value="57000">€ 57000</li>
-                                                <li data-value="57500">€ 57500</li>
-                                                <li data-value="58000">€ 58000</li>
-                                                <li data-value="58500">€ 58500</li>
-                                                <li data-value="59000">€ 59000</li>
-                                                <li data-value="59500">€ 59500</li>
-                                                <li data-value="60000">€ 60000</li>
-                                                <li data-value="60500">€ 60500</li>
-                                                <li data-value="61000">€ 61000</li>
-                                                <li data-value="61500">€ 61500</li>
-                                                <li data-value="62000">€ 62000</li>
-                                                <li data-value="62500">€ 62500</li>
-                                                <li data-value="63000">€ 63000</li>
-                                                <li data-value="63500">€ 63500</li>
-                                                <li data-value="64000">€ 64000</li>
-                                                <li data-value="64500">€ 64500</li>
-                                                <li data-value="65000">€ 65000</li>
-                                                <li data-value="65500">€ 65500</li>
-                                                <li data-value="66000">€ 66000</li>
-                                                <li data-value="66500">€ 66500</li>
-                                                <li data-value="67000">€ 67000</li>
-                                                <li data-value="67500">€ 67500</li>
-                                                <li data-value="68000">€ 68000</li>
-                                                <li data-value="68500">€ 68500</li>
-                                                <li data-value="69000">€ 69000</li>
-                                                <li data-value="69500">€ 69500</li>
-                                                <li data-value="70000">€ 70000</li>
-                                                <li data-value="70500">€ 70500</li>
-                                                <li data-value="71000">€ 71000</li>
-                                                <li data-value="71500">€ 71500</li>
-                                                <li data-value="72000">€ 72000</li>
-                                                <li data-value="72500">€ 72500</li>
-                                                <li data-value="73000">€ 73000</li>
-                                                <li data-value="73500">€ 73500</li>
-                                                <li data-value="74000">€ 74000</li>
-                                                <li data-value="74500">€ 74500</li>
-                                                <li data-value="75000">€ 75000</li>
-                                                <li data-value="75500">€ 75500</li>
-                                                <li data-value="76000">€ 76000</li>
-                                                <li data-value="76500">€ 76500</li>
-                                                <li data-value="77000">€ 77000</li>
-                                                <li data-value="77500">€ 77500</li>
-                                                <li data-value="78000">€ 78000</li>
-                                                <li data-value="78500">€ 78500</li>
-                                                <li data-value="79000">€ 79000</li>
-                                                <li data-value="79500">€ 79500</li>
-                                                <li data-value="80000">€ 80000</li>
-                                                <li data-value="80500">€ 80500</li>
-                                                <li data-value="81000">€ 81000</li>
-                                                <li data-value="81500">€ 81500</li>
-                                                <li data-value="82000">€ 82000</li>
-                                                <li data-value="82500">€ 82500</li>
-                                                <li data-value="83000">€ 83000</li>
-                                                <li data-value="83500">€ 83500</li>
-                                                <li data-value="84000">€ 84000</li>
-                                                <li data-value="84500">€ 84500</li>
-                                                <li data-value="85000">€ 85000</li>
-                                                <li data-value="85500">€ 85500</li>
-                                                <li data-value="86000">€ 86000</li>
-                                                <li data-value="86500">€ 86500</li>
-                                                <li data-value="87000">€ 87000</li>
-                                                <li data-value="87500">€ 87500</li>
-                                                <li data-value="88000">€ 88000</li>
-                                                <li data-value="88500">€ 88500</li>
-                                                <li data-value="89000">€ 89000</li>
-                                                <li data-value="89500">€ 89500</li>
-                                                <li data-value="90000">€ 90000</li>
-                                                <li data-value="90500">€ 90500</li>
-                                                <li data-value="91000">€ 91000</li>
-                                                <li data-value="91500">€ 91500</li>
-                                                <li data-value="92000">€ 92000</li>
-                                                <li data-value="92500">€ 92500</li>
-                                                <li data-value="93000">€ 93000</li>
-                                                <li data-value="93500">€ 93500</li>
-                                                <li data-value="94000">€ 94000</li>
-                                                <li data-value="94500">€ 94500</li>
-                                                <li data-value="95000">€ 95000</li>
-                                                <li data-value="95500">€ 95500</li>
-                                                <li data-value="96000">€ 96000</li>
-                                                <li data-value="96500">€ 96500</li>
-                                                <li data-value="97000">€ 97000</li>
-                                                <li data-value="97500">€ 97500</li>
-                                                <li data-value="98000">€ 98000</li>
-                                                <li data-value="98500">€ 98500</li>
-                                                <li data-value="99000">€ 99000</li>
-                                                <li data-value="99500">€ 99500</li>
-                                           </ul>
-                                       </div>
-                                   </div>
-                        </div>
-                        <!-- country -->
-                        <div>
-                            <label for="country" class="block mb-1 text-sm font-medium leading-6">Country</label>
-                            <div class="relative custom-select">
-                                <!-- select button -->
-                                <button type="button" class="text-left select-btn select">Choose</button>
-                                <!-- when user select value from dropdown data will store in input value -->
-                                <input id="country" type="text" name="model" value="" class="select-input" hidden>
-                                <!-- dropdown list -->
-                                <ul class="select-dropdown text-sm [&>li]:py-3 [&>li]:px-4 [&>li]:cursor-pointer [&>li:hover]:bg-blue-500/10" data-dropdown="country">
-															<li data-value="1">Afghanistan</li>
-															<li data-value="2">Albania</li>
-															<li data-value="3">Algeria</li>
-															<li data-value="4">Andorra</li>
-															<li data-value="5">Angola</li>
-															<li data-value="6">Antigua and Barbuda</li>
-															<li data-value="7">Argentina</li>
-															<li data-value="8">Armenia</li>
-															<li data-value="9">Australia</li>
-															<li data-value="10">Austria</li>
-															<li data-value="11">Azerbaijan</li>
-															<li data-value="12">Bahamas</li>
-															<li data-value="13">Bahrain</li>
-															<li data-value="14">Bangladesh</li>
-															<li data-value="15">Barbados</li>
-															<li data-value="16">Belarus</li>
-															<li data-value="17">Belgium</li>
-															<li data-value="18">Belize</li>
-															<li data-value="19">Benin</li>
-															<li data-value="20">Bhutan</li>
-															<li data-value="21">Bolivia</li>
-															<li data-value="22">Bosnia and Herzegovina</li>
-															<li data-value="23">Botswana</li>
-															<li data-value="24">Brazil</li>
-															<li data-value="25">Brunei</li>
-															<li data-value="26">Bulgaria</li>
-															<li data-value="27">Burkina Faso</li>
-															<li data-value="28">Burundi</li>
-															<li data-value="29">Cabo Verde</li>
-															<li data-value="30">Cambodia</li>
-															<li data-value="31">Cameroon</li>
-															<li data-value="32">Canada</li>
-															<li data-value="33">Central African Republic</li>
-															<li data-value="34">Chad</li>
-															<li data-value="35">Chile</li>
-															<li data-value="36">China</li>
-															<li data-value="37">Colombia</li>
-															<li data-value="38">Comoros</li>
-															<li data-value="39">Congo (Brazzaville)</li>
-															<li data-value="40">Congo (Kinshasa)</li>
-															<li data-value="41">Costa Rica</li>
-															<li data-value="42">Croatia</li>
-															<li data-value="43">Cuba</li>
-															<li data-value="44">Cyprus</li>
-															<li data-value="45">Czech Republic</li>
-															<li data-value="46">Côte dIvoire</li>
-															<li data-value="47">Denmark</li>
-															<li data-value="48">Djibouti</li>
-															<li data-value="49">Dominica</li>
-															<li data-value="50">Dominican Republic</li>
-															<li data-value="51">Ecuador</li>
-															<li data-value="52">Egypt</li>
-															<li data-value="53">El Salvador</li>
-															<li data-value="54">Equatorial Guinea</li>
-															<li data-value="55">Eritrea</li>
-															<li data-value="56">Estonia</li>
-															<li data-value="57">Eswatini (formerly Swaziland)</li>
-															<li data-value="58">Ethiopia</li>
-															<li data-value="59">Fiji</li>
-															<li data-value="60">Finland</li>
-															<li data-value="61">France</li>
-															<li data-value="62">Gabon</li>
-															<li data-value="63">Gambia</li>
-															<li data-value="64">Georgia</li>
-															<li data-value="65">Germany</li>
-															<li data-value="66">Ghana</li>
-															<li data-value="67">Greece</li>
-															<li data-value="68">Grenada</li>
-															<li data-value="69">Guatemala</li>
-															<li data-value="70">Guinea</li>
-															<li data-value="71">Guinea-Bissau</li>
-															<li data-value="72">Guyana</li>
-															<li data-value="73">Haiti</li>
-															<li data-value="74">Holy See (Vatican City)</li>
-															<li data-value="75">Honduras</li>
-															<li data-value="76">Hungary</li>
-															<li data-value="77">Iceland</li>
-															<li data-value="78">India</li>
-															<li data-value="79">Indonesia</li>
-															<li data-value="80">Iran</li>
-															<li data-value="81">Iraq</li>
-															<li data-value="82">Ireland</li>
-															<li data-value="83">Israel</li>
-															<li data-value="84">Italy</li>
-															<li data-value="85">Jamaica</li>
-															<li data-value="86">Japan</li>
-															<li data-value="87">Jordan</li>
-															<li data-value="88">Kazakhstan</li>
-															<li data-value="89">Kenya</li>
-															<li data-value="90">Kiribati</li>
-															<li data-value="91">Kuwait</li>
-															<li data-value="92">Kyrgyzstan</li>
-															<li data-value="93">Laos</li>
-															<li data-value="94">Latvia</li>
-															<li data-value="95">Lebanon</li>
-															<li data-value="96">Lesotho</li>
-															<li data-value="97">Liberia</li>
-															<li data-value="98">Libya</li>
-															<li data-value="99">Liechtenstein</li>
-															<li data-value="100">Lithuania</li>
-															<li data-value="101">Luxembourg</li>
-															<li data-value="102">Madagascar</li>
-															<li data-value="103">Malawi</li>
-															<li data-value="104">Malaysia</li>
-															<li data-value="105">Maldives</li>
-															<li data-value="106">Mali</li>
-															<li data-value="107">Malta</li>
-															<li data-value="108">Marshall Islands</li>
-															<li data-value="109">Mauritania</li>
-															<li data-value="110">Mauritius</li>
-															<li data-value="111">Mexico</li>
-															<li data-value="112">Micronesia</li>
-															<li data-value="113">Moldova</li>
-															<li data-value="114">Monaco</li>
-															<li data-value="115">Mongolia</li>
-															<li data-value="116">Montenegro</li>
-															<li data-value="117">Morocco</li>
-															<li data-value="118">Mozambique</li>
-															<li data-value="119">Myanmar (Burma)</li>
-															<li data-value="120">Namibia</li>
-															<li data-value="121">Nauru</li>
-															<li data-value="122">Nepal</li>
-															<li data-value="123">Netherlands</li>
-															<li data-value="124">New Zealand</li>
-															<li data-value="125">Nicaragua</li>
-															<li data-value="126">Niger</li>
-															<li data-value="127">Nigeria</li>
-															<li data-value="128">North Macedonia (formerly Macedonia)</li>
-															<li data-value="129">Norway</li>
-															<li data-value="130">Oman</li>
-															<li data-value="131">Pakistan</li>
-															<li data-value="132">Palau</li>
-															<li data-value="133">Palestine State</li>
-															<li data-value="134">Panama</li>
-															<li data-value="135">Papua New Guinea</li>
-															<li data-value="136">Paraguay</li>
-															<li data-value="137">Peru</li>
-															<li data-value="138">Philippines</li>
-															<li data-value="139">Poland</li>
-															<li data-value="140">Portugal</li>
-															<li data-value="141">Qatar</li>
-															<li data-value="142">Romania</li>
-															<li data-value="143">Russia</li>
-															<li data-value="144">Czech of Republic</li>
-															<li data-value="145">Saint Kitts and Nevis</li>
-															<li data-value="146">Saint Lucia</li>
-															<li data-value="147">Saint Vincent and the Grenadines</li>
-															<li data-value="148">Samoa</li>
-															<li data-value="149">San Marino</li>
-															<li data-value="150">Sao Tome and Principe</li>
-															<li data-value="151">Saudi Arabia</li>
-															<li data-value="152">Senegal</li>
-															<li data-value="153">Serbia</li>
-															<li data-value="154">Seychelles</li>
-															<li data-value="155">Sierra Leone</li>
-															<li data-value="156">Singapore</li>
-															<li data-value="157">Slovakia</li>
-															<li data-value="158">Slovenia</li>
-															<li data-value="159">Solomon Islands</li>
-															<li data-value="160">Somalia</li>
-															<li data-value="161">South Africa</li>
-															<li data-value="162">South Korea</li>
-															<li data-value="163">South Sudan</li>
-															<li data-value="164">Spain</li>
-															<li data-value="165">Sri Lanka</li>
-															<li data-value="166">Sudan</li>
-															<li data-value="167">Suriname</li>
-															<li data-value="168">Sweden</li>
-															<li data-value="169">Switzerland</li>
-															<li data-value="170">Syria</li>
-															<li data-value="171">Tajikistan</li>
-															<li data-value="172">Tanzania</li>
-															<li data-value="173">Thailand</li>
-															<li data-value="174">Timor-Leste</li>
-															<li data-value="175">Togo</li>
-															<li data-value="176">Tonga</li>
-															<li data-value="177">Trinidad and Tobago</li>
-															<li data-value="178">Tunisia</li>
-															<li data-value="179">Turkey</li>
-															<li data-value="180">Turkmenistan</li>
-															<li data-value="181">Tuvalu</li>
-															<li data-value="182">Uganda</li>
-															<li data-value="183">Ukraine</li>
-															<li data-value="184">United Arab Emirates</li>
-															<li data-value="185">United Kingdom</li>
-															<li data-value="186">United States of America</li>
-															<li data-value="187">Uruguay</li>
-															<li data-value="188">Uzbekistan</li>
-															<li data-value="189">Vanuatu</li>
-															<li data-value="190">Venezuela</li>
-															<li data-value="191">Vietnam</li>
-															<li data-value="192">Yemen</li>
-															<li data-value="193">Zambia</li>
-															<li data-value="194">Zimbabwe</li>
-													</ul>
-                            </div>
-                        </div>
-                        <!-- city -->
-                        <div>
-                                    <label for="city" class="block mb-1 text-sm font-medium leading-6">City / Zip code</label>
-                                    <div class="relative">
-                                        <input type="text" name="city" value="" class="input" placeholder="Z.B. Wien oder 1010" onkeyup="selectCity(event,this,'filter_input')">
-                                        <!-- dropdown list -->
-                                        <ul class="select-dropdown text-sm [&>li]:py-3 [&>li]:px-4 [&>li]:cursor-pointer [&>li:hover]:bg-blue-500/10" data-input="filter_input">
-                                            <li>5081 Anif</li>
-                                            <li>5090 Lofer</li>
-                                            <li>5091 Unken</li>
-                                            <li>5082 Grödig</li>
-                                            <li>5083 Grödig</li>
-                                            <li>5114 Göming</li>
-                                            <li>5164 Seeham</li>
-                                            <li>5211 Lengau</li>
-                                            <li>5212 Lengau</li>
-                                            <li>5225 Jeging</li>
-                                            <li>5252 Aspach</li>
-                                            <li>5111 Bürmoos</li>
-                                            <li>5163 Mattsee</li>
-                                            <li>5273 Roßbach</li>
-                                            <li>5020 Salzburg</li>
-                                            <li>5023 Salzburg</li>
-                                            <li>5026 Salzburg</li>
-                                            <li>5101 Bergheim</li>
-                                            <li>5131 Franking</li>
-                                            <li>5141 Moosdorf</li>
-                                       </ul>
-                                   </div>
-                        </div>
-                        <!-- radius -->
-                        <div>
-                            <label for="radius" class="block mb-1 text-sm font-medium leading-6">Radius</label>
-                            <div class="relative custom-select">
-                                <!-- select button -->
-                                <button type="button" class="text-left select-btn select">Choose</button>
-                                <!-- when user select value from dropdown data will store in input value -->
-                                <input id="radius" type="text" name="radius" value="" class="select-input" hidden>
-                                <!-- dropdown list -->
-                                <ul class="select-dropdown text-sm [&>li]:py-3 [&>li]:px-4 [&>li]:cursor-pointer [&>li:hover]:bg-blue-500/10" data-dropdown="brand">
-                                    <li>10 km</li>
-                                    <li>20 km</li>
-                                    <li>50 km</li>
-                                    <li>100 km</li>
-                                    <li>150 km</li>
-                                    <li>200 km</li>
-                                    <li>250 km</li>
-                                    <li>300 km</li>
-                                    <li>350 km</li>
-                                    <li>400 km</li>
-						        </ul>
-                            </div>
-                        </div>
-                        <!-- mileage -->
-                        <div>
-                            <label for="mileage" class="block mb-1 text-sm font-medium leading-6">Mileage</label>
-                            <div class="relative custom-select">
-                                <!-- select button -->
-                                <button type="button" class="text-left select-btn select">Choose</button>
-                                <!-- when user select value from dropdown data will store in input value -->
-                                <input id="mileage" type="text" name="mileage" value="" class="select-input" hidden>
-                                <!-- dropdown list -->
-                                <ul class="select-dropdown text-sm [&>li]:py-3 [&>li]:px-4 [&>li]:cursor-pointer [&>li:hover]:bg-blue-500/10" data-dropdown="mileage">
-									<li data-value="500">500</li>
-									<li data-value="1000">1000</li>
-									<li data-value="1500">1500</li>
-									<li data-value="2000">2000</li>
-									<li data-value="2500">2500</li>
-									<li data-value="3000">3000</li>
-									<li data-value="3500">3500</li>
-									<li data-value="4000">4000</li>
-									<li data-value="4500">4500</li>
-									<li data-value="5000">5000</li>
-								</ul>
-                            </div>
-                        </div>
-                        <!-- performance -->
-                        <div class="flex gap-2">
-                            <!-- performance select -->
-                            <div>
-                                <label for="performance" class="block mb-1 text-sm font-semibold">Performance</label>
-                                <div class="relative custom-select">
-                                    <!-- select button -->
-                                    <button type="button" class="text-left select-btn select">Choose</button>
-                                    <!-- when user select value from dropdown data will store in input value -->
-                                    <input id="performance" type="text" name="performance" value="1" class="select-input" hidden>
-                                    <!-- dropdown list -->
-                                    <ul class="select-dropdown text-sm [&>li]:py-3 [&>li]:px-4 [&>li]:cursor-pointer [&>li:hover]:bg-blue-500/10" data-dropdown="model">
-                                        <li data-value="1">PS</li>
-                                        <li data-value="2">KW</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <!-- performance from to -->
-                            <div class="flex gap-2">
-                                <div class="flex-1">
-                                    <label for="perfromance-from" class="block mb-1 text-sm font-semibold">From</label>
-                                    <input type="text" placeholder="From" class="input" id="performance-from">
-                                </div>
-                                <div class="flex-1">
-                                    <label for="performance-to" class="block mb-1 text-sm font-semibold">To</label>
-                                    <input type="text" placeholder="To" class="input" id="performance-to">
-                                </div>
-                            </div>
-                        </div>
-                        <!-- transmission -->
-                        <div>
-                            <label for="transmission" class="block mb-1 text-sm font-medium leading-6">Transmission</label>
-                            <div class="relative custom-select">
-                                <!-- select button -->
-                                <button type="button" class="text-left select-btn select">Choose</button>
-                                <!-- when user select value from dropdown data will store in input value -->
-                                <input id="transmission" type="text" name="transmission" value="" class="select-input" hidden>
-                                <!-- dropdown list -->
-                                <ul class="select-dropdown text-sm [&>li]:py-3 [&>li]:px-4 [&>li]:cursor-pointer [&>li:hover]:bg-blue-500/10 [&>li]:flex [&>li]:items-center [&>li]:gap-2">
-									<li class="single_check">
-									    <input type="checkbox" id="transmisson_1" class="checkbox">
-									    <label for="transmisson_1">Automatic</label>
-								    </li>
-									<li class="single_check">
-									    <input type="checkbox" id="transmisson_2" class="checkbox">
-									    <label for="transmisson_2">Manual transmission</label>
-								    </li>
-									<li class="single_check">
-									    <input type="checkbox" id="transmisson_3" class="checkbox">
-									    <label for="transmisson_3">Semi-automatic</label>
-								    </li>
-								</ul>
-                            </div>
-                        </div>
-                        <!-- doors -->
-                        <div>
-                            <label for="doors" class="block mb-1 text-sm font-medium leading-6">Number of doors</label>
-                            <div class="relative custom-select">
-                                <!-- select button -->
-                                <button type="button" class="text-left select-btn select">Choose</button>
-                                <!-- when user select value from dropdown data will store in input value -->
-                                <input doors" type="text" name="doors" value="" class="select-input" hidden>
-                                <!-- dropdown list -->
-                                <ul class="select-dropdown text-sm [&>li]:py-3 [&>li]:px-4 [&>li]:cursor-pointer [&>li:hover]:bg-blue-500/10" data-dropdown="doors">
-                                    <li>All</li>
-                                    <li>2/3</li>
-                                    <li>4/5</li>
-                                    <li>6/7</li>
-						        </ul>
-                            </div>
-                        </div>
-                        <!-- seating -->
-                        <div>
-                                    <label for="seating" class="block mb-1 text-sm font-medium leading-6">Seating</label>
-                                    <div class="flex gap-2">
-                                        <div class="relative flex-1 custom-select">
-                                            <button type="button" class="text-left select-btn select">From</button>
-                                            <!-- when user select value from dropdown data will store in input value -->
-                                            <input id="seating" type="text" value="" class="select-input" name="price" hidden>
-                                            <!-- dropdown list -->
-                                           <ul class="select-dropdown text-sm [&>li]:py-3 [&>li]:px-4 [&>li]:cursor-pointer [&>li:hover]:bg-blue-500/10" data-dropdown="seating_to">
-                                                <li data-value="1">1</li>
-                                                <li data-value="2">2</li>
-                                                <li data-value="3">3</li>
-                                                <li data-value="4">4</li>
-                                                <li data-value="5">5</li>
-							                </ul>
-                                       </div>
-                                        <div class="relative flex-1 custom-select">
-                                            <button type="button" class="text-left select-btn select">To</button>
-                                            <!-- when user select value from dropdown data will store in input value -->
-                                            <input id="seating-to" type="text" value="" name="price" class="select-input" hidden>
-                                            <!-- dropdown list -->
-                                           <ul class="select-dropdown text-sm [&>li]:py-3 [&>li]:px-4 [&>li]:cursor-pointer [&>li:hover]:bg-blue-500/10" data-dropdown="seating_from">
-                                                <li data-value="1">1</li>
-                                                <li data-value="2">2</li>
-                                                <li data-value="3">3</li>
-                                                <li data-value="4">4</li>
-                                                <li data-value="5">5</li>
-							                </ul>
-                                       </div>
-                                   </div>
-                        </div>
-                        <!-- sales person -->
-                        <div>
-                            <label for="sales-person" class="block mb-1 text-sm font-medium leading-6">Sales person</label>
-                            <div class="relative custom-select">
-                                <!-- select button -->
-                                <button type="button" class="text-left select-btn select">Choose</button>
-                                <!-- when user select value from dropdown data will store in input value -->
-                                <input id="sales-person" type="text" name="sales-person" value="" class="select-input" hidden>
-                                <!-- dropdown list -->
-                                <ul class="select-dropdown text-sm [&>li]:py-3 [&>li]:px-4 [&>li]:cursor-pointer [&>li:hover]:bg-blue-500/10" data-dropdown="person">
-                                    <li>All</li>
-                                    <li>Dealer</li>
-                                    <li>Private</li>
-						        </ul>
-                            </div>
-                        </div>
-                    </div>
+                	<h2 class="pb-2 mb-6 text-xl font-semibold leading-8 border-b border-blue-500 w-fit">Basic data & location</h2>
+                	<div class="grid gap-4 sm:grid-cols-card-grid">
+                		<!-- brand -->
+                		<div>
+                			<label for="brand" class="block mb-1 text-sm font-medium leading-6">Brand</label>
+                			<div class="relative custom-select">
+                				<!-- select button -->
+                				<button type="button" class="text-left select-btn select" aria-label="Select car">Choose</button>
+                				<!-- when user select value from dropdown data will store in input value -->
+                				<input id="brand" type="text" name="brand" value="" class="select-input" hidden>
+                				<!-- dropdown list -->
+                				<ul class="select-dropdown text-sm [&>li]:py-3 [&>li]:px-4 [&>li]:cursor-pointer [&>li:hover]:bg-blue-500/10" data-dropdown="brand">
+                					<li data-value="1">Abarth</li>
+                					<li data-value="2">AC</li>
+                					<li data-value="3">Acura</li>
+                					<li data-value="4">Aiways</li>
+                					<li data-value="5">Aixam</li>
+                					<li data-value="6">Alfa Romeo</li>
+                					<li data-value="7">ALPINA</li>
+                					<li data-value="8">Artega</li>
+                					<li data-value="9">Asia Motors</li>
+                					<li data-value="10">Aston Martin</li>
+                					<li data-value="11">Audi</li>
+                				</ul>
+                			</div>
+                		</div>
+                		<!-- model -->
+                		<div>
+                			<label for="model" class="block mb-1 text-sm font-medium leading-6">Model</label>
+                			<div class="relative custom-select">
+                				<!-- select button -->
+                				<button type="button" class="text-left select-btn select">Choose</button>
+                				<!-- when user select value from dropdown data will store in input value -->
+                				<input id="model" type="text" name="model" value="" class="select-input" hidden>
+                				<!-- dropdown list -->
+                				<ul class="select-dropdown text-sm [&>li]:py-3 [&>li]:px-4 [&>li]:cursor-pointer [&>li:hover]:bg-blue-500/10" data-dropdown="model">
+                					<li>First Select Brand</li>
+                				</ul>
+                			</div>
+                		</div>
+                		<!-- variant -->
+                		<div>
+                			<label for="city" class="block mb-1 text-sm font-medium leading-6">Variant</label>
+                			<input type="text" name="city" value="" id="city" class="input" placeholder="e.g.  B. Plus, GTI, 218, etc.">
+                		</div>
+                		<!-- body type -->
+                		<div>
+                			<label for="body-type" class="block mb-1 text-sm font-medium leading-6">Body type</label>
+                			<div class="relative custom-select">
+                				<!-- select button -->
+                				<button type="button" class="text-left select-btn select">Choose</button>
+                				<!-- when user select value from dropdown data will store in input value -->
+                				<input id="body-type" type="text" name="model" value="" class="select-input" hidden>
+                				<!-- dropdown list -->
+                				<ul class="select-dropdown text-sm [&>li]:py-3 [&>li]:px-4 [&>li]:cursor-pointer [&>li:hover]:bg-blue-500/10 [&>li]:flex [&>li]:items-center [&>li]:gap-2" data-dropdown="model">
+                					<li>
+                						<input type="checkbox" name="structure[]" id="struct_1" class="checkbox">
+                						<label for="struct_1">Convertible</label>
+                					</li>
+                					<li>
+                						<input type="checkbox" name="structure[]" id="struct_2" class="checkbox">
+                						<label for="struct_2">Coupe</label>
+                					</li>
+                					<li>
+                						<input type="checkbox" name="structure[]" id="struct_3" class="checkbox">
+                						<label for="struct_3">Small car</label>
+                					</li>
+                					<li>
+                						<input type="checkbox" name="structure[]" id="struct_4" class="checkbox">
+                						<label for="struct_4">Combi</label>
+                					</li>
+                					<li>
+                						<input type="checkbox" name="structure[]" id="struct_5" class="checkbox">
+                						<label for="struct_5">Limousine</label>
+                					</li>
+                					<li>
+                						<input type="checkbox" name="structure[]" id="struct_6" class="checkbox">
+                						<label for="struct_6">SUV/off-road vehicle/pickup truck</label>
+                					</li>
+                					<li>
+                						<input type="checkbox" name="structure[]" id="struct_7" class="checkbox">
+                						<label for="struct_7">Transporter</label>
+                					</li>
+                					<li>
+                						<input type="checkbox" name="structure[]" id="struct_8" class="checkbox">
+                						<label for="struct_8">Van/minibus</label>
+                					</li>
+                					<li>
+                						<input type="checkbox" name="structure[]" id="struct_9" class="checkbox">
+                						<label for="struct_9">Other</label>
+                					</li>
+                				</ul>
+                			</div>
+                		</div>
+                		<!-- fuel -->
+                		<div>
+                			<label for="fuel-type" class="block mb-1 text-sm font-medium leading-6">Fuel type</label>
+                			<div class="relative custom-select">
+                				<!-- select button -->
+                				<button type="button" class="text-left select-btn select">Choose</button>
+                				<!-- when user select value from dropdown data will store in input value -->
+                				<input id="fuel-type" type="text" name="model" value="" class="select-input" hidden>
+                				<!-- dropdown list -->
+                				<ul class="select-dropdown text-sm [&>li]:py-3 [&>li]:px-4 [&>li]:cursor-pointer [&>li:hover]:bg-blue-500/10 [&>li]:flex [&>li]:items-center [&>li]:gap-2" data-dropdown="fuel">
+                					<li>
+                						<input type="checkbox" name="structure[]" id="fuel_1" class="checkbox">
+                						<label for="fuel_1">Petrol</label>
+                					</li>
+                					<li>
+                						<input type="checkbox" name="structure[]" id="fuel_2" class="checkbox">
+                						<label for="fuel_2">Diesel</label>
+                					</li>
+                					<li>
+                						<input type="checkbox" name="structure[]" id="fuel_3" class="checkbox">
+                						<label for="fuel_3">Electric</label>
+                					</li>
+                					<li>
+                						<input type="checkbox" name="structure[]" id="fuel_4" class="checkbox">
+                						<label for="fuel_4">LPG</label>
+                					</li>
+                					<li>
+                						<input type="checkbox" name="structure[]" id="fuel_5" class="checkbox">
+                						<label for="fuel_5">Natural Gas</label>
+                					</li>
+                					<li>
+                						<input type="checkbox" name="structure[]" id="fuel_6" class="checkbox">
+                						<label for="fuel_6">Hybrid (petrol/electric)</label>
+                					</li>
+                					<li>
+                						<input type="checkbox" name="structure[]" id="fuel_7" class="checkbox">
+                						<label for="fuel_7">Hybrid (diesel/electric)</label>
+                					</li>
+                					<li>
+                						<input type="checkbox" name="structure[]" id="fuel_8" class="checkbox">
+                						<label for="fuel_8">Ethanol (FFV, E85, etc.)</label>
+                					</li>
+                					<li>
+                						<input type="checkbox" name="structure[]" id="fuel_9" class="checkbox">
+                						<label for="fuel_9">Hydrogen</label>
+                					</li>
+                					<li>
+                						<input type="checkbox" name="structure[]" id="fuel_10" class="checkbox">
+                						<label for="fuel_10">Other</label>
+                					</li>
+                				</ul>
+                			</div>
+                		</div>
+                		<!-- Registration -->
+                		<div>
+                			<label for="registration-from" class="block mb-1 text-sm font-medium leading-6">Initial registration</label>
+                			<div class="flex gap-2">
+                				<div class="relative flex-1 custom-select">
+                					<button type="button" class="text-left select-btn input select">From</button>
+                					<!-- when user select value from dropdown data will store in input value -->
+                					<input id="registration-from" type="text" value="" class="select-input" name="registration" hidden>
+                					<!-- dropdown list -->
+                					<ul class="select-dropdown text-sm [&>li]:py-3 [&>li]:px-4 [&>li]:cursor-pointer [&>li:hover]:bg-blue-500/10" data-dropdown="regis_from">
+                						<li data-value="2024">2024</li>
+                						<li data-value="2024">2023</li>
+                						<li data-value="2024">2022</li>
+                						<li data-value="2024">2021</li>
+                						<li data-value="2024">2020</li>
+                						<li data-value="2024">2019</li>
+                						<li data-value="2024">2018</li>
+                						<li data-value="2024">2017</li>
+                						<li data-value="2024">2016</li>
+                					</ul>
+                				</div>
+                				<div class="relative flex-1 custom-select">
+                					<button type="button" class="text-left select-btn select">To</button>
+                					<!-- when user select value from dropdown data will store in input value -->
+                					<input id="registration-to" type="text" class="select-input" name="registration" value="" hidden>
+                					<!-- dropdown list -->
+                					<ul class="select-dropdown text-sm [&>li]:py-3 [&>li]:px-4 [&>li]:cursor-pointer [&>li:hover]:bg-blue-500/10" data-dropdown="regis_to">
+                						<li data-value="2024">2024</li>
+                						<li data-value="2024">2023</li>
+                						<li data-value="2024">2022</li>
+                						<li data-value="2024">2021</li>
+                						<li data-value="2024">2020</li>
+                						<li data-value="2024">2019</li>
+                						<li data-value="2024">2018</li>
+                						<li data-value="2024">2017</li>
+                						<li data-value="2024">2016</li>
+                					</ul>
+                				</div>
+                			</div>
+                		</div>
+                		<!-- Price -->
+                		<div>
+                			<label for="price-from" class="block mb-1 text-sm font-medium leading-6">Price</label>
+                			<div class="flex gap-2">
+                				<div class="relative flex-1 custom-select">
+                					<button type="button" class="text-left select-btn select">From</button>
+                					<!-- when user select value from dropdown data will store in input value -->
+                					<input id="price-from" type="text" value="" class="select-input" name="price" hidden>
+                					<!-- dropdown list -->
+                					<ul class="select-dropdown text-sm [&>li]:py-3 [&>li]:px-4 [&>li]:cursor-pointer [&>li:hover]:bg-blue-500/10" data-dropdown="price_from">
+                						<li data-value="500">€ 500</li>
+                						<li data-value="1000">€ 1000</li>
+                						<li data-value="1500">€ 1500</li>
+                						<li data-value="2000">€ 2000</li>
+                						<li data-value="2500">€ 2500</li>
+                						<li data-value="3000">€ 3000</li>
+                						<li data-value="3500">€ 3500</li>
+                						<li data-value="4000">€ 4000</li>
+                						<li data-value="4500">€ 4500</li>
+                						<li data-value="5000">€ 5000</li>
+                						<li data-value="5500">€ 5500</li>
+                						<li data-value="6000">€ 6000</li>
+                						<li data-value="6500">€ 6500</li>
+                						<li data-value="7000">€ 7000</li>
+                						<li data-value="7500">€ 7500</li>
+                						<li data-value="8000">€ 8000</li>
+                						<li data-value="8500">€ 8500</li>
+                						<li data-value="9000">€ 9000</li>
+                						<li data-value="9500">€ 9500</li>
+                						<li data-value="10000">€ 10000</li>
+                						<li data-value="10500">€ 10500</li>
+                						<li data-value="11000">€ 11000</li>
+                						<li data-value="11500">€ 11500</li>
+                						<li data-value="12000">€ 12000</li>
+                						<li data-value="12500">€ 12500</li>
+                						<li data-value="13000">€ 13000</li>
+                						<li data-value="13500">€ 13500</li>
+                						<li data-value="14000">€ 14000</li>
+                						<li data-value="14500">€ 14500</li>
+                						<li data-value="15000">€ 15000</li>
+                						<li data-value="15500">€ 15500</li>
+                						<li data-value="16000">€ 16000</li>
+                						<li data-value="16500">€ 16500</li>
+                						<li data-value="17000">€ 17000</li>
+                						<li data-value="17500">€ 17500</li>
+                						<li data-value="18000">€ 18000</li>
+                						<li data-value="18500">€ 18500</li>
+                						<li data-value="19000">€ 19000</li>
+                						<li data-value="19500">€ 19500</li>
+                						<li data-value="20000">€ 20000</li>
+                						<li data-value="20500">€ 20500</li>
+                						<li data-value="21000">€ 21000</li>
+                						<li data-value="21500">€ 21500</li>
+                						<li data-value="22000">€ 22000</li>
+                						<li data-value="22500">€ 22500</li>
+                						<li data-value="23000">€ 23000</li>
+                						<li data-value="23500">€ 23500</li>
+                						<li data-value="24000">€ 24000</li>
+                						<li data-value="24500">€ 24500</li>
+                						<li data-value="25000">€ 25000</li>
+                						<li data-value="25500">€ 25500</li>
+                						<li data-value="26000">€ 26000</li>
+                						<li data-value="26500">€ 26500</li>
+                						<li data-value="27000">€ 27000</li>
+                						<li data-value="27500">€ 27500</li>
+                						<li data-value="28000">€ 28000</li>
+                						<li data-value="28500">€ 28500</li>
+                						<li data-value="29000">€ 29000</li>
+                						<li data-value="29500">€ 29500</li>
+                						<li data-value="30000">€ 30000</li>
+                						<li data-value="30500">€ 30500</li>
+                						<li data-value="31000">€ 31000</li>
+                						<li data-value="31500">€ 31500</li>
+                						<li data-value="32000">€ 32000</li>
+                						<li data-value="32500">€ 32500</li>
+                						<li data-value="33000">€ 33000</li>
+                						<li data-value="33500">€ 33500</li>
+                						<li data-value="34000">€ 34000</li>
+                						<li data-value="34500">€ 34500</li>
+                						<li data-value="35000">€ 35000</li>
+                						<li data-value="35500">€ 35500</li>
+                						<li data-value="36000">€ 36000</li>
+                						<li data-value="36500">€ 36500</li>
+                						<li data-value="37000">€ 37000</li>
+                						<li data-value="37500">€ 37500</li>
+                						<li data-value="38000">€ 38000</li>
+                						<li data-value="38500">€ 38500</li>
+                						<li data-value="39000">€ 39000</li>
+                						<li data-value="39500">€ 39500</li>
+                						<li data-value="40000">€ 40000</li>
+                						<li data-value="40500">€ 40500</li>
+                						<li data-value="41000">€ 41000</li>
+                						<li data-value="41500">€ 41500</li>
+                						<li data-value="42000">€ 42000</li>
+                						<li data-value="42500">€ 42500</li>
+                						<li data-value="43000">€ 43000</li>
+                						<li data-value="43500">€ 43500</li>
+                						<li data-value="44000">€ 44000</li>
+                						<li data-value="44500">€ 44500</li>
+                						<li data-value="45000">€ 45000</li>
+                						<li data-value="45500">€ 45500</li>
+                						<li data-value="46000">€ 46000</li>
+                						<li data-value="46500">€ 46500</li>
+                						<li data-value="47000">€ 47000</li>
+                						<li data-value="47500">€ 47500</li>
+                						<li data-value="48000">€ 48000</li>
+                						<li data-value="48500">€ 48500</li>
+                						<li data-value="49000">€ 49000</li>
+                						<li data-value="49500">€ 49500</li>
+                						<li data-value="50000">€ 50000</li>
+                						<li data-value="50500">€ 50500</li>
+                						<li data-value="51000">€ 51000</li>
+                						<li data-value="51500">€ 51500</li>
+                						<li data-value="52000">€ 52000</li>
+                						<li data-value="52500">€ 52500</li>
+                						<li data-value="53000">€ 53000</li>
+                						<li data-value="53500">€ 53500</li>
+                						<li data-value="54000">€ 54000</li>
+                						<li data-value="54500">€ 54500</li>
+                						<li data-value="55000">€ 55000</li>
+                						<li data-value="55500">€ 55500</li>
+                						<li data-value="56000">€ 56000</li>
+                						<li data-value="56500">€ 56500</li>
+                						<li data-value="57000">€ 57000</li>
+                						<li data-value="57500">€ 57500</li>
+                						<li data-value="58000">€ 58000</li>
+                						<li data-value="58500">€ 58500</li>
+                						<li data-value="59000">€ 59000</li>
+                						<li data-value="59500">€ 59500</li>
+                						<li data-value="60000">€ 60000</li>
+                						<li data-value="60500">€ 60500</li>
+                						<li data-value="61000">€ 61000</li>
+                						<li data-value="61500">€ 61500</li>
+                						<li data-value="62000">€ 62000</li>
+                						<li data-value="62500">€ 62500</li>
+                						<li data-value="63000">€ 63000</li>
+                						<li data-value="63500">€ 63500</li>
+                						<li data-value="64000">€ 64000</li>
+                						<li data-value="64500">€ 64500</li>
+                						<li data-value="65000">€ 65000</li>
+                						<li data-value="65500">€ 65500</li>
+                						<li data-value="66000">€ 66000</li>
+                						<li data-value="66500">€ 66500</li>
+                						<li data-value="67000">€ 67000</li>
+                						<li data-value="67500">€ 67500</li>
+                						<li data-value="68000">€ 68000</li>
+                						<li data-value="68500">€ 68500</li>
+                						<li data-value="69000">€ 69000</li>
+                						<li data-value="69500">€ 69500</li>
+                						<li data-value="70000">€ 70000</li>
+                						<li data-value="70500">€ 70500</li>
+                						<li data-value="71000">€ 71000</li>
+                						<li data-value="71500">€ 71500</li>
+                						<li data-value="72000">€ 72000</li>
+                						<li data-value="72500">€ 72500</li>
+                						<li data-value="73000">€ 73000</li>
+                						<li data-value="73500">€ 73500</li>
+                						<li data-value="74000">€ 74000</li>
+                						<li data-value="74500">€ 74500</li>
+                						<li data-value="75000">€ 75000</li>
+                						<li data-value="75500">€ 75500</li>
+                						<li data-value="76000">€ 76000</li>
+                						<li data-value="76500">€ 76500</li>
+                						<li data-value="77000">€ 77000</li>
+                						<li data-value="77500">€ 77500</li>
+                						<li data-value="78000">€ 78000</li>
+                						<li data-value="78500">€ 78500</li>
+                						<li data-value="79000">€ 79000</li>
+                						<li data-value="79500">€ 79500</li>
+                						<li data-value="80000">€ 80000</li>
+                						<li data-value="80500">€ 80500</li>
+                						<li data-value="81000">€ 81000</li>
+                						<li data-value="81500">€ 81500</li>
+                						<li data-value="82000">€ 82000</li>
+                						<li data-value="82500">€ 82500</li>
+                						<li data-value="83000">€ 83000</li>
+                						<li data-value="83500">€ 83500</li>
+                						<li data-value="84000">€ 84000</li>
+                						<li data-value="84500">€ 84500</li>
+                						<li data-value="85000">€ 85000</li>
+                						<li data-value="85500">€ 85500</li>
+                						<li data-value="86000">€ 86000</li>
+                						<li data-value="86500">€ 86500</li>
+                						<li data-value="87000">€ 87000</li>
+                						<li data-value="87500">€ 87500</li>
+                						<li data-value="88000">€ 88000</li>
+                						<li data-value="88500">€ 88500</li>
+                						<li data-value="89000">€ 89000</li>
+                						<li data-value="89500">€ 89500</li>
+                						<li data-value="90000">€ 90000</li>
+                						<li data-value="90500">€ 90500</li>
+                						<li data-value="91000">€ 91000</li>
+                						<li data-value="91500">€ 91500</li>
+                						<li data-value="92000">€ 92000</li>
+                						<li data-value="92500">€ 92500</li>
+                						<li data-value="93000">€ 93000</li>
+                						<li data-value="93500">€ 93500</li>
+                						<li data-value="94000">€ 94000</li>
+                						<li data-value="94500">€ 94500</li>
+                						<li data-value="95000">€ 95000</li>
+                						<li data-value="95500">€ 95500</li>
+                						<li data-value="96000">€ 96000</li>
+                						<li data-value="96500">€ 96500</li>
+                						<li data-value="97000">€ 97000</li>
+                						<li data-value="97500">€ 97500</li>
+                						<li data-value="98000">€ 98000</li>
+                						<li data-value="98500">€ 98500</li>
+                						<li data-value="99000">€ 99000</li>
+                						<li data-value="99500">€ 99500</li>
+                					</ul>
+                				</div>
+                				<div class="relative flex-1 custom-select">
+                					<button type="button" class="text-left select-btn select">To</button>
+                					<!-- when user select value from dropdown data will store in input value -->
+                					<input id="price-to" type="text" value="" name="price" class="select-input" hidden>
+                					<ul class="select-dropdown text-sm [&>li]:py-3 [&>li]:px-4 [&>li]:cursor-pointer [&>li:hover]:bg-blue-500/10" data-dropdown="price_to">
+                						<li data-value="500">€ 500</li>
+                						<li data-value="1000">€ 1000</li>
+                						<li data-value="1500">€ 1500</li>
+                						<li data-value="2000">€ 2000</li>
+                						<li data-value="2500">€ 2500</li>
+                						<li data-value="3000">€ 3000</li>
+                						<li data-value="3500">€ 3500</li>
+                						<li data-value="4000">€ 4000</li>
+                						<li data-value="4500">€ 4500</li>
+                						<li data-value="5000">€ 5000</li>
+                						<li data-value="5500">€ 5500</li>
+                						<li data-value="6000">€ 6000</li>
+                						<li data-value="6500">€ 6500</li>
+                						<li data-value="7000">€ 7000</li>
+                						<li data-value="7500">€ 7500</li>
+                						<li data-value="8000">€ 8000</li>
+                						<li data-value="8500">€ 8500</li>
+                						<li data-value="9000">€ 9000</li>
+                						<li data-value="9500">€ 9500</li>
+                						<li data-value="10000">€ 10000</li>
+                						<li data-value="10500">€ 10500</li>
+                						<li data-value="11000">€ 11000</li>
+                						<li data-value="11500">€ 11500</li>
+                						<li data-value="12000">€ 12000</li>
+                						<li data-value="12500">€ 12500</li>
+                						<li data-value="13000">€ 13000</li>
+                						<li data-value="13500">€ 13500</li>
+                						<li data-value="14000">€ 14000</li>
+                						<li data-value="14500">€ 14500</li>
+                						<li data-value="15000">€ 15000</li>
+                						<li data-value="15500">€ 15500</li>
+                						<li data-value="16000">€ 16000</li>
+                						<li data-value="16500">€ 16500</li>
+                						<li data-value="17000">€ 17000</li>
+                						<li data-value="17500">€ 17500</li>
+                						<li data-value="18000">€ 18000</li>
+                						<li data-value="18500">€ 18500</li>
+                						<li data-value="19000">€ 19000</li>
+                						<li data-value="19500">€ 19500</li>
+                						<li data-value="20000">€ 20000</li>
+                						<li data-value="20500">€ 20500</li>
+                						<li data-value="21000">€ 21000</li>
+                						<li data-value="21500">€ 21500</li>
+                						<li data-value="22000">€ 22000</li>
+                						<li data-value="22500">€ 22500</li>
+                						<li data-value="23000">€ 23000</li>
+                						<li data-value="23500">€ 23500</li>
+                						<li data-value="24000">€ 24000</li>
+                						<li data-value="24500">€ 24500</li>
+                						<li data-value="25000">€ 25000</li>
+                						<li data-value="25500">€ 25500</li>
+                						<li data-value="26000">€ 26000</li>
+                						<li data-value="26500">€ 26500</li>
+                						<li data-value="27000">€ 27000</li>
+                						<li data-value="27500">€ 27500</li>
+                						<li data-value="28000">€ 28000</li>
+                						<li data-value="28500">€ 28500</li>
+                						<li data-value="29000">€ 29000</li>
+                						<li data-value="29500">€ 29500</li>
+                						<li data-value="30000">€ 30000</li>
+                						<li data-value="30500">€ 30500</li>
+                						<li data-value="31000">€ 31000</li>
+                						<li data-value="31500">€ 31500</li>
+                						<li data-value="32000">€ 32000</li>
+                						<li data-value="32500">€ 32500</li>
+                						<li data-value="33000">€ 33000</li>
+                						<li data-value="33500">€ 33500</li>
+                						<li data-value="34000">€ 34000</li>
+                						<li data-value="34500">€ 34500</li>
+                						<li data-value="35000">€ 35000</li>
+                						<li data-value="35500">€ 35500</li>
+                						<li data-value="36000">€ 36000</li>
+                						<li data-value="36500">€ 36500</li>
+                						<li data-value="37000">€ 37000</li>
+                						<li data-value="37500">€ 37500</li>
+                						<li data-value="38000">€ 38000</li>
+                						<li data-value="38500">€ 38500</li>
+                						<li data-value="39000">€ 39000</li>
+                						<li data-value="39500">€ 39500</li>
+                						<li data-value="40000">€ 40000</li>
+                						<li data-value="40500">€ 40500</li>
+                						<li data-value="41000">€ 41000</li>
+                						<li data-value="41500">€ 41500</li>
+                						<li data-value="42000">€ 42000</li>
+                						<li data-value="42500">€ 42500</li>
+                						<li data-value="43000">€ 43000</li>
+                						<li data-value="43500">€ 43500</li>
+                						<li data-value="44000">€ 44000</li>
+                						<li data-value="44500">€ 44500</li>
+                						<li data-value="45000">€ 45000</li>
+                						<li data-value="45500">€ 45500</li>
+                						<li data-value="46000">€ 46000</li>
+                						<li data-value="46500">€ 46500</li>
+                						<li data-value="47000">€ 47000</li>
+                						<li data-value="47500">€ 47500</li>
+                						<li data-value="48000">€ 48000</li>
+                						<li data-value="48500">€ 48500</li>
+                						<li data-value="49000">€ 49000</li>
+                						<li data-value="49500">€ 49500</li>
+                						<li data-value="50000">€ 50000</li>
+                						<li data-value="50500">€ 50500</li>
+                						<li data-value="51000">€ 51000</li>
+                						<li data-value="51500">€ 51500</li>
+                						<li data-value="52000">€ 52000</li>
+                						<li data-value="52500">€ 52500</li>
+                						<li data-value="53000">€ 53000</li>
+                						<li data-value="53500">€ 53500</li>
+                						<li data-value="54000">€ 54000</li>
+                						<li data-value="54500">€ 54500</li>
+                						<li data-value="55000">€ 55000</li>
+                						<li data-value="55500">€ 55500</li>
+                						<li data-value="56000">€ 56000</li>
+                						<li data-value="56500">€ 56500</li>
+                						<li data-value="57000">€ 57000</li>
+                						<li data-value="57500">€ 57500</li>
+                						<li data-value="58000">€ 58000</li>
+                						<li data-value="58500">€ 58500</li>
+                						<li data-value="59000">€ 59000</li>
+                						<li data-value="59500">€ 59500</li>
+                						<li data-value="60000">€ 60000</li>
+                						<li data-value="60500">€ 60500</li>
+                						<li data-value="61000">€ 61000</li>
+                						<li data-value="61500">€ 61500</li>
+                						<li data-value="62000">€ 62000</li>
+                						<li data-value="62500">€ 62500</li>
+                						<li data-value="63000">€ 63000</li>
+                						<li data-value="63500">€ 63500</li>
+                						<li data-value="64000">€ 64000</li>
+                						<li data-value="64500">€ 64500</li>
+                						<li data-value="65000">€ 65000</li>
+                						<li data-value="65500">€ 65500</li>
+                						<li data-value="66000">€ 66000</li>
+                						<li data-value="66500">€ 66500</li>
+                						<li data-value="67000">€ 67000</li>
+                						<li data-value="67500">€ 67500</li>
+                						<li data-value="68000">€ 68000</li>
+                						<li data-value="68500">€ 68500</li>
+                						<li data-value="69000">€ 69000</li>
+                						<li data-value="69500">€ 69500</li>
+                						<li data-value="70000">€ 70000</li>
+                						<li data-value="70500">€ 70500</li>
+                						<li data-value="71000">€ 71000</li>
+                						<li data-value="71500">€ 71500</li>
+                						<li data-value="72000">€ 72000</li>
+                						<li data-value="72500">€ 72500</li>
+                						<li data-value="73000">€ 73000</li>
+                						<li data-value="73500">€ 73500</li>
+                						<li data-value="74000">€ 74000</li>
+                						<li data-value="74500">€ 74500</li>
+                						<li data-value="75000">€ 75000</li>
+                						<li data-value="75500">€ 75500</li>
+                						<li data-value="76000">€ 76000</li>
+                						<li data-value="76500">€ 76500</li>
+                						<li data-value="77000">€ 77000</li>
+                						<li data-value="77500">€ 77500</li>
+                						<li data-value="78000">€ 78000</li>
+                						<li data-value="78500">€ 78500</li>
+                						<li data-value="79000">€ 79000</li>
+                						<li data-value="79500">€ 79500</li>
+                						<li data-value="80000">€ 80000</li>
+                						<li data-value="80500">€ 80500</li>
+                						<li data-value="81000">€ 81000</li>
+                						<li data-value="81500">€ 81500</li>
+                						<li data-value="82000">€ 82000</li>
+                						<li data-value="82500">€ 82500</li>
+                						<li data-value="83000">€ 83000</li>
+                						<li data-value="83500">€ 83500</li>
+                						<li data-value="84000">€ 84000</li>
+                						<li data-value="84500">€ 84500</li>
+                						<li data-value="85000">€ 85000</li>
+                						<li data-value="85500">€ 85500</li>
+                						<li data-value="86000">€ 86000</li>
+                						<li data-value="86500">€ 86500</li>
+                						<li data-value="87000">€ 87000</li>
+                						<li data-value="87500">€ 87500</li>
+                						<li data-value="88000">€ 88000</li>
+                						<li data-value="88500">€ 88500</li>
+                						<li data-value="89000">€ 89000</li>
+                						<li data-value="89500">€ 89500</li>
+                						<li data-value="90000">€ 90000</li>
+                						<li data-value="90500">€ 90500</li>
+                						<li data-value="91000">€ 91000</li>
+                						<li data-value="91500">€ 91500</li>
+                						<li data-value="92000">€ 92000</li>
+                						<li data-value="92500">€ 92500</li>
+                						<li data-value="93000">€ 93000</li>
+                						<li data-value="93500">€ 93500</li>
+                						<li data-value="94000">€ 94000</li>
+                						<li data-value="94500">€ 94500</li>
+                						<li data-value="95000">€ 95000</li>
+                						<li data-value="95500">€ 95500</li>
+                						<li data-value="96000">€ 96000</li>
+                						<li data-value="96500">€ 96500</li>
+                						<li data-value="97000">€ 97000</li>
+                						<li data-value="97500">€ 97500</li>
+                						<li data-value="98000">€ 98000</li>
+                						<li data-value="98500">€ 98500</li>
+                						<li data-value="99000">€ 99000</li>
+                						<li data-value="99500">€ 99500</li>
+                					</ul>
+                				</div>
+                			</div>
+                		</div>
+                		<!-- country -->
+                		<div>
+                			<label for="country" class="block mb-1 text-sm font-medium leading-6">Country</label>
+                			<div class="relative custom-select">
+                				<!-- select button -->
+                				<button type="button" class="text-left select-btn select">Choose</button>
+                				<!-- when user select value from dropdown data will store in input value -->
+                				<input id="country" type="text" name="model" value="" class="select-input" hidden>
+                				<!-- dropdown list -->
+                				<ul class="select-dropdown text-sm [&>li]:py-3 [&>li]:px-4 [&>li]:cursor-pointer [&>li:hover]:bg-blue-500/10" data-dropdown="country">
+                					<li data-value="1">Afghanistan</li>
+                					<li data-value="2">Albania</li>
+                					<li data-value="3">Algeria</li>
+                					<li data-value="4">Andorra</li>
+                					<li data-value="5">Angola</li>
+                					<li data-value="6">Antigua and Barbuda</li>
+                					<li data-value="7">Argentina</li>
+                					<li data-value="8">Armenia</li>
+                					<li data-value="9">Australia</li>
+                					<li data-value="10">Austria</li>
+                					<li data-value="11">Azerbaijan</li>
+                					<li data-value="12">Bahamas</li>
+                					<li data-value="13">Bahrain</li>
+                					<li data-value="14">Bangladesh</li>
+                					<li data-value="15">Barbados</li>
+                					<li data-value="16">Belarus</li>
+                					<li data-value="17">Belgium</li>
+                					<li data-value="18">Belize</li>
+                					<li data-value="19">Benin</li>
+                					<li data-value="20">Bhutan</li>
+                					<li data-value="21">Bolivia</li>
+                					<li data-value="22">Bosnia and Herzegovina</li>
+                					<li data-value="23">Botswana</li>
+                					<li data-value="24">Brazil</li>
+                					<li data-value="25">Brunei</li>
+                					<li data-value="26">Bulgaria</li>
+                					<li data-value="27">Burkina Faso</li>
+                					<li data-value="28">Burundi</li>
+                					<li data-value="29">Cabo Verde</li>
+                					<li data-value="30">Cambodia</li>
+                					<li data-value="31">Cameroon</li>
+                					<li data-value="32">Canada</li>
+                					<li data-value="33">Central African Republic</li>
+                					<li data-value="34">Chad</li>
+                					<li data-value="35">Chile</li>
+                					<li data-value="36">China</li>
+                					<li data-value="37">Colombia</li>
+                					<li data-value="38">Comoros</li>
+                					<li data-value="39">Congo (Brazzaville)</li>
+                					<li data-value="40">Congo (Kinshasa)</li>
+                					<li data-value="41">Costa Rica</li>
+                					<li data-value="42">Croatia</li>
+                					<li data-value="43">Cuba</li>
+                					<li data-value="44">Cyprus</li>
+                					<li data-value="45">Czech Republic</li>
+                					<li data-value="46">Côte dIvoire</li>
+                					<li data-value="47">Denmark</li>
+                					<li data-value="48">Djibouti</li>
+                					<li data-value="49">Dominica</li>
+                					<li data-value="50">Dominican Republic</li>
+                					<li data-value="51">Ecuador</li>
+                					<li data-value="52">Egypt</li>
+                					<li data-value="53">El Salvador</li>
+                					<li data-value="54">Equatorial Guinea</li>
+                					<li data-value="55">Eritrea</li>
+                					<li data-value="56">Estonia</li>
+                					<li data-value="57">Eswatini (formerly Swaziland)</li>
+                					<li data-value="58">Ethiopia</li>
+                					<li data-value="59">Fiji</li>
+                					<li data-value="60">Finland</li>
+                					<li data-value="61">France</li>
+                					<li data-value="62">Gabon</li>
+                					<li data-value="63">Gambia</li>
+                					<li data-value="64">Georgia</li>
+                					<li data-value="65">Germany</li>
+                					<li data-value="66">Ghana</li>
+                					<li data-value="67">Greece</li>
+                					<li data-value="68">Grenada</li>
+                					<li data-value="69">Guatemala</li>
+                					<li data-value="70">Guinea</li>
+                					<li data-value="71">Guinea-Bissau</li>
+                					<li data-value="72">Guyana</li>
+                					<li data-value="73">Haiti</li>
+                					<li data-value="74">Holy See (Vatican City)</li>
+                					<li data-value="75">Honduras</li>
+                					<li data-value="76">Hungary</li>
+                					<li data-value="77">Iceland</li>
+                					<li data-value="78">India</li>
+                					<li data-value="79">Indonesia</li>
+                					<li data-value="80">Iran</li>
+                					<li data-value="81">Iraq</li>
+                					<li data-value="82">Ireland</li>
+                					<li data-value="83">Israel</li>
+                					<li data-value="84">Italy</li>
+                					<li data-value="85">Jamaica</li>
+                					<li data-value="86">Japan</li>
+                					<li data-value="87">Jordan</li>
+                					<li data-value="88">Kazakhstan</li>
+                					<li data-value="89">Kenya</li>
+                					<li data-value="90">Kiribati</li>
+                					<li data-value="91">Kuwait</li>
+                					<li data-value="92">Kyrgyzstan</li>
+                					<li data-value="93">Laos</li>
+                					<li data-value="94">Latvia</li>
+                					<li data-value="95">Lebanon</li>
+                					<li data-value="96">Lesotho</li>
+                					<li data-value="97">Liberia</li>
+                					<li data-value="98">Libya</li>
+                					<li data-value="99">Liechtenstein</li>
+                					<li data-value="100">Lithuania</li>
+                					<li data-value="101">Luxembourg</li>
+                					<li data-value="102">Madagascar</li>
+                					<li data-value="103">Malawi</li>
+                					<li data-value="104">Malaysia</li>
+                					<li data-value="105">Maldives</li>
+                					<li data-value="106">Mali</li>
+                					<li data-value="107">Malta</li>
+                					<li data-value="108">Marshall Islands</li>
+                					<li data-value="109">Mauritania</li>
+                					<li data-value="110">Mauritius</li>
+                					<li data-value="111">Mexico</li>
+                					<li data-value="112">Micronesia</li>
+                					<li data-value="113">Moldova</li>
+                					<li data-value="114">Monaco</li>
+                					<li data-value="115">Mongolia</li>
+                					<li data-value="116">Montenegro</li>
+                					<li data-value="117">Morocco</li>
+                					<li data-value="118">Mozambique</li>
+                					<li data-value="119">Myanmar (Burma)</li>
+                					<li data-value="120">Namibia</li>
+                					<li data-value="121">Nauru</li>
+                					<li data-value="122">Nepal</li>
+                					<li data-value="123">Netherlands</li>
+                					<li data-value="124">New Zealand</li>
+                					<li data-value="125">Nicaragua</li>
+                					<li data-value="126">Niger</li>
+                					<li data-value="127">Nigeria</li>
+                					<li data-value="128">North Macedonia (formerly Macedonia)</li>
+                					<li data-value="129">Norway</li>
+                					<li data-value="130">Oman</li>
+                					<li data-value="131">Pakistan</li>
+                					<li data-value="132">Palau</li>
+                					<li data-value="133">Palestine State</li>
+                					<li data-value="134">Panama</li>
+                					<li data-value="135">Papua New Guinea</li>
+                					<li data-value="136">Paraguay</li>
+                					<li data-value="137">Peru</li>
+                					<li data-value="138">Philippines</li>
+                					<li data-value="139">Poland</li>
+                					<li data-value="140">Portugal</li>
+                					<li data-value="141">Qatar</li>
+                					<li data-value="142">Romania</li>
+                					<li data-value="143">Russia</li>
+                					<li data-value="144">Czech of Republic</li>
+                					<li data-value="145">Saint Kitts and Nevis</li>
+                					<li data-value="146">Saint Lucia</li>
+                					<li data-value="147">Saint Vincent and the Grenadines</li>
+                					<li data-value="148">Samoa</li>
+                					<li data-value="149">San Marino</li>
+                					<li data-value="150">Sao Tome and Principe</li>
+                					<li data-value="151">Saudi Arabia</li>
+                					<li data-value="152">Senegal</li>
+                					<li data-value="153">Serbia</li>
+                					<li data-value="154">Seychelles</li>
+                					<li data-value="155">Sierra Leone</li>
+                					<li data-value="156">Singapore</li>
+                					<li data-value="157">Slovakia</li>
+                					<li data-value="158">Slovenia</li>
+                					<li data-value="159">Solomon Islands</li>
+                					<li data-value="160">Somalia</li>
+                					<li data-value="161">South Africa</li>
+                					<li data-value="162">South Korea</li>
+                					<li data-value="163">South Sudan</li>
+                					<li data-value="164">Spain</li>
+                					<li data-value="165">Sri Lanka</li>
+                					<li data-value="166">Sudan</li>
+                					<li data-value="167">Suriname</li>
+                					<li data-value="168">Sweden</li>
+                					<li data-value="169">Switzerland</li>
+                					<li data-value="170">Syria</li>
+                					<li data-value="171">Tajikistan</li>
+                					<li data-value="172">Tanzania</li>
+                					<li data-value="173">Thailand</li>
+                					<li data-value="174">Timor-Leste</li>
+                					<li data-value="175">Togo</li>
+                					<li data-value="176">Tonga</li>
+                					<li data-value="177">Trinidad and Tobago</li>
+                					<li data-value="178">Tunisia</li>
+                					<li data-value="179">Turkey</li>
+                					<li data-value="180">Turkmenistan</li>
+                					<li data-value="181">Tuvalu</li>
+                					<li data-value="182">Uganda</li>
+                					<li data-value="183">Ukraine</li>
+                					<li data-value="184">United Arab Emirates</li>
+                					<li data-value="185">United Kingdom</li>
+                					<li data-value="186">United States of America</li>
+                					<li data-value="187">Uruguay</li>
+                					<li data-value="188">Uzbekistan</li>
+                					<li data-value="189">Vanuatu</li>
+                					<li data-value="190">Venezuela</li>
+                					<li data-value="191">Vietnam</li>
+                					<li data-value="192">Yemen</li>
+                					<li data-value="193">Zambia</li>
+                					<li data-value="194">Zimbabwe</li>
+                				</ul>
+                			</div>
+                		</div>
+                		<!-- city -->
+                		<div>
+                			<label for="zip-code" class="block mb-1 text-sm font-medium leading-6">City / Zip code</label>
+                			<div class="relative">
+                				<input type="text" name="city" id="zip-code" value="" class="input" placeholder="Z.B. Wien oder 1010" onkeyup="selectCity(event,this,'filter_input')">
+                				<!-- dropdown list -->
+                				<ul class="select-dropdown text-sm [&>li]:py-3 [&>li]:px-4 [&>li]:cursor-pointer [&>li:hover]:bg-blue-500/10" data-input="filter_input">
+                					<li>5081 Anif</li>
+                					<li>5090 Lofer</li>
+                					<li>5091 Unken</li>
+                					<li>5082 Grödig</li>
+                					<li>5083 Grödig</li>
+                					<li>5114 Göming</li>
+                					<li>5164 Seeham</li>
+                					<li>5211 Lengau</li>
+                					<li>5212 Lengau</li>
+                					<li>5225 Jeging</li>
+                					<li>5252 Aspach</li>
+                					<li>5111 Bürmoos</li>
+                					<li>5163 Mattsee</li>
+                					<li>5273 Roßbach</li>
+                					<li>5020 Salzburg</li>
+                					<li>5023 Salzburg</li>
+                					<li>5026 Salzburg</li>
+                					<li>5101 Bergheim</li>
+                					<li>5131 Franking</li>
+                					<li>5141 Moosdorf</li>
+                				</ul>
+                			</div>
+                		</div>
+                		<!-- radius -->
+                		<div>
+                			<label for="radius" class="block mb-1 text-sm font-medium leading-6">Radius</label>
+                			<div class="relative custom-select">
+                				<!-- select button -->
+                				<button type="button" class="text-left select-btn select">Choose</button>
+                				<!-- when user select value from dropdown data will store in input value -->
+                				<input id="radius" type="text" name="radius" value="" class="select-input" hidden>
+                				<!-- dropdown list -->
+                				<ul class="select-dropdown text-sm [&>li]:py-3 [&>li]:px-4 [&>li]:cursor-pointer [&>li:hover]:bg-blue-500/10" data-dropdown="brand">
+                					<li>10 km</li>
+                					<li>20 km</li>
+                					<li>50 km</li>
+                					<li>100 km</li>
+                					<li>150 km</li>
+                					<li>200 km</li>
+                					<li>250 km</li>
+                					<li>300 km</li>
+                					<li>350 km</li>
+                					<li>400 km</li>
+                				</ul>
+                			</div>
+                		</div>
+                		<!-- mileage -->
+                		<div>
+                			<label for="mileage" class="block mb-1 text-sm font-medium leading-6">Mileage</label>
+                			<div class="relative custom-select">
+                				<!-- select button -->
+                				<button type="button" class="text-left select-btn select">Choose</button>
+                				<!-- when user select value from dropdown data will store in input value -->
+                				<input id="mileage" type="text" name="mileage" value="" class="select-input" hidden>
+                				<!-- dropdown list -->
+                				<ul class="select-dropdown text-sm [&>li]:py-3 [&>li]:px-4 [&>li]:cursor-pointer [&>li:hover]:bg-blue-500/10" data-dropdown="mileage">
+                					<li data-value="500">500</li>
+                					<li data-value="1000">1000</li>
+                					<li data-value="1500">1500</li>
+                					<li data-value="2000">2000</li>
+                					<li data-value="2500">2500</li>
+                					<li data-value="3000">3000</li>
+                					<li data-value="3500">3500</li>
+                					<li data-value="4000">4000</li>
+                					<li data-value="4500">4500</li>
+                					<li data-value="5000">5000</li>
+                				</ul>
+                			</div>
+                		</div>
+                		<!-- performance -->
+                		<div class="flex gap-2">
+                			<!-- performance select -->
+                			<div>
+                				<label for="performance" class="block mb-1 text-sm font-semibold">Performance</label>
+                				<div class="relative custom-select">
+                					<!-- select button -->
+                					<button type="button" class="text-left select-btn select">Choose</button>
+                					<!-- when user select value from dropdown data will store in input value -->
+                					<input id="performance" type="text" name="performance" value="1" class="select-input" hidden>
+                					<!-- dropdown list -->
+                					<ul class="select-dropdown text-sm [&>li]:py-3 [&>li]:px-4 [&>li]:cursor-pointer [&>li:hover]:bg-blue-500/10" data-dropdown="model">
+                						<li data-value="1">PS</li>
+                						<li data-value="2">KW</li>
+                					</ul>
+                				</div>
+                			</div>
+                			<!-- performance from to -->
+                			<div class="flex gap-2">
+                				<div class="flex-1">
+                					<label for="performance-from" class="block mb-1 text-sm font-semibold">From</label>
+                					<input type="text" placeholder="From" class="input" id="performance-from">
+                				</div>
+                				<div class="flex-1">
+                					<label for="performance-to" class="block mb-1 text-sm font-semibold">To</label>
+                					<input type="text" placeholder="To" class="input" id="performance-to">
+                				</div>
+                			</div>
+                		</div>
+                		<!-- transmission -->
+                		<div>
+                			<label for="transmission" class="block mb-1 text-sm font-medium leading-6">Transmission</label>
+                			<div class="relative custom-select">
+                				<!-- select button -->
+                				<button type="button" class="text-left select-btn select">Choose</button>
+                				<!-- when user select value from dropdown data will store in input value -->
+                				<input id="transmission" type="text" name="transmission" value="" class="select-input" hidden>
+                				<!-- dropdown list -->
+                				<ul class="select-dropdown text-sm [&>li]:py-3 [&>li]:px-4 [&>li]:cursor-pointer [&>li:hover]:bg-blue-500/10 [&>li]:flex [&>li]:items-center [&>li]:gap-2">
+                					<li class="single_check">
+                						<input type="checkbox" id="transmisson_1" class="checkbox">
+                						<label for="transmisson_1">Automatic</label>
+                					</li>
+                					<li class="single_check">
+                						<input type="checkbox" id="transmisson_2" class="checkbox">
+                						<label for="transmisson_2">Manual transmission</label>
+                					</li>
+                					<li class="single_check">
+                						<input type="checkbox" id="transmisson_3" class="checkbox">
+                						<label for="transmisson_3">Semi-automatic</label>
+                					</li>
+                				</ul>
+                			</div>
+                		</div>
+                		<!-- doors -->
+                		<div>
+                			<label for="doors" class="block mb-1 text-sm font-medium leading-6">Number of doors</label>
+                			<div class="relative custom-select">
+                				<!-- select button -->
+                				<button type="button" class="text-left select-btn select">Choose</button>
+                				<!-- when user select value from dropdown data will store in input value -->
+                				<input id="doors" type="text" name="doors" value="" class="select-input" hidden>
+                				<!-- dropdown list -->
+                				<ul class="select-dropdown text-sm [&>li]:py-3 [&>li]:px-4 [&>li]:cursor-pointer [&>li:hover]:bg-blue-500/10" data-dropdown="doors">
+                					<li>All</li>
+                					<li>2/3</li>
+                					<li>4/5</li>
+                					<li>6/7</li>
+                				</ul>
+                			</div>
+                		</div>
+                		<!-- seating -->
+                		<div>
+                			<label for="seating" class="block mb-1 text-sm font-medium leading-6">Seating</label>
+                			<div class="flex gap-2">
+                				<div class="relative flex-1 custom-select">
+                					<button type="button" class="text-left select-btn select">From</button>
+                					<!-- when user select value from dropdown data will store in input value -->
+                					<input id="seating" type="text" value="" class="select-input" name="price" hidden>
+                					<!-- dropdown list -->
+                					<ul class="select-dropdown text-sm [&>li]:py-3 [&>li]:px-4 [&>li]:cursor-pointer [&>li:hover]:bg-blue-500/10" data-dropdown="seating_to">
+                						<li data-value="1">1</li>
+                						<li data-value="2">2</li>
+                						<li data-value="3">3</li>
+                						<li data-value="4">4</li>
+                						<li data-value="5">5</li>
+                					</ul>
+                				</div>
+                				<div class="relative flex-1 custom-select">
+                					<button type="button" class="text-left select-btn select">To</button>
+                					<!-- when user select value from dropdown data will store in input value -->
+                					<input id="seating-to" type="text" value="" name="price" class="select-input" hidden>
+                					<!-- dropdown list -->
+                					<ul class="select-dropdown text-sm [&>li]:py-3 [&>li]:px-4 [&>li]:cursor-pointer [&>li:hover]:bg-blue-500/10" data-dropdown="seating_from">
+                						<li data-value="1">1</li>
+                						<li data-value="2">2</li>
+                						<li data-value="3">3</li>
+                						<li data-value="4">4</li>
+                						<li data-value="5">5</li>
+                					</ul>
+                				</div>
+                			</div>
+                		</div>
+                		<!-- sales person -->
+                		<div>
+                			<label for="sales-person" class="block mb-1 text-sm font-medium leading-6">Sales person</label>
+                			<div class="relative custom-select">
+                				<!-- select button -->
+                				<button type="button" class="text-left select-btn select">Choose</button>
+                				<!-- when user select value from dropdown data will store in input value -->
+                				<input id="sales-person" type="text" name="sales-person" value="" class="select-input" hidden>
+                				<!-- dropdown list -->
+                				<ul class="select-dropdown text-sm [&>li]:py-3 [&>li]:px-4 [&>li]:cursor-pointer [&>li:hover]:bg-blue-500/10" data-dropdown="person">
+                					<li>All</li>
+                					<li>Dealer</li>
+                					<li>Private</li>
+                				</ul>
+                			</div>
+                		</div>
+                	</div>
                 </div>
                 <!-- vehicle condition -->
                 <div class="p-5 mb-6 rounded-md sm:mb-10 sm:p-6 bg-neutral-50 shadow-box-shadow">
-                    <h2 class="pb-2 mb-6 text-xl font-semibold leading-8 border-b border-blue-500 w-fit">Vehicle condition</h2>
-                    <!-- owner,accident & guarantee -->
-                    <div class="grid gap-4 sm:grid-cols-card-grid">
-                        <div>
-                            <label for="owner" class="block mb-1 text-sm font-medium leading-6">Vehicle owner (Max)</label>
-                            <div class="relative custom-select">
-                                <!-- select button -->
-                                <button type="button" class="text-left select-btn select">Choose</button>
-                                <!-- when user select value from dropdown data will store in input value -->
-                                <input id="owner" type="text" name="owner" value="" class="select-input" hidden>
-                                <!-- dropdown list -->
-                                <ul class="select-dropdown text-sm [&>li]:py-3 [&>li]:px-4 [&>li]:cursor-pointer [&>li:hover]:bg-blue-500/10" data-dropdown="owner">
-                                    <li>1</li>
-                                    <li>2</li>
-                                    <li>3</li>
-						        </ul>
-                            </div>
-                        </div>
-                        <div class="flex flex-col justify-center">
-                            <span class="invisible mb-1 text-sm font-semibold opacity-0">hide</span>
-                            <div class="flex items-center gap-3">
-                                <input type="checkbox" id="v1" name="guarantee" class="checkbox">
-                                <label for="v1" class="text-sm cursor-pointer">Accident vehicle</label>
-                            </div>
-                        </div>
-                        <div class="flex flex-col justify-center">
-                            <span class="invisible mb-1 text-sm font-semibold opacity-0">hide</span>
-                            <div class="flex items-center gap-3">
-                                <input type="checkbox" id="v2" name="guarantee" class="checkbox">
-                                <label for="v2" class="text-sm cursor-pointer">Guarantee</label>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- vehicle about list -->
-                    <ul class="grid gap-4 sm:grid-cols-card-grid [&>li>label]:cursor-pointer mt-4 [&>li]:flex [&>li]:items-center [&>li]:gap-3 text-sm">
-                        <li class="single_check">
-                            <input type="checkbox" id="v1_1" class="checkbox">
-                            <label for="v1_1">New</label>
-                        </li>
-                        <li class="single_check">
-                            <input type="checkbox" id="v1_2" class="checkbox">
-                            <label for="v1_2">Needed</label>
-                        </li>
-                        <li class="single_check">
-                            <input type="checkbox" id="v2_1" class="checkbox">
-                            <label for="v2_1">Annual car</label>
-                        </li>
-                        <li class="single_check">
-                            <input type="checkbox" id="v2_2" class="checkbox">
-                            <label for="v2_2">Antique car</label>
-                        </li>
-                        <li class="single_check">
-                            <input type="checkbox" id="v2_3" class="checkbox">
-                            <label for="v2_3">Demonstration car</label>
-                        </li>
-                        <li class="single_check">
-                            <input type="checkbox" id="v3" class="checkbox">
-                            <label for="v3">Daily admission</label>
-                        </li>
-                    </ul>
+                	<h2 class="pb-2 mb-6 text-xl font-semibold leading-8 border-b border-blue-500 w-fit">Vehicle condition</h2>
+                	<!-- owner,accident & guarantee -->
+                	<div class="grid gap-4 sm:grid-cols-card-grid">
+                		<div>
+                			<label for="owner" class="block mb-1 text-sm font-medium leading-6">Vehicle owner (Max)</label>
+                			<div class="relative custom-select">
+                				<!-- select button -->
+                				<button type="button" class="text-left select-btn select">Choose</button>
+                				<!-- when user select value from dropdown data will store in input value -->
+                				<input id="owner" type="text" name="owner" value="" class="select-input" hidden>
+                				<!-- dropdown list -->
+                				<ul class="select-dropdown text-sm [&>li]:py-3 [&>li]:px-4 [&>li]:cursor-pointer [&>li:hover]:bg-blue-500/10" data-dropdown="owner">
+                					<li>1</li>
+                					<li>2</li>
+                					<li>3</li>
+                				</ul>
+                			</div>
+                		</div>
+                		<div class="flex flex-col justify-center">
+                			<span class="invisible mb-1 text-sm font-semibold opacity-0">hide</span>
+                			<div class="flex items-center gap-3">
+                				<input type="checkbox" id="accident" name="guarantee" class="checkbox">
+                				<label for="accident" class="text-sm cursor-pointer">Accident vehicle</label>
+                			</div>
+                		</div>
+                		<div class="flex flex-col justify-center">
+                			<span class="invisible mb-1 text-sm font-semibold opacity-0">hide</span>
+                			<div class="flex items-center gap-3">
+                				<input type="checkbox" id="v2" name="guarantee" class="checkbox">
+                				<label for="v2" class="text-sm cursor-pointer">Guarantee</label>
+                			</div>
+                		</div>
+                	</div>
+                	<!-- vehicle about list -->
+                	<ul class="grid gap-4 sm:grid-cols-card-grid [&>li>label]:cursor-pointer mt-4 [&>li]:flex [&>li]:items-center [&>li]:gap-3 text-sm">
+                		<li class="single_check">
+                			<input type="checkbox" id="v1_1" class="checkbox">
+                			<label for="v1_1">New</label>
+                		</li>
+                		<li class="single_check">
+                			<input type="checkbox" id="v1_2" class="checkbox">
+                			<label for="v1_2">Needed</label>
+                		</li>
+                		<li class="single_check">
+                			<input type="checkbox" id="v2_1" class="checkbox">
+                			<label for="v2_1">Annual car</label>
+                		</li>
+                		<li class="single_check">
+                			<input type="checkbox" id="v2_2" class="checkbox">
+                			<label for="v2_2">Antique car</label>
+                		</li>
+                		<li class="single_check">
+                			<input type="checkbox" id="v2_3" class="checkbox">
+                			<label for="v2_3">Demonstration car</label>
+                		</li>
+                		<li class="single_check">
+                			<input type="checkbox" id="v3" class="checkbox">
+                			<label for="v3">Daily admission</label>
+                		</li>
+                	</ul>
                 </div>
                 <!-- exterior colors -->
                 <div class="p-5 mb-6 rounded-md sm:mb-10 sm:p-6 bg-neutral-50 shadow-box-shadow">
-                    <h2 class="pb-2 mb-6 text-xl font-semibold leading-8 border-b border-blue-500 w-fit">Exterior color</h2>
-                    <ul class="grid gap-4 grid-cols-2 sm:grid-cols-color-grid [&>li>label]:cursor-pointer [&>li]:flex [&>li]:items-center [&>li]:gap-3 text-sm">
-						<li class="single_check beige">
-						    <input type="checkbox" id="first_1" name="first_colours" class="checkbox bg-beige border-beige checked:bg-beige checked:border-beige">
-						    <label for="first_1">Beige</label>
-					    </li>
-						<li class="single_check blue">
-						    <input type="checkbox" id="first_2" name="first_colours" class="checkbox bg-blue-custom border-blue-custom checked:bg-blue-custom checked:border-blue-custom">
-						    <label for="first_2">Blue</label>
-					    </li>
-						<li class="single_check brown">
-						    <input type="checkbox" id="first_3" name="first_colours" class="checkbox bg-brown border-brown checked:bg-brown checked:border-brown">
-						    <label for="first_3">Brown</label>
-					</li>
-									<li class="single_check bronze">
-						<input type="checkbox" id="first_4" name="first_colours" class="checkbox bg-bronze border-bronze checked:bg-bronze checked:border-bronze">
-						<label for="first_4">Bronze</label>
-					</li>
-									<li class="single_check yellow">
-						<input type="checkbox" id="first_5" name="first_colours" class="checkbox bg-yellow border-yellow checked:bg-yellow checked:border-yellow">
-						<label for="first_5">Yellow</label>
-					</li>
-									<li class="single_check gold">
-						<input type="checkbox" id="first_6" name="first_colours" class="checkbox bg-gold border-gold checked:bg-gold checked:border-gold">
-						<label for="first_6">Gold</label>
-					</li>
-									<li class="single_check gray">
-						<input type="checkbox" id="first_7" name="first_colours" class="checkbox bg-gray-custom border-gray-custom checked:bg-gray-custom checked:border-gray-custom">
-						<label for="first_7">Gray</label>
-					</li>
-									<li class="single_check green">
-						<input type="checkbox" id="first_8" name="first_colours" class="checkbox bg-green-custom border-green-custom checked:bg-green-custom checked:border-green-custom">
-						<label for="first_8">Green</label>
-					</li>
-									<li class="single_check orange">
-						<input type="checkbox" id="first_9" name="first_colours" class="checkbox bg-orange border-orange checked:bg-orange checked:border-orange">
-						<label for="first_9">Orange</label>
-					</li>
-									<li class="single_check red">
-						<input type="checkbox" id="first_10" name="first_colours" class="border-red-custom checked:bg-red-custom checked:border-red-custom checkbox bg-red-custom">
-						<label for="first_10">Red</label>
-					</li>
-									<li class="single_check black">
-						<input type="checkbox" id="first_11" name="first_colours" class="bg-black border-black checkbox checked:bg-black checked:border-black">
-						<label for="first_11">Black</label>
-					</li>
-									<li class="single_check silver">
-						<input type="checkbox" id="first_12" name="first_colours" class="border-silver checked:bg-silver checked:border-silver checkbox bg-silver">
-						<label for="first_12">Silver</label>
-					</li>
-									<li class="single_check purple">
-						<input type="checkbox" id="first_13" name="first_colours" class="checkbox bg-purple border-purple checked:bg-purple checked:border-purple">
-						<label for="first_13">Purple</label>
-					</li>
-									<li class="single_check white">
-						<input type="checkbox" id="first_14" name="first_colours" class="bg-white checkbox checked:bg-black checked:border-black">
-						<label for="first_14">White</label>
-					    </li>
-				    </ul>
+                	<h2 class="pb-2 mb-6 text-xl font-semibold leading-8 border-b border-blue-500 w-fit">Exterior color</h2>
+                	<ul class="grid gap-4 grid-cols-2 sm:grid-cols-color-grid [&>li>label]:cursor-pointer [&>li]:flex [&>li]:items-center [&>li]:gap-3 text-sm">
+                		<li class="single_check beige">
+                			<input type="checkbox" id="first_1" name="colors" class="checkbox bg-beige border-beige checked:bg-beige checked:border-beige">
+                			<label for="first_1">Beige</label>
+                		</li>
+                		<li class="single_check blue">
+                			<input type="checkbox" id="first_2" name="colors" class="checkbox bg-blue-custom border-blue-custom checked:bg-blue-custom checked:border-blue-custom">
+                			<label for="first_2">Blue</label>
+                		</li>
+                		<li class="single_check brown">
+                			<input type="checkbox" id="first_3" name="colors" class="checkbox bg-brown border-brown checked:bg-brown checked:border-brown">
+                			<label for="first_3">Brown</label>
+                		</li>
+                		<li class="single_check bronze">
+                			<input type="checkbox" id="first_4" name="colors" class="checkbox bg-bronze border-bronze checked:bg-bronze checked:border-bronze">
+                			<label for="first_4">Bronze</label>
+                		</li>
+                		<li class="single_check yellow">
+                			<input type="checkbox" id="first_5" name="colors" class="checkbox bg-yellow border-yellow checked:bg-yellow checked:border-yellow">
+                			<label for="first_5">Yellow</label>
+                		</li>
+                		<li class="single_check gold">
+                			<input type="checkbox" id="first_6" name="colors" class="checkbox bg-gold border-gold checked:bg-gold checked:border-gold">
+                			<label for="first_6">Gold</label>
+                		</li>
+                		<li class="single_check gray">
+                			<input type="checkbox" id="first_7" name="colors" class="checkbox bg-gray-custom border-gray-custom checked:bg-gray-custom checked:border-gray-custom">
+                			<label for="first_7">Gray</label>
+                		</li>
+                		<li class="single_check green">
+                			<input type="checkbox" id="first_8" name="colors" class="checkbox bg-green-custom border-green-custom checked:bg-green-custom checked:border-green-custom">
+                			<label for="first_8">Green</label>
+                		</li>
+                		<li class="single_check orange">
+                			<input type="checkbox" id="first_9" name="colors" class="checkbox bg-orange border-orange checked:bg-orange checked:border-orange">
+                			<label for="first_9">Orange</label>
+                		</li>
+                		<li class="single_check red">
+                			<input type="checkbox" id="first_10" name="colors" class="border-red-custom checked:bg-red-custom checked:border-red-custom checkbox bg-red-custom">
+                			<label for="first_10">Red</label>
+                		</li>
+                		<li class="single_check black">
+                			<input type="checkbox" id="first_11" name="colors" class="bg-black border-black checkbox checked:bg-black checked:border-black">
+                			<label for="first_11">Black</label>
+                		</li>
+                		<li class="single_check silver">
+                			<input type="checkbox" id="first_12" name="colors" class="border-silver checked:bg-silver checked:border-silver checkbox bg-silver">
+                			<label for="first_12">Silver</label>
+                		</li>
+                		<li class="single_check purple">
+                			<input type="checkbox" id="first_13" name="colors" class="checkbox bg-purple border-purple checked:bg-purple checked:border-purple">
+                			<label for="first_13">Purple</label>
+                		</li>
+                		<li class="single_check white">
+                			<input type="checkbox" id="first_14" name="colors" class="bg-white checkbox checked:bg-black checked:border-black">
+                			<label for="first_14">White</label>
+                		</li>
+                	</ul>
                 </div>
                 <!-- Interior color -->
                 <div class="p-5 mb-6 rounded-md sm:mb-10 sm:p-6 bg-neutral-50 shadow-box-shadow">
-                    <h2 class="pb-2 mb-6 text-xl font-semibold leading-8 border-b border-blue-500 w-fit">Upholstery color</h2>
-                    <ul class="grid gap-4 grid-cols-2 sm:grid-cols-color-grid [&>li>label]:cursor-pointer [&>li]:flex [&>li]:items-center [&>li]:gap-3 text-sm">
-						<li class="single_check beige">
-						    <input type="checkbox" id="in-1" name="first_colours" class="checkbox bg-beige border-beige checked:bg-beige checked:border-beige">
-						    <label for="in-1">Beige</label>
-					    </li>
-						<li class="single_check blue">
-						    <input type="checkbox" id="in-2" name="first_colours" class="checkbox bg-blue-custom border-blue-custom checked:bg-blue-custom checked:border-blue-custom">
-						    <label for="in-2">Blue</label>
-					    </li>
-						<li class="single_check brown">
-						    <input type="checkbox" id="in-3" name="first_colours" class="checkbox bg-brown border-brown checked:bg-brown checked:border-brown">
-						    <label for="in-3">Brown</label>
-					</li>
-									<li class="single_check bronze">
-						<input type="checkbox" id="in-4" name="first_colours" class="checkbox bg-bronze border-bronze checked:bg-bronze checked:border-bronze">
-						<label for="in-4">Bronze</label>
-					</li>
-									<li class="single_check yellow">
-						<input type="checkbox" id="in-5" name="first_colours" class="checkbox bg-yellow border-yellow checked:bg-yellow checked:border-yellow">
-						<label for="in-5">Yellow</label>
-					</li>
-									<li class="single_check gold">
-						<input type="checkbox" id="in-6" name="first_colours" class="checkbox bg-gold border-gold checked:bg-gold checked:border-gold">
-						<label for="in-6">Gold</label>
-					</li>
-									<li class="single_check gray">
-						<input type="checkbox" id="in-7" name="first_colours" class="checkbox bg-gray-custom border-gray-custom checked:bg-gray-custom checked:border-gray-custom">
-						<label for="in-7">Gray</label>
-					</li>
-									<li class="single_check green">
-						<input type="checkbox" id="in-8" name="first_colours" class="checkbox bg-green-custom border-green-custom checked:bg-green-custom checked:border-green-custom">
-						<label for="in-8">Green</label>
-					</li>
-									<li class="single_check orange">
-						<input type="checkbox" id="in-9" name="first_colours" class="checkbox bg-orange border-orange checked:bg-orange checked:border-orange">
-						<label for="in-9">Orange</label>
-					</li>
-									<li class="single_check red">
-						<input type="checkbox" id="in-10" name="first_colours" class="border-red-custom checked:bg-red-custom checked:border-red-custom checkbox bg-red-custom">
-						<label for="in-10">Red</label>
-					</li>
-									<li class="single_check black">
-						<input type="checkbox" id="in-11" name="first_colours" class="bg-black border-black checkbox checked:bg-black checked:border-black">
-						<label for="in-11">Black</label>
-					</li>
-									<li class="single_check silver">
-						<input type="checkbox" id="in-12" name="first_colours" class="border-silver checked:bg-silver checked:border-silver checkbox bg-silver">
-						<label for="in-12">Silver</label>
-					</li>
-									<li class="single_check purple">
-						<input type="checkbox" id="in-13" name="first_colours" class="checkbox bg-purple border-purple checked:bg-purple checked:border-purple">
-						<label for="in-13">Purple</label>
-					</li>
-									<li class="single_check white">
-						<input type="checkbox" id="in-14" name="first_colours" class="bg-white checkbox checked:bg-black checked:border-black">
-						<label for="in-14">White</label>
-					    </li>
-				    </ul>
-                    <!-- material type -->
-                    <div class="mt-6">
-                        <h4 class="mb-4 text-base font-medium leading-6">Interior decoration</h4>
-                        <ul class="grid gap-4 sm:grid-cols-card-grid [&>li>label]:cursor-pointer mt-4 [&>li]:flex [&>li]:items-center [&>li]:gap-3 text-sm">
-                            <li class="single_check">
-                                    <input type="checkbox" id="design_1" name="design" class="checkbox">
-                                    <label for="design_1">Alcantara</label>
-                                </li>
-                                                    <li class="single_check">
-                                    <input type="checkbox" id="design_2" name="design" class="checkbox">
-                                    <label for="design_2">Material</label>
-                                </li>
-                                                    <li class="single_check">
-                                    <input type="checkbox" id="design_3" name="design" class="checkbox">
-                                    <label for="design_3">Partial leather</label>
-                                </li>
-                                                    <li class="single_check">
-                                    <input type="checkbox" id="design_4" name="design" class="checkbox">
-                                    <label for="design_4">Velor</label>
-                                </li>
-                                                    <li class="single_check">
-                                    <input type="checkbox" id="design_5" name="design" class="checkbox">
-                                    <label for="design_5">Full leather</label>
-                                </li>
-                                                    <li class="single_check">
-                                    <input type="checkbox" id="design_6" name="design" class="checkbox">
-                                    <label for="design_6">Other</label>
-                                </li>
-                        </ul>
-                    </div>
+                	<h2 class="pb-2 mb-6 text-xl font-semibold leading-8 border-b border-blue-500 w-fit">Upholstery color</h2>
+                	<ul class="grid gap-4 grid-cols-2 sm:grid-cols-color-grid [&>li>label]:cursor-pointer [&>li]:flex [&>li]:items-center [&>li]:gap-3 text-sm">
+                		<li class="single_check beige">
+                			<input type="checkbox" id="in-1" name="colors" class="checkbox bg-beige border-beige checked:bg-beige checked:border-beige">
+                			<label for="in-1">Beige</label>
+                		</li>
+                		<li class="single_check blue">
+                			<input type="checkbox" id="in-2" name="colors" class="checkbox bg-blue-custom border-blue-custom checked:bg-blue-custom checked:border-blue-custom">
+                			<label for="in-2">Blue</label>
+                		</li>
+                		<li class="single_check brown">
+                			<input type="checkbox" id="in-3" name="colors" class="checkbox bg-brown border-brown checked:bg-brown checked:border-brown">
+                			<label for="in-3">Brown</label>
+                		</li>
+                		<li class="single_check bronze">
+                			<input type="checkbox" id="in-4" name="colors" class="checkbox bg-bronze border-bronze checked:bg-bronze checked:border-bronze">
+                			<label for="in-4">Bronze</label>
+                		</li>
+                		<li class="single_check yellow">
+                			<input type="checkbox" id="in-5" name="colors" class="checkbox bg-yellow border-yellow checked:bg-yellow checked:border-yellow">
+                			<label for="in-5">Yellow</label>
+                		</li>
+                		<li class="single_check gold">
+                			<input type="checkbox" id="in-6" name="colors" class="checkbox bg-gold border-gold checked:bg-gold checked:border-gold">
+                			<label for="in-6">Gold</label>
+                		</li>
+                		<li class="single_check gray">
+                			<input type="checkbox" id="in-7" name="colors" class="checkbox bg-gray-custom border-gray-custom checked:bg-gray-custom checked:border-gray-custom">
+                			<label for="in-7">Gray</label>
+                		</li>
+                		<li class="single_check green">
+                			<input type="checkbox" id="in-8" name="colors" class="checkbox bg-green-custom border-green-custom checked:bg-green-custom checked:border-green-custom">
+                			<label for="in-8">Green</label>
+                		</li>
+                		<li class="single_check orange">
+                			<input type="checkbox" id="in-9" name="colors" class="checkbox bg-orange border-orange checked:bg-orange checked:border-orange">
+                			<label for="in-9">Orange</label>
+                		</li>
+                		<li class="single_check red">
+                			<input type="checkbox" id="in-10" name="colors" class="border-red-custom checked:bg-red-custom checked:border-red-custom checkbox bg-red-custom">
+                			<label for="in-10">Red</label>
+                		</li>
+                		<li class="single_check black">
+                			<input type="checkbox" id="in-11" name="colors" class="bg-black border-black checkbox checked:bg-black checked:border-black">
+                			<label for="in-11">Black</label>
+                		</li>
+                		<li class="single_check silver">
+                			<input type="checkbox" id="in-12" name="colors" class="border-silver checked:bg-silver checked:border-silver checkbox bg-silver">
+                			<label for="in-12">Silver</label>
+                		</li>
+                		<li class="single_check purple">
+                			<input type="checkbox" id="in-13" name="colors" class="checkbox bg-purple border-purple checked:bg-purple checked:border-purple">
+                			<label for="in-13">Purple</label>
+                		</li>
+                		<li class="single_check white">
+                			<input type="checkbox" id="in-14" name="colors" class="bg-white checkbox checked:bg-black checked:border-black">
+                			<label for="in-14">White</label>
+                		</li>
+                	</ul>
+                	<!-- material type -->
+                	<div class="mt-6">
+                		<h4 class="mb-4 text-base font-medium leading-6">Interior decoration</h4>
+                		<ul class="grid gap-4 sm:grid-cols-card-grid [&>li>label]:cursor-pointer mt-4 [&>li]:flex [&>li]:items-center [&>li]:gap-3 text-sm">
+                			<li class="single_check">
+                				<input type="checkbox" id="design_1" name="design" class="checkbox">
+                				<label for="design_1">Alcantara</label>
+                			</li>
+                			<li class="single_check">
+                				<input type="checkbox" id="design_2" name="design" class="checkbox">
+                				<label for="design_2">Material</label>
+                			</li>
+                			<li class="single_check">
+                				<input type="checkbox" id="design_3" name="design" class="checkbox">
+                				<label for="design_3">Partial leather</label>
+                			</li>
+                			<li class="single_check">
+                				<input type="checkbox" id="design_4" name="design" class="checkbox">
+                				<label for="design_4">Velor</label>
+                			</li>
+                			<li class="single_check">
+                				<input type="checkbox" id="design_5" name="design" class="checkbox">
+                				<label for="design_5">Full leather</label>
+                			</li>
+                			<li class="single_check">
+                				<input type="checkbox" id="design_6" name="design" class="checkbox">
+                				<label for="design_6">Other</label>
+                			</li>
+                		</ul>
+                	</div>
                 </div>
                 <!-- Furnishing -->
                 <div class="p-5 mb-6 rounded-md sm:mb-10 sm:p-6 bg-neutral-50 shadow-box-shadow">
-                    <h2 class="pb-2 mb-6 text-xl font-semibold leading-8 border-b border-blue-500 w-fit">Furnishing</h2>
-                    <ul class="grid gap-4 sm:grid-cols-card-grid [&>li>label]:cursor-pointer [&>li]:flex [&>li]:items-center [&>li]:gap-3 text-sm">
-                        <li class="single_check">
-                            <input type="checkbox" id="fr1" class="checkbox">
-                            <label for="fr1">Section</label>
-                        </li>
-                        <li class="single_check">
-                            <input type="checkbox" id="fr2" class="checkbox">
-                            <label for="fr2">Distance cruise control</label>
-                        </li>
-                        <li class="single_check">
-                            <input type="checkbox" id="fr3" class="checkbox">
-                            <label for="fr3">All-wheel drive</label>
-                        </li>
-                        <li class="single_check">
-                            <input type="checkbox" id="fr4" class="checkbox">
-                            <label for="fr4">Trailer hitch</label>
-                        </li>
-                        <li class="single_check">
-                            <input type="checkbox" id="fr5" class="checkbox">
-                            <label for="fr5">Electric windows</label>
-                        </li>
-                        <li class="single_check">
-                            <input type="checkbox" id="fr6" class="checkbox">
-                            <label for="fr6">Air conditioner</label>
-                        </li>
-                        <li class="single_check">
-                            <input type="checkbox" id="fr7" class="checkbox">
-                            <label for="fr7">Automatic climate control</label>
-                        </li>
-                        <li class="single_check">
-                            <input type="checkbox" id="fr8" class="checkbox">
-                            <label for="fr8">LED highlights</label>
-                        </li>
-                        <li class="single_check">
-                            <input type="checkbox" id="fr9" class="checkbox">
-                            <label for="fr9">Multifunctional steering wheel</label>
-                        </li>
-                        <li class="single_check">
-                            <input type="checkbox" id="fr10" class="checkbox">
-                            <label for="fr10">Navigation system</label>
-                        </li>
-                        <li class="single_check">
-                            <input type="checkbox" id="fr11" class="checkbox">
-                            <label for="fr11">Heated seats</label>
-                        </li>
-                        <li class="single_check">
-                            <input type="checkbox" id="fr12" class="checkbox">
-                            <label for="fr12">Cruise control</label>
-                        </li>
-                        <li class="single_check">
-                            <input type="checkbox" id="fr13" class="checkbox">
-                            <label for="fr13">Xenon headlights</label>
-                        </li>
-                        <li class="single_check">
-                            <input type="checkbox" id="fr14" class="checkbox">
-                            <label for="fr14">Catalyst</label>
-                        </li>
-                        <li class="single_check">
-                            <input type="checkbox" id="fr15" class="checkbox">
-                            <label for="fr15">Isofix</label>
-                        </li>
-                        <li class="single_check">
-                            <input type="checkbox" id="fr16" class="checkbox">
-                            <label for="fr16">Massage seats</label>
-                        </li>
-                        <li class="single_check">
-                            <input type="checkbox" id="fr17" class="checkbox">
-                            <label for="fr17">MP3</label>
-                        </li>
-                        <li class="single_check">
-                            <input type="checkbox" id="fr18" class="checkbox">
-                            <label for="fr18">Fog lights</label>
-                        </li>
-                    </ul>
+                	<h2 class="pb-2 mb-6 text-xl font-semibold leading-8 border-b border-blue-500 w-fit">Furnishing</h2>
+                	<ul class="grid gap-4 sm:grid-cols-card-grid [&>li>label]:cursor-pointer [&>li]:flex [&>li]:items-center [&>li]:gap-3 text-sm">
+                		<li class="single_check">
+                			<input type="checkbox" id="fr1" class="checkbox">
+                			<label for="fr1">Section</label>
+                		</li>
+                		<li class="single_check">
+                			<input type="checkbox" id="fr2" class="checkbox">
+                			<label for="fr2">Distance cruise control</label>
+                		</li>
+                		<li class="single_check">
+                			<input type="checkbox" id="fr3" class="checkbox">
+                			<label for="fr3">All-wheel drive</label>
+                		</li>
+                		<li class="single_check">
+                			<input type="checkbox" id="fr4" class="checkbox">
+                			<label for="fr4">Trailer hitch</label>
+                		</li>
+                		<li class="single_check">
+                			<input type="checkbox" id="fr5" class="checkbox">
+                			<label for="fr5">Electric windows</label>
+                		</li>
+                		<li class="single_check">
+                			<input type="checkbox" id="fr6" class="checkbox">
+                			<label for="fr6">Air conditioner</label>
+                		</li>
+                		<li class="single_check">
+                			<input type="checkbox" id="fr7" class="checkbox">
+                			<label for="fr7">Automatic climate control</label>
+                		</li>
+                		<li class="single_check">
+                			<input type="checkbox" id="fr8" class="checkbox">
+                			<label for="fr8">LED highlights</label>
+                		</li>
+                		<li class="single_check">
+                			<input type="checkbox" id="fr9" class="checkbox">
+                			<label for="fr9">Multifunctional steering wheel</label>
+                		</li>
+                		<li class="single_check">
+                			<input type="checkbox" id="fr10" class="checkbox">
+                			<label for="fr10">Navigation system</label>
+                		</li>
+                		<li class="single_check">
+                			<input type="checkbox" id="fr11" class="checkbox">
+                			<label for="fr11">Heated seats</label>
+                		</li>
+                		<li class="single_check">
+                			<input type="checkbox" id="fr12" class="checkbox">
+                			<label for="fr12">Cruise control</label>
+                		</li>
+                		<li class="single_check">
+                			<input type="checkbox" id="fr13" class="checkbox">
+                			<label for="fr13">Xenon headlights</label>
+                		</li>
+                		<li class="single_check">
+                			<input type="checkbox" id="fr14" class="checkbox">
+                			<label for="fr14">Catalyst</label>
+                		</li>
+                		<li class="single_check">
+                			<input type="checkbox" id="fr15" class="checkbox">
+                			<label for="fr15">Isofix</label>
+                		</li>
+                		<li class="single_check">
+                			<input type="checkbox" id="fr16" class="checkbox">
+                			<label for="fr16">Massage seats</label>
+                		</li>
+                		<li class="single_check">
+                			<input type="checkbox" id="fr17" class="checkbox">
+                			<label for="fr17">MP3</label>
+                		</li>
+                		<li class="single_check">
+                			<input type="checkbox" id="fr18" class="checkbox">
+                			<label for="fr18">Fog lights</label>
+                		</li>
+                	</ul>
                 </div>
                 <!-- Environment -->
                 <div class="p-5 rounded-md sm:p-6 bg-neutral-50 shadow-box-shadow">
-                    <h2 class="pb-2 mb-6 text-xl font-semibold leading-8 border-b border-blue-500 w-fit">Environment</h2>
-                    <div class="grid gap-4 sm:grid-cols-card-grid">
-                        <div>
-                            <label for="emission" class="block mb-1 text-sm font-medium leading-6">Emission class (min)</label>
-                            <div class="relative custom-select">
-                                <!-- select button -->
-                                <button type="button" class="text-left select-btn select">Choose</button>
-                                <!-- when user select value from dropdown data will store in input value -->
-                                <input id="emission" type="text" name="emission" value="" class="select-input" hidden>
-                                <!-- dropdown list -->
-                                <ul class="select-dropdown text-sm [&>li]:py-3 [&>li]:px-4 [&>li]:cursor-pointer [&>li:hover]:bg-blue-500/10" data-dropdown="owner">
-									<li>Euro 1</li>
-									<li>Euro 2</li>
-									<li>Euro 3</li>
-									<li>Euro 4</li>
-									<li>Euro 5</li>
-									<li>Euro 6</li>
-									<li>Euro 6c</li>
-									<li>Euros 6d</li>
-									<li>Euro 6d-TEMP</li>
-						        </ul>
-                            </div>
-                        </div>
-                        <div class="flex flex-col justify-center">
-                            <span class="invisible mb-1 text-sm font-semibold opacity-0">hide</span>
-                            <div class="flex items-center gap-3">
-                                <input type="checkbox" id="v1" name="shoot" class="checkbox">
-                                <label for="shoot" class="text-sm cursor-pointer">Shoot particle filter</label>
-                            </div>
-                        </div>
-                    </div>
+                	<h2 class="pb-2 mb-6 text-xl font-semibold leading-8 border-b border-blue-500 w-fit">Environment</h2>
+                	<div class="grid gap-4 sm:grid-cols-card-grid">
+                		<div>
+                			<label for="emission" class="block mb-1 text-sm font-medium leading-6">Emission class (min)</label>
+                			<div class="relative custom-select">
+                				<!-- select button -->
+                				<button type="button" class="text-left select-btn select">Choose</button>
+                				<!-- when user select value from dropdown data will store in input value -->
+                				<input id="emission" type="text" name="emission" value="" class="select-input" hidden>
+                				<!-- dropdown list -->
+                				<ul class="select-dropdown text-sm [&>li]:py-3 [&>li]:px-4 [&>li]:cursor-pointer [&>li:hover]:bg-blue-500/10" data-dropdown="owner">
+                					<li>Euro 1</li>
+                					<li>Euro 2</li>
+                					<li>Euro 3</li>
+                					<li>Euro 4</li>
+                					<li>Euro 5</li>
+                					<li>Euro 6</li>
+                					<li>Euro 6c</li>
+                					<li>Euros 6d</li>
+                					<li>Euro 6d-TEMP</li>
+                				</ul>
+                			</div>
+                		</div>
+                		<div class="flex flex-col justify-center">
+                			<span class="invisible mb-1 text-sm font-semibold opacity-0">hide</span>
+                			<div class="flex items-center gap-3">
+                				<input type="checkbox" id="shoot" name="shoot" class="checkbox">
+                				<label for="shoot" class="text-sm cursor-pointer">Shoot particle filter</label>
+                			</div>
+                		</div>
+                	</div>
                 </div>
             </div>
             <!-- sticky button -->
