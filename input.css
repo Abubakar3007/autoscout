@@ -34,4 +34,8 @@
     .checkbox {
         @apply w-6 h-6 border appearance-none cursor-pointer flex-shrink-0 rounded-xs border-neutral-400 bg-neutral-50 checked:bg-blue-500 checked:border-blue-500 checked:bg-no-repeat checked:bg-center checked:bg-[url('/assets/images/checked.svg')];
     }
+
+    .popup{
+        @apply fixed inset-0 invisible w-full h-full px-4 transition-opacity duration-300 ease-in-out opacity-0 bg-black/80 z-1000;
+    }
 }

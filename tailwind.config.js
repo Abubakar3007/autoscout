@@ -57,6 +57,9 @@ module.exports = {
         'inherit': 'inherit',
         '200' : '200px'
       },
+      maxHeight:{
+        '90':'90px',
+      },
       minWidth: {
         '250': '250px',
         '537': '537px',
@@ -75,6 +78,11 @@ module.exports = {
         '816':'816px',
         '257':'257px',
         '335':'335px',
+        '106':'106px',
+        '646':'646px',
+        '636':'636px',
+        '448':'448px',
+        '300':'300px',
       },
       lineHeight: {
         '60': '60px',
@@ -104,11 +112,16 @@ module.exports = {
         '92':'92px',
         '222':'222px',
         '42':'42px',
+        '470':'470px',
+        '394':'394px',
+        '100':'100px'
       },
       gridTemplateColumns: {
         'car-grid': 'repeat(auto-fit, minmax(257px, 1fr))',
         'card-grid': 'repeat(auto-fill, minmax(318px, 1fr))',
         'color-grid': 'repeat(auto-fill, minmax(140px, 1fr))',
+        'social-grid': 'repeat(auto-fill, minmax(80px, 1fr))',
+        'box-grid': 'repeat(auto-fill, minmax(226px, 1fr))',
       },
       backgroundImage: {
         'gradient-overlay': 'linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.7))',
@@ -130,6 +143,9 @@ module.exports = {
       },
       borderRadius:{
         'xs':'2px',
+      },
+      zIndex:{
+        '1000':'1000',
       }
     },
     plugins: [],

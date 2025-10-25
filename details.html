@@ -1,0 +1,1526 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/tailwind.min.css">
+    <!-- google font cdn -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <style>
+        .list-btn.active{
+            background-color:#EBF2FF;
+        }
+
+        .list-btn.active img{
+            transform: rotate(-90deg);
+        }
+
+        .list-dropdown.active{
+            max-height:max-content;
+        }
+        
+        .show{
+            visibility: visible;
+            opacity:1;
+        }
+
+        .menu-content.active{
+            left:0;
+        }
+
+        .vehicle-type.active{
+            color:#347DFF;
+            border-color:#347DFF;
+            font-weight:700;
+        }
+
+        .vehicle-type.active svg path{
+            fill:#347DFF;
+        }
+
+        .select-dropdown.show{
+            visibility: visible;
+            opacity:1;
+            max-height:250px;
+        }
+
+        .select-dropdown li.selected{
+            background-color:rgb(52 125 255 / 0.1);
+        }
+        
+        .select-dropdown::-webkit-scrollbar-track{
+            -webkit-box-shadow: inset 0 0 6px rgba(168, 165, 165, 0.3);
+            border-radius: 6px;
+            background-color: #fff;
+        }
+
+        .select-dropdown::-webkit-scrollbar{
+            width: 10px;
+        }
+
+        .select-dropdown::-webkit-scrollbar-thumb{
+            border-radius: 6px;
+            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+            background-color: #347DFF;
+        }
+
+        .scroll-top-btn.visible{
+            display:block
+        }
+
+        .success{
+            color:#2E7D31;
+            border-color:#2E7D31;
+            background-color:#DCF8DD;
+        }
+
+        .info-msg.show{
+            transform:translate(-50%,0);
+            visibility:visible;
+        }
+
+        .error{
+            color:#E53835;
+            border-color:#E53835;
+            background-color:#FEF3ED;
+        }
+
+        .km{
+            background-image:url('/assets/images/km.svg');
+        }
+
+        .auto{
+            background-image:url('/assets/images/automatic.svg');
+        }
+
+        .date{
+            background-image:url('/assets/images/date.svg');
+        }
+
+        .oil{
+            background-image:url('/assets/images/fuel-type.svg');
+        }
+
+        .hp{
+            background-image:url('/assets/images/kilometer.svg');
+        }
+
+        .user{
+            background-image:url('/assets/images/user.svg');
+        }
+
+        .no-scroll{
+            scrollbar-width:none;
+        }
+
+        .no-scroll {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;     /* Firefox */
+        }
+        .no-scroll::-webkit-scrollbar {
+            display: none;             /* Chrome, Safari, Opera */
+        }
+
+        .small-images li.active{
+            border-color:#347DFF;
+        }
+   </style>
+</head>
+
+<body class="font-nunito text-[#303033] bg-gray-50">
+    <!-- header -->
+    <header class="bg-blue-950 relative z-[102] lg:min-h-[72px] min-h-14">
+    	<div class="flex justify-between items-center min-h-[inherit] wrapper">
+    		<!-- Menu button on responsive mode -->
+    		<button id="menu-btn" class="lg:hidden space-y-[6px] [&>span]:w-6 [&>span]:h-[2.5px] [&>span]:block [&>span]:bg-[#FAFAFA] [&>span]:rounded-[3px]">
+    			<span></span>
+    			<span></span>
+    			<span></span>
+    		</button>
+    		<!-- Left header wrapper -->
+    		<div class="flex items-center gap-10 lg:w-auto lg:max-w-[100%] max-w-[100px] w-full lg:justify-start justify-end">
+    			<!-- logo -->
+    			<a href="index.html" title="Go to homepage" class="text-[#FAFAFA] lg:text-[30px] text-2xl font-medium">
+    				<img src="assets/images/logo.png" alt="Logo" class="lg:w-[75px] w-16">
+    			</a>
+    			<!-- Navigation -->
+    			<nav class="hidden lg:block">
+    				<ul class="space-x-3">
+    					<!-- Seek -->
+    					<li class="inline-block group">
+    						<!-- button -->
+    						<div class="h-14 py-2 px-4 flex justify-center items-center gap-3 text-white text-[18px] font-medium border border-transparent rounded-t-[5px] transitiona-all ease duration-300 cursor-pointer group-hover:border-[#FAFAFA]">
+    							<span>Seek</span>
+    							<img src="assets/images/chevron-down.svg" alt="Dropdown" class="inline-block">
+    						</div>
+    						<!-- dropdown -->
+    						<div class="min-w-[250px] opacity-0 invisible absolute border border-[#FAFAFA] bg-white transition-all ease duration-500 z-[100] shadow-[0px_4px_8px_#0000000d] overflow-hidden group-hover:opacity-100 group-hover:visible">
+    							<ul class="[&>li>a]:py-3 [&>li>a]:px-4 [&>li>a]:leading-6 [&>li>a]:block">
+    								<li>
+    									<a href="">Used cars / new cars</a>
+    								</li>
+    								<li>
+    									<a href="">Price rating</a>
+    								</li>
+    								<li>
+    									<a href="">Motorcycle</a>
+    								</li>
+    								<li>
+    									<a href="">Caravan/Mobile</a>
+    								</li>
+    								<li>
+    									<a href="">Truck/Commercial vehicle</a>
+    								</li>
+    								<li>
+    									<a href="">Dealer</a>
+    								</li>
+    							</ul>
+    						</div>
+    					</li>
+    					<!-- Sell -->
+    					<li class="inline-block group">
+    						<!-- button -->
+    						<div class="h-14 py-2 px-4 flex justify-center items-center gap-3 text-white text-[18px] font-medium border border-transparent rounded-t-[5px] transitiona-all ease duration-300 cursor-pointer group-hover:border-[#FAFAFA]">
+    							<span>Sell</span>
+    							<img src="assets/images/chevron-down.svg" alt="Dropdown" class="inline-block">
+    						</div>
+    						<div class="min-w-[250px] opacity-0 invisible absolute border border-[#FAFAFA] bg-white transition-all ease duration-500 z-[100] shadow-[0px_4px_8px_#0000000d] overflow-hidden group-hover:opacity-100 group-hover:visible">
+    							<ul class="[&>li>a]:py-3 [&>li>a]:px-4 [&>li>a]:leading-6 [&>li>a]:block">
+    								<li>
+    									<a href="">Automobile <sup>for free</sup>
+    									</a>
+    								</li>
+    								<li>
+    									<a href="">Motorcycle <sup>for free</sup>
+    									</a>
+    								</li>
+    								<li>
+    									<a href="">Truck/Commercial vehicle</a>
+    								</li>
+    								<li>
+    									<a href="">Vehicle valution</a>
+    								</li>
+    							</ul>
+    						</div>
+    					</li>
+    					<!-- Inform -->
+    					<li class="inline-block group">
+    						<div class="h-14 py-2 px-4 flex justify-center items-center gap-3 text-white text-[18px] font-medium border border-transparent rounded-t-[5px] transitiona-all ease duration-300 cursor-pointer group-hover:border-[#FAFAFA]">
+    							<span>Inform</span>
+    							<img src="assets/images/chevron-down.svg" alt="Dropdown" class="inline-block">
+    						</div>
+    						<div class="min-w-[537px] opacity-0 invisible absolute border border-[#FAFAFA] bg-white transition-all ease duration-500 z-[100] shadow-[0px_4px_8px_#0000000d] overflow-hidden group-hover:opacity-100 group-hover:visible">
+    							<div class="flex gap-4">
+    								<ul class="flex-1 [&>li>a]:py-3 [&>li>a]:px-4 [&>li>a]:leading-6 [&>li>a]:block">
+    									<li>
+    										<strong class="block px-4 py-3 font-semibold">Buying & selling</strong>
+    									</li>
+    									<li>
+    										<a href="">Car contract</a>
+    									</li>
+    									<li>
+    										<a href="">Vehicle valuation</a>
+    									</li>
+    									<li>
+    										<a href="">Price rating</a>
+    									</li>
+    								</ul>
+    								<ul class="flex-1 [&>li>a]:py-3 [&>li>a]:px-4 [&>li>a]:leading-6 [&>li>a]:block">
+    									<li>
+    										<strong class="block px-4 py-3 font-semibold">Buying advice</strong>
+    									</li>
+    									<li>
+    										<a href="">New hits</a>
+    									</li>
+    									<li>
+    										<a href="">Testing</a>
+    									</li>
+    								</ul>
+    								<ul class="flex-1 [&>li>a]:py-3 [&>li>a]:px-4 [&>li>a]:leading-6 [&>li>a]:block">
+    									<li>
+    										<a href="">Car catalog</a>
+    									</li>
+    									<li>
+    										<a href="">Motorcycle catalog</a>
+    									</li>
+    								</ul>
+    							</div>
+    						</div>
+    					</li>
+    				</ul>
+    			</nav>
+    		</div>
+    		<!-- Right header wrapper -->
+    		<div class="flex items-center gap-10">
+    			<!-- notification, profile & favorite-->
+    			<div class="flex items-center gap-2 lg:gap-4">
+    				<!-- notification -->
+    				<div class="relative hidden group lg:block">
+    					<a href="notification.html" title="Notification" target="_blank" class="relative w-10 h-10 rounded-full leading-[40px] grid place-items-center">
+    						<img src="assets/images/notification-box.svg" alt="Notification-box">
+    						<div class="absolute text-white rounded-full bg-[#E53835] text-[10px] top-[3px] right-[2px] h-4 grid place-items-center w-4 leading-[8px] text-center font-bold">4</div>
+    					</a>
+    					<!-- if no notification the class add n-grid-->
+    					<div class="flex items-center justify-center flex-col gap-4 overflow-hidden absolute w-[300px] p-3 top-[100%] left-[50%] -translate-x-1/2 bg-white min-h-[200px] opacity-0 invisible transition-all rounded-[10px] duration-300 ease shadow-[0px_4px_8px_#0000000d] group-hover:opacity-100 group-hover:visible">
+    						<!-- if notification then this -->
+    						<!-- minimum 3 notification show here -->
+    						<div style="display:none">
+    							<div>
+    								<div>
+    									<h4>Search request 06.20.20</h4>
+    									<span class="n-box">100</span>
+    								</div>
+    								<span>(Location)</span>
+    							</div>
+    							<div>
+    								<div>
+    									<h4>Search request 06.20.20</h4>
+    									<span class="n-box">100</span>
+    								</div>
+    								<span>(Location)</span>
+    							</div>
+    							<div>
+    								<div>
+    									<h4>Search request 06.20.20</h4>
+    									<span class="n-box">100</span>
+    								</div>
+    								<span>(Location)</span>
+    							</div>
+    						</div>
+    						<!-- otherwise show this div -->
+    						<div>
+    							<img src="assets/images/no-notification.svg" alt="No notification" class="mx-auto">
+    							<h4 class="text-[#666666] text-lg font-semibold mt-4">No Notifications</h4>
+    						</div>
+    					</div>
+    				</div>
+    				<!-- favorite button -->
+    				<a href="favorite.html" title="Favorite list" target="_blank" class="relative w-10 h-10 rounded-full leading-[40px] grid place-items-center">
+    					<img src="assets/images/heart-logo.svg" alt="Heart icon" class="mx-auto">
+    					<div class="absolute bg-white rounded-full text-[10px] top-[3px] right-[2px] h-4 grid place-items-center w-4 leading-[8px] text-center font-bold">5</div>
+    				</a>
+    				<!-- login popup button -->
+    				<div>
+    					<button aria-label="Login" title="Login to your account" class="grid w-10 h-10 border border-transparent rounded-full place-items-center hover:border-[#FAFAFA] transition-all ease duration-300">
+    						<img src="assets/images/user-icon.svg" alt="User logo">
+    					</button>
+    				</div>
+    			</div>
+    			<!-- post ad button -->
+    			<a href="post-ad.html" title="Post an ad" target="_blank" class="leading-[48px] lg:block hidden h-12 rounded-[5px] bg-[#347DFF] shadow-[0px_4px_14px_0px_rgba(0,0,0,0.15)] text-[#FAFAFA] px-6 text-base font-medium transition-all ease duration-300 hover:bg-[#1F4D9D] hover:rounded-[25px]">Post and ad</a>
+    			<!-- Select language dropdown -->
+    			<div class="relative hidden language group lg:block">
+    				<!-- select language button -->
+    				<button class="grid w-12 h-12 p-1 border border-transparent place-items-center rounded-t-[5px] group-hover:border-[#FAFAFA] transition-all ease duration-300">
+    					<img src="assets/images/austria-flag.svg" alt="Flag logo" class="w-[25px] h-[18px] rounded-[5px]">
+    				</button>
+    				<!-- Select language dropdown -->
+    				<div class="right-0 min-w-[250px] absolute z-[100] shadow-[0px_4px_8px_#0000000d] bg-white invisible opacity-0 transition-all ease duration-300 overflow-hidden border border-[#FAFAFA] group-hover:opacity-100 group-hover:visible">
+    					<ul class="text-base [&>li>a]:block [&>li>a]:leading-6 [&>li>a]:py-3 [&>li>a]:px-4 [&>li>a>img]:w-[25px] [&>li>a>img]:h-[18px] [&>li>a>img]:rounded-[5px] [&>li>a>img]:inline-block [&>li>a>img]:mr-2 [&>li>a>span]:align-middle">
+    						<li>
+    							<a href="">
+    								<img src="assets/images/austria-flag.svg" alt="Austria flag">
+    								<span>Austria</span>
+    							</a>
+    						</li>
+    						<li>
+    							<a href="">
+    								<img src="assets/images/germany-flag.svg" alt="Germany flag">
+    								<span>Germany</span>
+    							</a>
+    						</li>
+    						<li>
+    							<a href="">
+    								<img src="assets/images/italy-flag.svg" alt="Italy flag">
+    								<span>Italy</span>
+    							</a>
+    						</li>
+    						<li>
+    							<a href="">
+    								<img src="assets/images/netherland-flag.svg" alt="Netherlands flag">
+    								<span>Netherlands</span>
+    							</a>
+    						</li>
+    						<li>
+    							<a href="">
+    								<img src="assets/images/belgium-flag.svg" alt="Belgium flag">
+    								<span>Belgium</span>
+    							</a>
+    						</li>
+    						<li>
+    							<a href="">
+    								<img src="assets/images/spain-flag.svg" alt="Spain flag">
+    								<span>Spain</span>
+    							</a>
+    						</li>
+    						<li>
+    							<a href="">
+    								<img src="assets/images/france-flag.svg" alt="France flag">
+    								<span>France</span>
+    							</a>
+    						</li>
+    						<li>
+    							<a href="">
+    								<img src="assets/images/lexumberg-flag.svg" alt="Luxembourg flag">
+    								<span>Luxembourg</span>
+    							</a>
+    						</li>
+    					</ul>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    	<!-- Responsive header content -->
+    	<div class="lg:hidden">
+    		<!-- header bg -->
+    		<div class="header-bg opacity-0 invisible overflow-hidden fixed top-0 backdrop-blur-md z-[1] right-0 w-full h-full bg-black/40 opacity-0 z-[1] transition-[backdrop-filter,opacity] duration-300 ease-in-out"></div>
+    		<!-- header close button -->
+    		<button id="menu-close" class="absolute top-[30px] right-[3vw] z-[1] invisible opacity-0">
+    			<svg xmlns="http://www.w3.org/2000/svg" fill="#fff" width="30" viewBox="0 0 24 24">
+    				<path d="M0 0h24v24H0V0z" fill="none"></path>
+    				<path d="M18.3 5.71c-.39-.39-1.02-.39-1.41 0L12 10.59 7.11 5.7c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41L10.59 12 5.7 16.89c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0L12 13.41l4.89 4.89c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L13.41 12l4.89-4.89c.38-.38.38-1.02 0-1.4z"></path>
+    			</svg>
+    		</button>
+    		<!-- Header menu content -->
+    		<div id="menu-content" class="menu-content fixed top-0 h-[100dvh] -left-[100%] transition-all ease duration-300 max-w-[21em] w-[80vw] z-[2] bg-white h-full shadow-[0px_4px_24px_0px_rgba(0,0,0,0.08)]">
+    			<!-- header navigation -->
+    			<div class="bg-[#15346D] p-3 flex items-center justify-between">
+    				<a href="index.html" title="Go to homepage">
+    					<img src="assets/images/logo.png" alt="Logo" class="object-cover w-16 h-12">
+    				</a>
+    				<!-- if user not login -->
+    				<div class="flex items-center gap-1 text-[#FAFAFA]">
+    					<a href="login.html" title="Login" class="block text-sm font-medium">Login</a>
+    					<span class="leading-5">/</span>
+    					<a href="login.html" title="Login" class="block text-sm font-medium">Register</a>
+    				</div>
+    				<!-- If user login then show -->
+    				<a href="#" class="hidden bg-[#FAFAFA] py-1 px-3 rounded-[50px] text-sm">Username</a>
+    			</div>
+    			<div class="h-[calc(100dvh-148px)] overflow-auto pb-6">
+    				<!-- nav link -->
+    				<ul>
+    					<li class="border-b border-[#e9e9e9]">
+    						<!-- button -->
+    						<button class="relative block w-full p-4 font-semibold text-left list-btn">
+    							<span>Seek</span>
+    							<img src="assets/images/chevron-left-blur.svg" alt="Chevron down" class="inline-block rotate-[270deg] transition-all duration-300 ease absolute right-4 top-[19px]">
+    						</button>
+    						<!-- Dropdown -->
+    						<ul class="[&>li:not(:last-child)]:border-b [&>li:not(:last-child)]:border-[#e9e9e9] pl-12 [&>li>a]:block [&>li>a]:p-4 list-dropdown transition-all duration-300 ease max-h-[0px] overflow-hidden">
+    							<li>
+    								<a href="">Buy used cars</a>
+    							</li>
+    							<li>
+    								<a href="">Price rating</a>
+    							</li>
+    							<li>
+    								<a href="">Motorcycle</a>
+    							</li>
+    							<li>
+    								<a href="">Caravan/mobile</a>
+    							</li>
+    							<li>
+    								<a href="">Truck/commercial</a>
+    							</li>
+    							<li>
+    								<a href="">Dealer</a>
+    							</li>
+    						</ul>
+    					</li>
+    					<li class="border-b border-[#e9e9e9]">
+    						<!-- button -->
+    						<button class="relative block w-full p-4 font-semibold text-left list-btn">
+    							<span>Sell</span>
+    							<img src="assets/images/chevron-left-blur.svg" alt="Chevron down" class="inline-block rotate-[270deg] transition-all duration-300 ease absolute right-4 top-[19px]">
+    						</button>
+    						<!-- Dropdown -->
+    						<ul class="[&>li:not(:last-child)]:border-b [&>li:not(:last-child)]:border-[#e9e9e9] pl-12 [&>li>a]:block [&>li>a]:p-4 list-dropdown transition-all duration-300 ease max-h-[0px] overflow-hidden">
+    							<li>
+    								<a href="">Car <sup>free of charge</sup>
+    								</a>
+    							</li>
+    							<li>
+    								<a href="">Motorcycle <sup>free of charge</sup>
+    								</a>
+    							</li>
+    							<li>
+    								<a href="">Truck/commercial vehicle</a>
+    							</li>
+    							<li>
+    								<a href="">Vehicle valuation</a>
+    							</li>
+    						</ul>
+    					</li>
+    					<li class="border-b border-[#e9e9e9]">
+    						<!-- button -->
+    						<button class="relative block w-full p-4 font-semibold text-left list-btn">
+    							<span>Inform</span>
+    							<img src="assets/images/chevron-left-blur.svg" alt="Chevron down" class="inline-block rotate-[270deg] transition-all duration-300 ease absolute right-4 top-[19px]">
+    						</button>
+    						<ul class="[&>li:not(:last-child)]:border-b [&>li:not(:last-child)]:border-[#e9e9e9] pl-12 [&>li>a]:block [&>li>a]:p-4 list-dropdown transition-all duration-300 ease max-h-[0px] overflow-hidden">
+    							<li>
+    								<a href="">Buying and selling</a>
+    							</li>
+    							<li>
+    								<a href="">Car contract</a>
+    							</li>
+    							<li>
+    								<a href="">Vehicle valuation</a>
+    							</li>
+    							<li>
+    								<a href="">Price rating</a>
+    							</li>
+    							<li>
+    								<a href="">Buying advice</a>
+    							</li>
+    							<li>
+    								<a href="">New hits</a>
+    							</li>
+    							<li>
+    								<a href="">Testing</a>
+    							</li>
+    							<li>
+    								<a href="">Car catalog</a>
+    							</li>
+    							<li>
+    								<a href="">Motorcycle catalog</a>
+    							</li>
+    						</ul>
+    					</li>
+    				</ul>
+    				<!-- User profile -->
+    				<ul class="[&>li]:border-b [&>li]:border-[#e9e9e9] [&>li>a]:p-4 [&>li>a]:block [&>li>a]:relative [&>li>a]:font-semibold [&>li>a]:after:absolute [&>li>a]:after:content-[url(/assets/images/arrow-blue.svg)] [&>li>a]:after:right-4">
+    					<li>
+    						<a href="my-ads.html">
+    							<svg xmlns="http://www.w3.org/2000/svg" class="inline-block mr-1 align-middle" viewBox="0 0 64 64" width="24" height="24" fill="none" stroke="#303033" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Ads">
+    								<path d="M12 28v12c0 2 1.5 3.5 3.5 3.5h6L32 54V14l-10.5 10.5h-6c-2 0-3.5 1.5-3.5 3.5z" />
+    								<path d="M32 18l18-6v40l-18-6" />
+    								<path d="M52 22c4 4 4 16 0 20" />
+    							</svg>
+    							<span class="align-middle">My ads</span>
+    						</a>
+    					</li>
+    					<li>
+    						<a href="/profile/my_notepad/">
+    							<!-- favorite-outline.svg -->
+    							<svg xmlns="http://www.w3.org/2000/svg" class="inline-block mr-1 align-middle" viewBox="0 0 64 64" width="24" height="24" fill="none" stroke="#303033" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Favorite">
+    								<path d="M47 12c-5-2-11 0-15 6-4-6-10-8-15-6-7 3-10 11-6 19 3 6 9 12 21 21 12-9 18-15 21-21 4-8 1-16-6-19z" />
+    							</svg>
+    							<span class="align-middle">My favorites</span>
+    						</a>
+    					</li>
+    					<li>
+    						<a href="saved-searches.html">
+    							<svg xmlns="http://www.w3.org/2000/svg" class="inline-block mr-1 align-middle" viewBox="0 0 80 80" width="24" height="24" fill="none" stroke="#303033" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Saved searches badge">
+    								<circle cx="40" cy="40" r="36" />
+    								<circle cx="32" cy="32" r="10" />
+    								<path d="M40 40 L50 50" />
+    								<path d="M48 20v14l-5-1.6-5 1.6V20a1.6 1.6 0 0 1 1.6-1.6h7.8A1.6 1.6 0 0 1 48 20z" />
+    							</svg>
+    							<span class="align-middle">Saved searches</span>
+    						</a>
+    					</li>
+    					<li>
+    						<a href="notification.html">
+    							<!-- notification-bell-outline.svg -->
+    							<svg xmlns="http://www.w3.org/2000/svg" class="inline-block mr-1 align-middle" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#303033" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Notifications">
+    								<path d="M15.5 17h-7a1 1 0 0 1-1-1v-3c0-3 1.5-5 3.5-5.9V6a2.5 2.5 0 1 1 5 0v1.1c2 0.9 3.5 2.9 3.5 5.9v3a1 1 0 0 1-1 1z" />
+    								<path d="M9 19a3 3 0 0 0 6 0" />
+    							</svg>
+    							<span class="align-middle">My Notifications</span>
+    						</a>
+    					</li>
+    					<li>
+    						<a href="profile.html">
+    							<svg xmlns="http://www.w3.org/2000/svg" class="inline-block mr-1 align-middle" viewBox="0 0 64 64" width="24" height="24" fill="none" stroke="#303033" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="User Icon">
+    								<circle cx="32" cy="20" r="12" />
+    								<path d="M10 56c0-10 10-20 22-20s22 10 22 20v4H10v-4z" />
+    							</svg>
+    							<span class="align-middle">My Profile</span>
+    						</a>
+    					</li>
+    					<li>
+    						<a href="/profile/change_password/">
+    							<!-- change-password-outline.svg -->
+    							<svg xmlns="http://www.w3.org/2000/svg" class="inline-block mr-1 align-middle" viewBox="0 0 64 64" width="24" height="24" fill="none" stroke="#303033" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Change Password">
+    								<rect x="18" y="28" width="28" height="28" rx="4" ry="4" />
+    								<path d="M28 28V18a8 8 0 0 1 16 0v10" />
+    								<circle cx="32" cy="42" r="4" />
+    							</svg>
+    							<span class="align-middle">Change password</span>
+    						</a>
+    					</li>
+    				</ul>
+    				<!-- Language -->
+    				<button id="language-btn" class="p-3 rounded-[5px] font-medium bg-white shadow-[0px_4px_24px_0px_rgba(0,0,0,0.08)] mt-6 max-w-[80%] relative text-left w-full mx-auto block after:absolute after:right-0 after:content-[url(/assets/images/arrow-blue.svg)] after:block after:top-3 after:h-5 after:right-3">
+    					<img src="assets/images/austria-flag.svg" alt="Austria flag" class="inline-block mr-1 w-[25px] h-[18px]">
+    					<span>Austria</span>
+    				</button>
+    			</div>
+    			<!-- post ad button -->
+    			<div class="absolute bottom-0 left-0 w-full p-[10px] bg-[#FAFAFA] shadow-[0px_-4px_8px_#0000000d]">
+    				<a href="" class="h-11 leading-[44px] bg-[#15346D] rounded-[25px] text-[#FAFAFA] block w-fit mx-auto px-6">Sell your car</a>
+    			</div>
+    		</div>
+    	</div>
+    	<!-- Language popup -->
+    	<div id="language-popup" class="fixed inset-0 z-[100] w-full h-[100dvh] bg-black/80 overflow-hidden hidden">
+    		<div class="grid w-full h-full px-3 place-items-center">
+    			<div class="max-w-[430px] w-full mx-auto bg-white rounded-[10px] relative p-5 pt-10">
+    				<!-- language close button -->
+    				<button id="language-close-btn" class="absolute top-5 right-5">
+    					<svg xmlns="http://www.w3.org/2000/svg" fill="#303033" width="24" viewBox="0 0 24 24">
+    						<path d="M0 0h24v24H0V0z" fill="none"></path>
+    						<path d="M18.3 5.71c-.39-.39-1.02-.39-1.41 0L12 10.59 7.11 5.7c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41L10.59 12 5.7 16.89c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0L12 13.41l4.89 4.89c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L13.41 12l4.89-4.89c.38-.38.38-1.02 0-1.4z"></path>
+    					</svg>
+    				</button>
+    				<h4 class="mb-4 text-xl font-semibold">Select language</h4>
+    				<!-- Language list -->
+    				<ul class="language max-h-[400px] overflow-y-auto [&>li:not(:last-child)]:border-b [&>li:not(:last-child)]:border-[#e9e9e9] [&>li>a]:relative [&>li>a]:p-3 [&>li>a>span]:align-middle [&>li>a]:block [&>li>a]:after:absolute [&>li>a]:after:content-[url(/assets/images/arrow-blue.svg)] [&>li>a]:after:right-4 [&>li>a]:after:top-[13px]">
+    					<li>
+    						<a href="">
+    							<img src="assets/images/austria-flag.svg" alt="Austria flag" class="inline-block mr-1 w-[25px] h-[18px]">
+    							<span>Austria</span>
+    						</a>
+    					</li>
+    					<li>
+    						<a href="">
+    							<img src="assets/images/germany-flag.svg" alt="Austria flag" class="inline-block mr-1 w-[25px] h-[18px]">
+    							<span>Germany</span>
+    						</a>
+    					</li>
+    					<li>
+    						<a href="">
+    							<img src="assets/images/spain-flag.svg" alt="Austria flag" class="inline-block mr-1 w-[25px] h-[18px]">
+    							<span>Spain</span>
+    						</a>
+    					</li>
+    					<li>
+    						<a href="">
+    							<img src="assets/images/france-flag.svg" alt="Austria flag" class="inline-block mr-1 w-[25px] h-[18px]">
+    							<span>France</span>
+    						</a>
+    					</li>
+    					<li>
+    						<a href="">
+    							<img src="assets/images/netherland-flag.svg" alt="Austria flag" class="inline-block mr-1 w-[25px] h-[18px]">
+    							<span>Netherlands</span>
+    						</a>
+    					</li>
+    					<li>
+    						<a href="">
+    							<img src="assets/images/belgium-flag.svg" alt="Austria flag" class="inline-block mr-1 w-[25px] h-[18px]">
+    							<span>Belgium</span>
+    						</a>
+    					</li>
+    					<li>
+    						<a href="">
+    							<img src="assets/images/italy-flag.svg" alt="Austria flag" class="inline-block mr-1 w-[25px] h-[18px]">
+    							<span>Italy</span>
+    						</a>
+    					</li>
+    					<li>
+    						<a href="">
+    							<img src="assets/images/lexumberg-flag.svg" alt="Austria flag" class="inline-block mr-1 w-[25px] h-[18px]">
+    							<span>Luxembourg</span>
+    						</a>
+    					</li>
+    				</ul>
+    			</div>
+    		</div>
+    	</div>
+    	<!-- success message popup -->
+    	<!-- add show class for visible -->
+    	<!-- add class for success success and for error error -->
+    	<div class="fixed top-0 z-50 invisible w-full transition-all duration-300 ease-in-out -translate-x-1/2 -translate-y-20 border-b-4 border-transparent lg:w-1/2 info-msg error left-1/2">
+    		<div class="flex items-center gap-4 px-4 py-3">
+    			<!-- if success then show this image -->
+    			<!-- <img src="assets/images/success-badge.png" alt="success icon"> -->
+    			<!-- if warning or error then show this image -->
+    			<img src="assets/images/warning.png" alt="warning icon">
+    			<p class="text-base leading-6">Your car successfully add in favorite. <a href="favorite.html" class="text-gray-800 underline">Go to favorite</a>
+    			</p>
+    		</div>
+    	</div>
+    </header>
+    <!-- main -->
+    <main>
+        <div class="md:py-20 py-14">
+            <div class="wrapper">
+                <!-- object pagination -->
+                <div class="flex items-center justify-end gap-6 mb-6">
+                    <!-- prev button -->
+                    <a href="details.html" title="Go to previous car" class="text-sm font-semibold text-blue-500">
+                        <img src="assets/images/chevron-left-blue.svg" alt="left" class="inline-block mr-1">
+                        <span class="align-middle">Previous</span>
+                    </a>
+                    <!-- total cars per page -->
+                    <strong class="text-sm font-medium">1200</strong>
+                    <!-- next button -->
+                    <a href="details.html" title="Go to next car" class="text-sm font-semibold text-blue-500">
+                        <span class="align-middle">Next</span>
+                        <img src="assets/images/chevron-right-blue.svg" alt="left" class="inline-block ml-1">
+                    </a>
+                </div>
+                <!-- object header title and heading  -->
+                <div class="sticky top-0 z-50 p-6 mb-10 rounded-md box bg-gray-50 shadow-box-shadow">
+                    <!-- heading & price -->
+                    <div class="flex items-center justify-between gap-6 pb-4 mb-4 border-b border-neutral-400">
+                        <h1 class="font-semibold text-xxl">Porsche 911<span class="text-xl text-gray-500">Carrera S Cabrio </span></h1>
+                        <!-- price -->
+                        <div class="font-bold text-blue-500 text-xxl">€379,00</div>
+                    </div>
+                    <!-- location , favorite & share buttons -->
+                    <div class="flex items-center justify-between gap-6">
+                        <div class="flex items-center gap-2">
+                            <img src="assets/images/location.svg" alt="location">
+                            <h4 class="text-lg font-semibold text-gray-500">Ludres,FR</h4>
+                        </div>
+                        <!-- heart & favorite -->
+                        <div class="gap-4 flex [&>button]:w-8 [&>button]:h-8 [&>button]:border [&>button]:border-neutral-400 [&>button]:rounded-full [&>button]:grid [&>button]:place-items-center">
+                            <!-- heart -->
+                            <button title="Add to favorite car">
+                                <img src="assets/images/favorite-black.svg" alt="heart">
+                            </button>
+                            <!-- favorite -->
+                            <button title="Share this car">
+                                <img src="assets/images/share-black.svg" alt="share">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- object all content -->
+                <div class="flex gap-10">
+                    <!-- object left wrapper -->
+                    <div class="w-full">
+                        <!-- gallery -->
+                        <div class="flex gap-6 mb-10 gallery">
+                            <!-- gallery big image -->
+                            <div class="relative w-full cursor-pointer max-w-636" onclick="openPopup('gallery_popup')">
+                                <!-- image -->
+                                <div class="w-full overflow-hidden rounded-md h-470">
+                                    <img src="assets/images/car-image.png" alt="Car image" loading="lazy" class="object-cover w-full h-full">
+                                </div>
+                                <!-- car total number -->
+                                <div class="absolute flex items-center gap-2 px-2 py-1 text-sm font-semibold text-center text-white rounded-md min-w-20 bg-black/40 bottom-3 right-3" data-number="slider_number">
+                                    <img src="assets/images/gallery-icon.svg" alt="landscape">
+                                    <span>1 / 8</span>
+                                </div>
+                            </div>
+                            <!-- gallery small images -->
+                            <div class="flex flex-col w-full gap-2 max-w-100" data-slider="small_slider">
+                                <button class="w-full h-8 bg-gray-100 rounded-md">
+                                    <img src="/assets/images/chevron-right-blue.svg" alt="prev button" class="mx-auto -rotate-90">
+                                </button>
+                                <ul class="small-images overflow-y-scroll no-scroll h-394 space-y-2 [&>li>img]:w-full [&>li>img]:w-full [&>li]:cursor-pointer [&>li]:h-100 [&>li]:rounded-md [&>li]:overflow-hidden [&>li>img]:h-full [&>li]:border-2 [&>li]:border-transparent [&>li>img]:object-cover [&>li>img]:w-full">
+                                    <li class="active"><img src="assets/images/car-image.png" alt="Car image" loading="lazy"></li>
+                                    <li><img src="assets/images/car-image.png" alt="Car image" loading="lazy"></li>
+                                    <li><img src="assets/images/car-image.png" alt="Car image" loading="lazy"></li>
+                                    <li><img src="assets/images/car-image.png" alt="Car image" loading="lazy"></li>
+                                    <li><img src="assets/images/car-image.png" alt="Car image" loading="lazy"></li>
+                                    <li><img src="assets/images/car-image.png" alt="Car image" loading="lazy"></li>
+                                    <li><img src="assets/images/car-image.png" alt="Car image" loading="lazy"></li>
+                                    <li><img src="assets/images/car-image.png" alt="Car image" loading="lazy"></li>
+                                </ul>
+                                <button class="w-full h-8 bg-gray-100 rounded-md">
+                                    <img src="assets/images/chevron-right-blue.svg" alt="next button" class="mx-auto rotate-90">
+                                </button>
+                            </div>
+                        </div>
+                        <div class="view_info box res">
+                            <div class="d_space">
+                                <h1>Porsche 911<span>Carrera S Cabrio </span></h1>
+                                <h4>€379,00</h4>
+                            </div>
+                            <div class="d_space">
+                                <div class="gap-8 location flex_align">
+                                    <img src="/assets/images/location-pin.svg" alt="">
+                                    <h4>Ludres,FR</h4>
+                                </div>
+                                <div class="gap-16 obj_share flex_align">
+                                    <button>
+                                        <img src="/assets/images/heart_block.svg" alt="heart">
+                                    </button>
+                                    <button onclick="openPopup('share_popup')">
+                                        <img src="/assets/images/share_black.svg" alt="share">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- data about cars -->
+                        <div class="space-y-10">
+                            <!-- basic data show here -->
+                            <div class="p-6 rounded-md box bg-gray-50 shadow-box-shadow" data-box="basic-box">
+                                <h3 class="pb-2 mb-6 text-xl font-semibold border-b border-blue-500 w-fit">Basic data</h3>
+                                <!-- list -->
+                                <ul class="grid gap-4 grid-cols-box-grid [&>li>span]:text-sm [&>li>span]:text-gray-500 font-medium [&>li>strong]:text-base [&>li>span]:mb-2 [&>li>span]:block">
+                                    <li>
+                                        <span>Body shape</span>
+                                        <strong>Coupe</strong>
+                                    </li>
+                                    <li>
+                                        <span>Seats:</span>
+                                        <strong>2</strong>
+                                    </li>
+                                    <li>
+                                        <span>2</span>
+                                        <strong>Doors:</strong>
+                                    </li>
+                                    <li>
+                                        <span>Drive type:</span>
+                                        <strong>All-wheel drive</strong>
+                                    </li>
+                                    <li>
+                                        <span>Country version:</span>
+                                        <strong>Austria</strong>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- vehicle history show here -->
+                            <div class="p-6 rounded-md box bg-gray-50 shadow-box-shadow" data-box="vehicle-box">
+                                <h3 class="pb-2 mb-6 text-xl font-semibold border-b border-blue-500 w-fit">Vehicle history</h3>
+                                <ul class="grid gap-4 grid-cols-box-grid [&>li>span]:text-sm [&>li>span]:text-gray-500 font-medium [&>li>strong]:text-base [&>li>span]:mb-2 [&>li>span]:block">
+                                    <li>
+                                        <span>Mileage</span>
+                                        <strong>159,084 km</strong>
+                                    </li>
+                                    <li>
+                                        <span>Initial registration:</span>
+                                        <strong>12/2021</strong>
+                                    </li>
+                                    <li>
+                                        <span>Final inspection:</span>
+                                        <strong>04/2022</strong>
+                                    </li>
+                                    <li>
+                                        <span>Service history maintained: </span>
+                                        <strong>Yes</strong>
+                                    </li>
+                                    <li>
+                                        <span>Non-smoking vehicle:</span>
+                                        <strong>Yes</strong>
+                                    </li>
+                                    <li>
+                                        <span>Vehicle owner:</span>
+                                        <strong>1</strong>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- technical data show here -->
+                            <div class="p-6 rounded-md box bg-gray-50 shadow-box-shadow" data-box="technical-box">
+                                <h3 class="pb-2 mb-6 text-xl font-semibold border-b border-blue-500 w-fit">Technical data</h3>
+                                <ul class="grid gap-4 grid-cols-box-grid [&>li>span]:text-sm [&>li>span]:text-gray-500 font-medium [&>li>strong]:text-base [&>li>span]:mb-2 [&>li>span]:block">
+                                    <li>
+                                        <span>Performance </span>
+                                        <strong>400 kW (544 hp)</strong>
+                                    </li>
+                                    <li>
+                                        <span> Transmission</span>
+                                        <strong>Automatic box</strong>
+                                    </li>
+                                    <li>
+                                        <span>Displacement:</span>
+                                        <strong>3,800 cm³</strong>
+                                    </li>
+                                    <li>
+                                        <span>Gears</span>
+                                        <strong>7</strong>
+                                    </li>
+                                    <li>
+                                        <span>Cylinder:</span>
+                                        <strong>6</strong>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- power consumption show here-->
+                            <div class="p-6 rounded-md box bg-gray-50 shadow-box-shadow" data-box="power-box">
+                                <h3 class="pb-2 mb-6 text-xl font-semibold border-b border-blue-500 w-fit">Power consumption</h3>
+                                <ul class="grid gap-4 grid-cols-box-grid [&>li>span]:text-sm [&>li>span]:text-gray-500 font-medium [&>li>strong]:text-base [&>li>span]:mb-2 [&>li>span]:block">
+                                    <li>
+                                        <span>Fuel</span>
+                                        <strong>Electric</strong>
+                                    </li>
+
+                                    <li>
+                                        <span>Fuel consumption2.8:</span>
+                                        <strong>10.3 l/100 km (combined)
+                                            14.9 l/100 km (urban)
+                                        </strong>
+                                    </li>
+
+                                    <li>
+                                        <span>CO₂ emissions 2 </span>
+                                        <strong>0 g/km (combined)</strong>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- furnishing data show here -->
+                            <div class="data_object box">
+                                <div class="section_header2">
+                                    <h3>Furnishing</h3>
+                                </div>
+                                <ul class="data_list" data-list="furnishing">
+                                    <li>Rear parking sensors</li>
+                                    <li>Front parking sensors</li>
+                                    <li>Air conditioner</li>
+                                    <li>Automatic air conditioning</li>
+                                    <li>Light detector</li>
+                                    <li>Reversing radar</li>
+                                    <li>Speed ​​regulator</li>
+                                    <li>Leather upholstery</li>
+                                    <li>Automatic parking assistance system</li>
+                                    <li>Rear parking sensors</li>
+                                    <li>Front parking sensors</li>
+                                    <li>Air conditioner</li>
+                                    <li>Automatic air conditioning</li>
+                                    <li>Light detector</li>
+                                    <li>Reversing radar</li>
+                                    <li>Speed ​​regulator</li>
+                                    <li>Leather upholstery</li>
+                                    <li>Automatic parking assistance system</li>
+                                    <li>Rear parking sensors</li>
+                                    <li>Front parking sensors</li>
+                                    <li>Air conditioner</li>
+                                    <li>Automatic air conditioning</li>
+                                    <li>Light detector</li>
+                                    <li>Reversing radar</li>
+                                    <li>Speed ​​regulator</li>
+                                    <li>Leather upholstery</li>
+                                    <li>Automatic parking assistance system</li>
+                                </ul>
+                                <div class="show_more">
+                                    <button onclick="showMore(this,'furnishing')">Show more <img src="/assets/images/chevron-left_blue.svg" alt=""></button>
+                                </div>
+                            </div>
+                            <!-- color data show here -->
+                            <div class="data_object box">
+                                <div class="section_header2">
+                                    <h3>Color and interior design</h3>
+                                </div>
+                                <ul class="data_ul">
+                                    <li>
+                                        <span>Exterior color</span>
+                                        <strong> Gray</strong>
+                                    </li>
+                                    <li>
+                                        <span>Color according to manufacturer</span>
+                                        <strong>M brooklyn gray</strong>
+                                    </li>
+                                    <li>
+                                        <span>Painting</span>
+                                        <strong> Metallic</strong>
+                                    </li>
+                                    <li>
+                                        <span>Interior Color</span>
+                                        <strong> Black </strong>
+                                    </li>
+                                    <li> <span> Interior decoration</span>
+                                        <strong> Full leather</strong>
+                                    </li>
+
+                                </ul>
+                            </div>
+                            <!-- description show here -->
+                            <div class="data_object box">
+                                <div class="section_header2">
+                                    <h3>Description</h3>
+                                </div>
+                                <p data-list="description">
+                                    Lorem ipsum dolor sit amet consectetur. Lacinia nisl
+                                    ut libero ornare vitae. Augue ipsum dignissim est viverra
+                                    at fringilla eu id. Hendrerit cras amet ut in. Nibh iaculis
+                                    rhoncus vitae adipiscing.
+                                    Ipsum malesuada pharetra nibh semper suspendisse. Ut non
+                                    bibendum facilisis at. In at nunc et sit a risus odio vestibulum tortor
+                                    . Nunc porttitor aliquam et posuere. Nec imperdiet adipiscing a
+                                    amet tincidunt nulla ut. Vel ultrices ornare vitae enim eget ut.
+                                    Viverra amet nascetur egestas laoreet in facilisi amet purus et.
+                                    Iaculis neque vestibulum at diam.
+                                    Sit sed amet nunc lorem nec. Morbi mattis volutpat vel neque
+                                    arcu facilisis dui. Vitae pretium lectus eu mauris nunc ut mi.
+                                    Magnis pellentesque sit accumsan etiam et a congue viverra
+                                    fermentum. Morbi.
+                                    Viverra amet nascetur egestas laoreet in facilisi amet purus et.
+                                    Iaculis neque vestibulum at diam.
+                                    Sit sed amet nunc lorem nec. Morbi mattis volutpat vel neque
+                                    arcu facilisis dui. Vitae pretium lectus eu mauris nunc ut mi.
+                                    Magnis pellentesque sit accumsan etiam et a congue viverra
+                                    fermentum. Morbi.
+                                </p>
+                                <div class="show_more">
+                                    <button onclick="showMore(this,'description')">
+                                        Show more <img src="/assets/images/chevron-left_blue.svg" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="sales_person" id="contact">
+                            <div class="left_sales box">
+                                <div class="section_header2">
+                                    <h3>Seller</h3>
+                                </div>
+                                <div class="user_contact">
+                                    <img src="/assets/images/user_contact.png" alt="user profile">
+                                    <ul>
+                                        <li>
+                                            <img src="/assets/images/user_logo.svg" alt="">
+                                            <span>Isabelle G</span>
+                                        </li>
+                                        <li>
+                                            <img src="/assets/images/phone_logo.svg" alt="">
+                                            <a href="+33 (0)3 - 57800299">+33 (0)3 - 57800299</a>
+                                        </li>
+                                        <li>
+                                            <img src="/assets/images/location_logo.svg" alt="">
+                                            <address>74 RUE DU FRANCLOS <br>
+                                                54710 LUDRES, FR
+                                            </address>
+                                        </li>
+                                    </ul>
+                                </div>
+
+
+                            </div>
+                            <div class="right_sales box">
+                                <div class="section_header2">
+                                    <h3>Contact</h3>
+                                </div>
+                                <form action="">
+                                    <div class="gap-16 form_top flex_col">
+                                        <!-- if error exist then you add with input_text class error_msg -->
+                                        <div class="single_input error_msg">
+                                            <label for="">Name*</label>
+                                            <div class="input_text">
+                                                <input type="text" placeholder="Enter your name">
+                                                <!-- if error exist the show here -->
+                                                <p>Please enter valid value</p>
+
+                                            </div>
+                                        </div>
+                                        <div class="single_input">
+                                            <label for="">Email*</label>
+                                            <input type="text" placeholder="Enter your email address">
+                                        </div>
+                                        <div class="single_input">
+                                            <label for="">Mobile number*</label>
+                                            <input type="number" placeholder="Enter your phone number">
+                                        </div>
+                                        <div class="single_input">
+                                            <label for="message">Your message*</label>
+                                            <textarea name="" id="" cols="30" rows="8" placeholder="Write your query"></textarea>
+                                        </div>
+                                    </div>
+                                    <button class="btn_bg medium_btn">Send message</button>
+                                    <p>We will use your email address in accordance with our <a href="">privacy policy</a>, for example for vehicle recommendations.&nbsp;You can object to this at any time by clicking <a href="">here</a>.</p>
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- object right wrapper -->
+                    <div class="w-full max-w-300">
+                        <!-- car data -->
+                        <div class="p-6 rounded-md shadow-box-shadow bg-gray-50">
+                            <ul class="space-y-4 text-sm font-medium [&>li>span]:text-gray-500 [&>li>span]:bg-no-repeat [&>li>span]:bg-left [&>li>span]:pl-8 [&>li>span]:block [&>li>span]:mt-2">
+                                <li>
+                                    <strong>Transmission</strong>
+                                    <span class="auto">Automatic box</span>
+                                </li>
+                                <li>
+                                    <strong>Mileage</strong>
+                                    <span class="km">159,089 km</span>
+                                </li>
+                                <li>
+                                    <strong>Year</strong>
+                                    <span class="date">01/2008</span>
+                                </li>
+                                <li>
+                                    <strong>Fuel</strong>
+                                    <span class="oil">Petrol</span>
+                                </li>
+                                <li>
+                                    <strong>Power KW (CH)</strong>
+                                    <span class="hp">180 KW(245 HP)</span>
+                                </li>
+                                <li>
+                                    <strong>Seller</strong>
+                                    <span class="user">Private</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- dealer contact -->
+                        <div class="p-6 mt-10 rounded-md shadow-box-shadow bg-gray-50">
+                            <a href="" class="block w-full text-center secondary-btn">
+                                <span>+33 (0)3- 12345678</span>
+                                <span class="sm:hidden">Call</span>
+                            </a>
+                            <a href="#contact" class="block mt-6 text-center primary-btn w-ful">Contact</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="obj_smiler">
+                    <div class="section_header">
+                        <h2>Similar cars</h2>
+                    </div>
+                    <div class="similar_container" data-object="similar_object">
+                        <button class="left_btn active" onclick="similarObjectSlider(-1)">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20" fill="none">
+                                <path d="M14.666 1.66675L6.33268 10.0001L14.666 18.3334" stroke="#B8B8B8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </button>
+                        <div class="vehicle_collection" data-sliders="slider_objects">
+                            <div class="single_car card">
+                                <div class="car_images">
+                                    <a href="">
+                                        <img src="/assets/images/car_object.png" alt="car image">
+                                    </a>
+                                    <div class="heart">
+                                        <!-- when not add favorite then show this -->
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                        <path d="M10.0012 3.77415C11.9587 2.01665 14.9837 2.07498 16.8695 3.96415C18.7545 5.85415 18.8195 8.86415 17.0662 10.8275L9.9995 17.9042L2.9345 10.8275C1.18116 8.86415 1.247 5.84915 3.13116 3.96415C5.01866 2.07748 8.03783 2.01415 10.0012 3.77415ZM15.6895 5.14165C14.4395 3.88998 12.4228 3.83915 11.1145 5.01415L10.002 6.01248L8.88866 5.01498C7.57616 3.83832 5.56366 3.88998 4.31033 5.14332C3.06866 6.38498 3.00616 8.37248 4.15033 9.68582L10.0003 15.545L15.8503 9.68665C16.9953 8.37248 16.9328 6.38748 15.6895 5.14165Z" fill="#347DFF"></path>
+                                    </svg>
+                                        <!-- otherwise show this -->
+                                        <!-- <img src="/assets/images/heart-blue.svg" alt="heart icon"> -->
+                                    </div>
+                                </div>
+                                <div class="car_content">
+                                    <h3><a href="">Audi A4 <span>Avant 2.0TDI QUATTRO SPORT</span></a></h3>
+                                    <ul>
+                                        <li>01/2019 |</li>
+                                        <li>Electric/petrol |</li>
+                                        <li>39,900 km |</li>
+                                        <li>Automatic |</li>
+                                        <li>More</li>
+                                    </ul>
+                                    <div class="location flex_align">
+                                        <img src="/assets/images/location-pin.svg" alt="location icon">
+                                        <span>AT 8753 Fohnsdorf</span>
+                                    </div>
+                                    <div class="car_price d_flex">
+                                        <span>€ 14,950</span>
+                                        <span>Private</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="single_car card">
+                                <div class="car_images">
+                                    <a href="">
+                                        <img src="/assets/images/car_object.png" alt="car image">
+                                    </a>
+                                    <div class="heart">
+                                        <!-- when not add favorite then show this -->
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                        <path d="M10.0012 3.77415C11.9587 2.01665 14.9837 2.07498 16.8695 3.96415C18.7545 5.85415 18.8195 8.86415 17.0662 10.8275L9.9995 17.9042L2.9345 10.8275C1.18116 8.86415 1.247 5.84915 3.13116 3.96415C5.01866 2.07748 8.03783 2.01415 10.0012 3.77415ZM15.6895 5.14165C14.4395 3.88998 12.4228 3.83915 11.1145 5.01415L10.002 6.01248L8.88866 5.01498C7.57616 3.83832 5.56366 3.88998 4.31033 5.14332C3.06866 6.38498 3.00616 8.37248 4.15033 9.68582L10.0003 15.545L15.8503 9.68665C16.9953 8.37248 16.9328 6.38748 15.6895 5.14165Z" fill="#347DFF"></path>
+                                    </svg>
+                                        <!-- otherwise show this -->
+                                        <!-- <img src="/assets/images/heart-blue.svg" alt="heart icon"> -->
+                                    </div>
+                                </div>
+                                <div class="car_content">
+                                    <h3><a href="">Audi A4 <span>Avant 2.0TDI QUATTRO SPORT</span></a></h3>
+                                    <ul>
+                                        <li>01/2019 |</li>
+                                        <li>Electric/petrol |</li>
+                                        <li>39,900 km |</li>
+                                        <li>Automatic |</li>
+                                        <li>More</li>
+                                    </ul>
+                                    <div class="location flex_align">
+                                        <img src="/assets/images/location-pin.svg" alt="location icon">
+                                        <span>AT 8753 Fohnsdorf</span>
+                                    </div>
+                                    <div class="car_price d_flex">
+                                        <span>€ 14,950</span>
+                                        <span>Private</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="single_car card">
+                                <div class="car_images">
+                                    <a href="">
+                                        <img src="/assets/images/car_object.png" alt="car image">
+                                    </a>
+                                    <div class="heart">
+                                        <!-- when not add favorite then show this -->
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                        <path d="M10.0012 3.77415C11.9587 2.01665 14.9837 2.07498 16.8695 3.96415C18.7545 5.85415 18.8195 8.86415 17.0662 10.8275L9.9995 17.9042L2.9345 10.8275C1.18116 8.86415 1.247 5.84915 3.13116 3.96415C5.01866 2.07748 8.03783 2.01415 10.0012 3.77415ZM15.6895 5.14165C14.4395 3.88998 12.4228 3.83915 11.1145 5.01415L10.002 6.01248L8.88866 5.01498C7.57616 3.83832 5.56366 3.88998 4.31033 5.14332C3.06866 6.38498 3.00616 8.37248 4.15033 9.68582L10.0003 15.545L15.8503 9.68665C16.9953 8.37248 16.9328 6.38748 15.6895 5.14165Z" fill="#347DFF"></path>
+                                    </svg>
+                                        <!-- otherwise show this -->
+                                        <!-- <img src="/assets/images/heart-blue.svg" alt="heart icon"> -->
+                                    </div>
+                                </div>
+                                <div class="car_content">
+                                    <h3><a href="">Audi A4 <span>Avant 2.0TDI QUATTRO SPORT</span></a></h3>
+                                    <ul>
+                                        <li>01/2019 |</li>
+                                        <li>Electric/petrol |</li>
+                                        <li>39,900 km |</li>
+                                        <li>Automatic |</li>
+                                        <li>More</li>
+                                    </ul>
+                                    <div class="location flex_align">
+                                        <img src="/assets/images/location-pin.svg" alt="location icon">
+                                        <span>AT 8753 Fohnsdorf</span>
+                                    </div>
+                                    <div class="car_price d_flex">
+                                        <span>€ 14,950</span>
+                                        <span>Private</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="single_car card">
+                                <div class="car_images">
+                                    <a href="">
+                                        <img src="/assets/images/car_object.png" alt="car image">
+                                    </a>
+                                    <div class="heart">
+                                        <!-- when not add favorite then show this -->
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                        <path d="M10.0012 3.77415C11.9587 2.01665 14.9837 2.07498 16.8695 3.96415C18.7545 5.85415 18.8195 8.86415 17.0662 10.8275L9.9995 17.9042L2.9345 10.8275C1.18116 8.86415 1.247 5.84915 3.13116 3.96415C5.01866 2.07748 8.03783 2.01415 10.0012 3.77415ZM15.6895 5.14165C14.4395 3.88998 12.4228 3.83915 11.1145 5.01415L10.002 6.01248L8.88866 5.01498C7.57616 3.83832 5.56366 3.88998 4.31033 5.14332C3.06866 6.38498 3.00616 8.37248 4.15033 9.68582L10.0003 15.545L15.8503 9.68665C16.9953 8.37248 16.9328 6.38748 15.6895 5.14165Z" fill="#347DFF"></path>
+                                    </svg>
+                                        <!-- otherwise show this -->
+                                        <!-- <img src="/assets/images/heart-blue.svg" alt="heart icon"> -->
+                                    </div>
+                                </div>
+                                <div class="car_content">
+                                    <h3><a href="">Audi A4 <span>Avant 2.0TDI QUATTRO SPORT</span></a></h3>
+                                    <ul>
+                                        <li>01/2019 |</li>
+                                        <li>Electric/petrol |</li>
+                                        <li>39,900 km |</li>
+                                        <li>Automatic |</li>
+                                        <li>More</li>
+                                    </ul>
+                                    <div class="location flex_align">
+                                        <img src="/assets/images/location-pin.svg" alt="location icon">
+                                        <span>AT 8753 Fohnsdorf</span>
+                                    </div>
+                                    <div class="car_price d_flex">
+                                        <span>€ 14,950</span>
+                                        <span>Private</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="single_car card">
+                                <div class="car_images">
+                                    <a href="">
+                                        <img src="/assets/images/car_object.png" alt="car image">
+                                    </a>
+                                    <div class="heart">
+                                        <!-- when not add favorite then show this -->
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                        <path d="M10.0012 3.77415C11.9587 2.01665 14.9837 2.07498 16.8695 3.96415C18.7545 5.85415 18.8195 8.86415 17.0662 10.8275L9.9995 17.9042L2.9345 10.8275C1.18116 8.86415 1.247 5.84915 3.13116 3.96415C5.01866 2.07748 8.03783 2.01415 10.0012 3.77415ZM15.6895 5.14165C14.4395 3.88998 12.4228 3.83915 11.1145 5.01415L10.002 6.01248L8.88866 5.01498C7.57616 3.83832 5.56366 3.88998 4.31033 5.14332C3.06866 6.38498 3.00616 8.37248 4.15033 9.68582L10.0003 15.545L15.8503 9.68665C16.9953 8.37248 16.9328 6.38748 15.6895 5.14165Z" fill="#347DFF"></path>
+                                    </svg>
+                                        <!-- otherwise show this -->
+                                        <!-- <img src="/assets/images/heart-blue.svg" alt="heart icon"> -->
+                                    </div>
+                                </div>
+                                <div class="car_content">
+                                    <h3><a href="">Audi A4 <span>Avant 2.0TDI QUATTRO SPORT</span></a></h3>
+                                    <ul>
+                                        <li>01/2019 |</li>
+                                        <li>Electric/petrol |</li>
+                                        <li>39,900 km |</li>
+                                        <li>Automatic |</li>
+                                        <li>More</li>
+                                    </ul>
+                                    <div class="location flex_align">
+                                        <img src="/assets/images/location-pin.svg" alt="location icon">
+                                        <span>AT 8753 Fohnsdorf</span>
+                                    </div>
+                                    <div class="car_price d_flex">
+                                        <span>€ 14,950</span>
+                                        <span>Private</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="single_car card">
+                                <div class="car_images">
+                                    <a href="">
+                                        <img src="/assets/images/car_object.png" alt="car image">
+                                    </a>
+                                    <div class="heart">
+                                        <!-- when not add favorite then show this -->
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                        <path d="M10.0012 3.77415C11.9587 2.01665 14.9837 2.07498 16.8695 3.96415C18.7545 5.85415 18.8195 8.86415 17.0662 10.8275L9.9995 17.9042L2.9345 10.8275C1.18116 8.86415 1.247 5.84915 3.13116 3.96415C5.01866 2.07748 8.03783 2.01415 10.0012 3.77415ZM15.6895 5.14165C14.4395 3.88998 12.4228 3.83915 11.1145 5.01415L10.002 6.01248L8.88866 5.01498C7.57616 3.83832 5.56366 3.88998 4.31033 5.14332C3.06866 6.38498 3.00616 8.37248 4.15033 9.68582L10.0003 15.545L15.8503 9.68665C16.9953 8.37248 16.9328 6.38748 15.6895 5.14165Z" fill="#347DFF"></path>
+                                    </svg>
+                                        <!-- otherwise show this -->
+                                        <!-- <img src="/assets/images/heart-blue.svg" alt="heart icon"> -->
+                                    </div>
+                                </div>
+                                <div class="car_content">
+                                    <h3><a href="">Audi A4 <span>Avant 2.0TDI QUATTRO SPORT</span></a></h3>
+                                    <ul>
+                                        <li>01/2019 |</li>
+                                        <li>Electric/petrol |</li>
+                                        <li>39,900 km |</li>
+                                        <li>Automatic |</li>
+                                        <li>More</li>
+                                    </ul>
+                                    <div class="location flex_align">
+                                        <img src="/assets/images/location-pin.svg" alt="location icon">
+                                        <span>AT 8753 Fohnsdorf</span>
+                                    </div>
+                                    <div class="car_price d_flex">
+                                        <span>€ 14,950</span>
+                                        <span>Private</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="single_car card">
+                                <div class="car_images">
+                                    <a href="">
+                                        <img src="/assets/images/car_object.png" alt="car image">
+                                    </a>
+                                    <div class="heart">
+                                        <!-- when not add favorite then show this -->
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                        <path d="M10.0012 3.77415C11.9587 2.01665 14.9837 2.07498 16.8695 3.96415C18.7545 5.85415 18.8195 8.86415 17.0662 10.8275L9.9995 17.9042L2.9345 10.8275C1.18116 8.86415 1.247 5.84915 3.13116 3.96415C5.01866 2.07748 8.03783 2.01415 10.0012 3.77415ZM15.6895 5.14165C14.4395 3.88998 12.4228 3.83915 11.1145 5.01415L10.002 6.01248L8.88866 5.01498C7.57616 3.83832 5.56366 3.88998 4.31033 5.14332C3.06866 6.38498 3.00616 8.37248 4.15033 9.68582L10.0003 15.545L15.8503 9.68665C16.9953 8.37248 16.9328 6.38748 15.6895 5.14165Z" fill="#347DFF"></path>
+                                    </svg>
+                                        <!-- otherwise show this -->
+                                        <!-- <img src="/assets/images/heart-blue.svg" alt="heart icon"> -->
+                                    </div>
+                                </div>
+                                <div class="car_content">
+                                    <h3><a href="">Audi A4 <span>Avant 2.0TDI QUATTRO SPORT</span></a></h3>
+                                    <ul>
+                                        <li>01/2019 |</li>
+                                        <li>Electric/petrol |</li>
+                                        <li>39,900 km |</li>
+                                        <li>Automatic |</li>
+                                        <li>More</li>
+                                    </ul>
+                                    <div class="location flex_align">
+                                        <img src="/assets/images/location-pin.svg" alt="location icon">
+                                        <span>AT 8753 Fohnsdorf</span>
+                                    </div>
+                                    <div class="car_price d_flex">
+                                        <span>€ 14,950</span>
+                                        <span>Private</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="right_btn active" onclick="similarObjectSlider(1)">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                                <path d="M5.83838 2.16675L14.1717 10.5001L5.83838 18.8334" stroke="#666666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="dots"></div>
+                </div>
+            </div>
+            <div class="gallery_popup popup" id="popupId" data-popup="gallery_popup">
+                <div class="container popup_container box">
+                    <button class="close_icon" onclick="closePopup('gallery_popup')">
+                        <img src="/assets/images/close_icon.svg" alt="close icon">
+                    </button>
+                    <div class="gap-24 first_div flex_col">
+                        <h3>Porsche 911<span>Carrera S Cabrio </span></h3>
+                        <div class="gallery_main">
+                            <button onclick="sliderClick(-1,this)" class="move-btn">
+                                <img src="/assets/images/chevron-right_blue.svg" alt="prev button">
+                            </button>
+                            <div class="gallery_img">
+                                <img src="/assets/demo_images/demo1.webp" alt="">
+                            </div>
+                            <button onclick="sliderClick(1,this)" class="move-btn2">
+                                <img src="/assets/images/chevron-right_blue.svg" alt="next button">
+                            </button>
+                        </div>
+                        <div class="gallery_num">
+                            1/12
+                        </div>
+                    </div>
+                    <ul>
+                        <li class="active"><img src="/assets/demo_images/demo1.webp" alt=""></li>
+                        <li><img src="/assets/demo_images/demo2.webp" alt=""></li>
+                        <li><img src="/assets/demo_images/demo3.webp" alt=""></li>
+                        <li><img src="/assets/demo_images/demo4.webp" alt=""></li>
+                        <li><img src="/assets/demo_images/demo5.webp" alt=""></li>
+                        <li><img src="/assets/demo_images/demo6.webp" alt=""></li>
+                        <li><img src="/assets/demo_images/demo7.webp" alt=""></li>
+                        <li><img src="/assets/demo_images/demo8.webp" alt=""></li>
+                        <li><img src="/assets/demo_images/demo9.webp" alt=""></li>
+                        <li><img src="/assets/demo_images/demo10.webp" alt=""></li>
+                        <li><img src="/assets/demo_images/demo11.webp" alt=""></li>
+                        <li><img src="/assets/demo_images/demo12.webp" alt=""></li>
+                        <li><img src="/assets/demo_images/demo13.webp" alt=""></li>
+                        <li><img src="/assets/demo_images/demo14.webp" alt=""></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="popup share_popup" data-popup="share_popup">
+                <div class="popup_container box">
+                    <button class="close_icon" onclick="closePopup('share_popup')">
+                        <img src="/assets/images/close_icon.svg" alt="close icon">
+                    </button>
+                    <h3>Contact</h3>
+                    <div class="share_content">
+                        <ul data-filter="more_filter">
+                            <li>
+                                <a href="">
+                                    <img src="/assets/images/whatsapp.svg" alt="whatsapp">
+                                    <span>Whatsapp</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="/assets/images/facebook2.svg" alt="facebook">
+                                    <span>Facebook</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="/assets/images/twitter.svg" alt="x">
+                                    <span>X</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="/assets/images/instagram.svg" alt="instagram">
+                                    <span>Instagram</span>
+                                </a>
+                            </li>
+                            <li><a href="">
+                                    <img src="/assets/images/telegram.svg" alt="telegram">
+                                    <span>Telegram</span>
+                                </a></li>
+                            <li><a href="">
+                                    <img src="/assets/images/pinterest.svg" alt="pinterest">
+                                    <span>Pinterest</span>
+                                </a></li>
+                            <li><a href="">
+                                    <img src="/assets/images/reddit.svg" alt="reddit">
+                                    <span>Reddit</span>
+                                </a></li>
+                            <li><a href="">
+                                    <img src="/assets/images/linkedin.svg" alt="linkdin">
+                                    <span>Linkedin</span>
+                                </a></li>
+                            <li><a href="">
+                                    <img src="/assets/images/snapchat.svg" alt="snapchat">
+                                    <span>Snapchat</span>
+                                </a></li>
+                            <li><a href="">
+                                    <img src="/assets/images/mail.svg" alt="mail">
+                                    <span>Mail</span>
+                                </a></li>
+                        </ul>
+                        <button>
+                            <span>More </span>
+                            <img src="/assets/images/chevron_black.svg" alt="">
+                        </button>
+                    </div>
+
+                    <div class="select_text" data-select="copy_text">
+                        <input type="text" value="https://XYZ.com/en/classified/home-appliances/?keywor">
+                        <button class="medium_btn btn_bg">Copy</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- footer -->
+    <footer class="py-14 bg-blue-950 md:py-20">
+    	<div class="wrapper">
+    		<!-- footer top -->
+    		<div class="flex flex-col justify-between gap-6 pb-6 mb-6 border-b mid:gap-12 border-neutral-50 mid:flex-row">
+    			<!-- logo -->
+    			<div class="w-full max-w-120">
+    				<a href="index.html" title="Go to homepage" class="text-[#FAFAFA] lg:text-[30px] text-2xl font-medium">
+    					<img src="assets/images/logo.png" alt="Logo" class="lg:w-[75px] w-20">
+    				</a>
+    			</div>
+    			<div class="sm:flex grid grid-cols-2 justify-between sm:gap-x-0 sm:gap-y-0 gap-x-4 gap-y-8 w-full text-gray-50 [&>div>h4]:text-lg [&>div>h4]:leading-7 [&>div>h4]:font-medium [&>div>h4]:border-b-2 [&>div>h4]:border-gray-50 [&>div>h4]:mb-6 [&>div>h4]:w-fit [&>div>h4]:pb-2">
+    				<div>
+    					<h4>Pursue</h4>
+    					<ul class="space-y-2 text-base [&>li>a]:border-b [&>li>a]:border-transparent [&>li>a:hover]:border-gray-50">
+    						<li>
+    							<a href="/about_us/">About us</a>
+    						</li>
+    						<li>
+    							<a href="/your_advt/">Advertising</a>
+    						</li>
+    						<li>
+    							<a href="/terms/">Conditions</a>
+    						</li>
+    						<li>
+    							<a href="/data_protection/">Data protection</a>
+    						</li>
+    					</ul>
+    				</div>
+    				<div>
+    					<h4>Service</h4>
+    					<ul class="space-y-2 text-base [&>li>a]:border-b [&>li>a]:border-transparent [&>li>a:hover]:border-gray-50">
+    						<li>
+    							<a href="">Help</a>
+    						</li>
+    						<li>
+    							<a href="/contact/">Contact</a>
+    						</li>
+    					</ul>
+    				</div>
+    				<div>
+    					<h4>Dealer</h4>
+    					<ul class="space-y-2 text-base [&>li>a]:border-b [&>li>a]:border-transparent [&>li>a:hover]:border-gray-50">
+    						<li>
+    							<a href="/register/">Register</a>
+    						</li>
+    						<li>
+    							<a href="">Advantages</a>
+    						</li>
+    					</ul>
+    				</div>
+    				<div>
+    					<h4>Stay in contact</h4>
+    					<div>
+    						<a href="" title="Visit facebook channel">
+    							<img src="assets/images/facebook.svg" alt="facebook">
+    						</a>
+    						<select class="mt-5 text-gray-800 appearance-none cursor-pointer select sm:mt-9">
+    							<option value="de/">Germany</option>
+    							<option value="be/"> Belgium/Belgique </option>
+    							<option value="es/"> Spain </option>
+    							<option value="fr/"> France </option>
+    							<option value="it/"> Italy </option>
+    							<option value="lu/"> Luxembourg </option>
+    							<option value="nl/"> Netherlands </option>
+    							<option value="at/" selected=""> Austria </option>
+    							<option value="bg/"> Български </option>
+    							<option value="cz/"> Česky </option>
+    							<option value="com/"> English </option>
+    							<option value="hr/"> Hrvatski </option>
+    							<option value="pl/"> Polski </option>
+    							<option value="ro/"> Română </option>
+    							<option value="ru/"> Russian </option>
+    							<option value="se/"> Svenska </option>
+    							<option value="com.tr/"> Türkçe </option>
+    							<option value="com.ua/"> Українська </option>
+    							<option value="hu/"> Magyar </option>
+    						</select>
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    		<!-- footer bottom -->
+    		<div class="text-xs text-center copyright text-gray-50 mid:text-left">
+    			<p>© Copyright 2023 AutoScout24 GmbH. All rights reserved. </p>
+    		</div>
+    	</div>
+    	<!-- scroll top button -->
+    	<button class="fixed z-50 grid visible hidden w-12 h-12 rounded-full scroll-top-btn mid:h-14 mid:w-14 bottom-8 right-6 mid:bottom-10 mid:right-10 place-items-center bg-blue-50 shadow-box-shadow">
+    		<img src="assets/images/scroll-blue.svg" alt="Scroll top" class="w-5 mid:w-auto">
+    	</button>
+    </footer>
+    <script src="assets/js/index.js"></script>
+</body>
+
+</html>

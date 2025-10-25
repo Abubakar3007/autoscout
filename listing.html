@@ -118,6 +118,11 @@
             color:white;
             box-shadow: 0px 121px 34px 0px rgba(162, 154, 154, 0.00), 0px 78px 31px 0px rgba(162, 154, 154, 0.01), 0px 44px 26px 0px rgba(162, 154, 154, 0.05), 0px 19px 19px 0px rgba(162, 154, 154, 0.09), 0px 5px 11px 0px rgba(162, 154, 154, 0.10);
         }
+
+        .popup.show{
+            visibility:visible;
+            opacity:1;
+        }
    </style>
 </head>
 
@@ -686,18 +691,18 @@
                         </ul>
                     </div>
                 </div>
-                <div class="flex gap-10 pt-20">
+                <div class="flex flex-col items-start gap-8 pt-2 sm:gap-10 lg:pt-20 lg:flex-row">
                     <!-- left side wrapper -->
-                    <div class="w-full max-w-335 h-max" data-scroll="scroll_filter">
+                    <div class="sticky top-0 z-50 w-full lg:max-w-335 h-max lg:static" data-scroll="scroll_filter">
                         <!-- save search button -->
-                        <button class="w-full mb-4 primary-btn">
+                        <button class="hidden w-full mb-4 primary-btn lg:block">
                             <img src="assets/images/save-search.svg" alt="Save search" class="inline-block mr-1">
                             <span class="align-middle">Save search</span>
                         </button>
                         <!-- my search box -->
-                        <div class="p-6 mb-2 rounded-md box shadow-box-shadow bg-gray-50">
+                        <div class="flex items-center gap-2 p-3 mb-2 lg:p-6 lg:block lg:rounded-md box shadow-box-shadow bg-gray-50">
                             <!-- ny search header -->
-                            <div class="flex items-center justify-between mb-5 text-base font-semibold">
+                            <div class="items-center justify-between hidden pb-3 mb-5 text-base font-semibold border-b lg:flex border-neutral-400">
                                 <h4 class="leading-6">My search <span>(0)</span></h4>
                                 <!-- close button -->
                                 <button class="text-blue-500">
@@ -706,13 +711,13 @@
                                 </button>
                             </div>
                             <!-- responsive filter button -->
-                            <button class="font-semibold lg:hidden" onclick="openPopup('filter_popup')">
-                                <img src="/assets/images/filter_icon.svg" alt="">
+                            <button class="flex items-center flex-shrink-0 w-full p-2 text-sm text-white bg-blue-500 rounded-md h-max lg:hidden max-w-106 gap-1.5" onclick="openPopup('filter_popup')">
+                                <img src="assets/images/filter-icon.svg" alt="filter icon">
                                 <span>Filter</span>
-                                <span class="search-num">22</span>
+                                <span class="inline-block w-5 font-semibold leading-5 text-gray-500 align-middle bg-white rounded-full search-num text-10">22</span>
                             </button>
                             <!-- when user search or select anything add here inside this list -->
-                            <ul data-filter="more_filter" class="flex flex-wrap gap-3 overflow-hidden h-92 [&>li>.del]:bg-[url('/assets/images/close-btn.svg')] [&>li>.del]:w-3 [&>li>.del]:h-3 [&>li>.del]:inline-block [&>li>.del]:bg-cover [&>li>span]:align-middle [&>li>.del]:mr-1 [&>li>.del]:cursor-pointer [&>li]:bg-neutral-100 [&>li]:p-1.5 text-sm [&>li]:h-max">
+                            <ul data-filter="more_filter" class="flex lg:flex-wrap gap-1 lg:gap-3 overflow-scroll lg:overflow-hidden lg:max-h-90 [&>li>.del]:bg-[url('/assets/images/close-btn.svg')] [&>li>.del]:w-3 [&>li>.del]:h-3 [&>li]:whitespace-nowrap [&>li]:rounded-md [&>li>.del]:inline-block [&>li>.del]:bg-cover [&>li>span]:align-middle [&>li>.del]:mr-1 [&>li>.del]:cursor-pointer [&>li]:bg-gray-100 [&>li]:py-1.5 [&>li]:px-4 text-sm [&>li]:h-max">
                                 <li>
                                     <span class="del"></span>
                                     <span>Audi</span>
@@ -731,10 +736,10 @@
                                 </li>
                             </ul>
                             <!-- when user click this button hen show all filter list -->
-                            <button class="block mx-auto mt-12 text-base font-semibold text-blue-500 w-fit">1+ more filter</button>
+                            <button class="hidden mx-auto mt-3 text-base font-semibold text-blue-500 lg:block w-fit">View all</button>
                         </div>
                         <!-- Filter wrapper -->
-                        <div class="res_filter" data-popup="filter_popup">
+                        <div class="hidden res_filter lg:block" data-popup="filter_popup">
                             <div class="hidden filter_head">
                                 <div class="gap-16 d_flex">
                                     <button class="filter_hide" onclick="closePopup('filter_popup')">
@@ -2089,20 +2094,20 @@
                         <!-- car cards -->
                         <div class="space-y-6 cards">
                             <!-- card -->
-                            <div class="relative p-4 rounded-md card shadow-box-shadow bg-gray-50 group">
-                                <div class="flex gap-4">
+                            <div class="relative rounded-md sm:p-4 card shadow-box-shadow bg-gray-50 group">
+                                <div class="flex flex-col sm:gap-4 sm:flex-row">
                                     <!-- car image -->
-                                    <div class="relative w-full overflow-hidden max-w-250">
+                                    <div class="relative w-full overflow-hidden sm:max-w-250">
                                         <a href="details.html" title="Lamborghini Murciélago LP640 E-Ge..." target="_blank" class="block w-full">
-                                            <img src="assets/images/car-image.png" alt="object image" class="object-cover w-full rounded-md h-222">
+                                            <img src="assets/images/car-image.png" alt="object image" class="object-cover w-full sm:rounded-md rounded-t-md sm:h-222">
                                             <!-- total image number -->
-                                            <div class="absolute flex items-center gap-2 px-2 py-1 text-sm text-white rounded-md bottom-2 right-2 bg-black/40">
+                                            <div class="absolute flex items-center gap-2 px-2 py-1 text-sm text-white rounded-md sm:top-auto sm:left-auto top-3 left-3 sm:bottom-2 sm:right-2 bg-black/40">
                                                 <img src="assets/images/gallery-icon.svg" alt="landscape">
                                                 <span>12</span>
                                             </div>
                                         </a>
                                         <!-- share & favorite button -->
-                                        <div class="absolute flex flex-col gap-4 duration-300 ease-in-out -translate-y-1/2 -right-14 top-1/2 trnasition-all group-hover:right-2">
+                                        <div class="absolute flex gap-2 duration-300 ease-in-out sm:flex-col sm:gap-4 top-3 right-3 sm:-translate-y-1/2 sm:-right-14 sm:top-1/2 trnasition-all sm:group-hover:right-2">
                                             <button class="grid w-8 h-8 bg-white rounded-full place-items-center">
                                                 <!-- when not add favorite then show this -->
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -2117,12 +2122,12 @@
                                         </div>
                                     </div>
                                     <!-- car content -->
-                                    <div class="w-full">
+                                    <div class="w-full p-4 sm:p-0">
                                         <!-- title -->
                                         <h3 class="text-xl font-semibold leading-8 line-clamp-1 text-ellipsis"><a href="details.html" title="Lamborghini Murcielago LP640 E-Ge" class="hover:text-blue-500">Lamborghini Murciélago <span class="text-base text-gray-500">LP640 E-Ge...</span></a></h3>
                                         <p class="mb-4 text-sm font-medium leading-6 text-gray-500 line-clamp-1 text-ellipsis">Lane departure warning, cruise control, USB, pas</p>
                                         <!-- properties -->
-                                        <ul class="grid grid-cols-2 mb-4 gap-4 text-sm font-medium [&>li]:pl-8 [&>li]:bg-left [&>li]:bg-no-repeat">
+                                        <ul class="grid grid-cols-2 mb-4 gap-4 text-sm font-medium [&>li]:pl-8 [&>li]:bg-left [&>li]:bg-no-repeat [&>li]:whitespace-nowrap [&>li]:overflow-hidden [&>li]:text-ellipsis">
                                             <li class="km">13, 500 km</li>
                                             <li class="auto">Automatic box</li>
                                             <li class="date">01/2014</li>
@@ -2135,7 +2140,7 @@
                                     </div>
                                 </div>
                                 <!-- dealer info -->
-                                <div class="flex items-center justify-between pt-4 mt-4 border-t border-neutral-400">
+                                <div class="flex items-center justify-between p-4 border-t sm:pt-4 sm:mt-4 border-neutral-400">
                                     <div class="flex items-center gap-2">
                                         <!-- dealer image -->
                                         <a href="dealer.html" title="CT Cartrade Handels" class="block">
@@ -2158,7 +2163,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <a href="" class="text-xs font-medium text-blue-500"><img src="assets/images/show-more.svg" alt="Show more" class="inline-block mr-1">Show more vehicles</a>
+                                    <a href="" class="hidden text-xs font-medium text-blue-500 sm:block"><img src="assets/images/show-more.svg" alt="Show more" class="inline-block mr-1">Show more vehicles</a>
                                 </div>
                             </div>
                         </div>
@@ -2181,7 +2186,7 @@
                         <div class="mt-10">
                             <h4 class="mb-6 text-base font-medium">The most popular models</h4>
                             <!-- popular links -->
-                            <div class="flex items-center gap-x-10 gap-y-6 [&>ul]:flex-1 text-base text-blue-500 [&>ul]:space-y-2">
+                            <div class="flex items-center gap-x-10 gap-y-6 sm:[&>ul]:flex-1 [&>ul]:w-fit text-base text-blue-500 [&>ul]:space-y-2 flex-wrap">
                                 <ul>
                                     <li><a href="">Porsche 356</a></li>
                                     <li><a href="">Porsche 356</a></li>
@@ -2189,7 +2194,7 @@
                                     <li><a href="">Porsche 356</a></li>
                                     <li><a href="">Porsche 356</a></li>
                                 </ul>
-                                <div class="w-1 h-14 bg-neutral-400"></div>
+                                <div class="hidden w-1 h-14 bg-neutral-400 sm:block"></div>
                                 <ul>
                                     <li><a href="">Porsche 356</a></li>
                                     <li><a href="">Porsche 356</a></li>
@@ -2197,7 +2202,7 @@
                                     <li><a href="">Porsche 356</a></li>
                                     <li><a href="">Porsche 356</a></li>
                                 </ul>
-                                <div class="w-1 h-14 bg-neutral-400"></div>
+                                <div class="hidden w-1 h-14 bg-neutral-400 sm:block"></div>
                                 <ul>
                                     <li><a href="">Porsche 356</a></li>
                                     <li><a href="">Porsche 356</a></li>
@@ -2207,6 +2212,92 @@
                                 </ul>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- saved search popup -->
+        <div class="popup" id="save-search-popup">
+            <div class="grid w-full h-full place-items-center">
+                <div class="relative w-full p-6 rounded-md box max-w-448 shadow-box-shadow bg-gray-50">
+                    <!-- close button -->
+                    <button id="close-save-popup" class="absolute top-2 right-2">
+                        <img src="assets/images/close-btn.svg" alt="close icon" class="w-5 h-5">
+                    </button>
+                    <h3 class="pr-10 mb-4 text-xl font-semibold leading-8">Save search</h3>
+                    <form>
+                        <div>
+                            <label for="title" class="block mb-2 text-sm font-semibold">Title</label>
+                            <input type="text" id="title" class="input" placeholder="Enter text">
+                        </div>
+                        <button class="block w-full mx-auto mt-6 primary-btn max-w-300">Save search</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- share popup -->
+        <div id="share-popup" class="popup">
+            <div class="grid w-full h-full place-items-center">
+                <div class="relative w-full p-6 rounded-md max-w-646 bg-gray-50 shadow-box-shadow">
+                    <!-- close button -->
+                    <button id="close-share-popup" class="absolute top-2 right-2">
+                        <img src="assets/images/close-btn.svg" alt="close icon" class="w-5 h-5">
+                    </button>
+                    <h3 class="pr-10 text-xl font-semibold leading-8">Contact</h3>
+                    <!-- share social links -->
+                    <div class="px-4 py-6 mt-6 mb-4 rounded-md bg-blue-50">
+                        <!-- social links wrapper -->
+                        <div class="grid gap-10 overflow-hidden text-base text-center duration-300 ease-in-out grid-cols-social-grid max-h-20 transition-max-height [&>a>span]:mt-2 [&>a]:block [&>a>span]:block [&>a>img]:mx-auto">
+                            <a href="">
+                                <img src="assets/images/whatsapp.svg" alt="whatsapp">
+                                <span>Whatsapp</span>
+                            </a>
+                            <a href="">
+                                <img src="assets/images/facebook2.svg" alt="facebook">
+                                <span>Facebook</span>
+                            </a>
+                            <a href="">
+                                <img src="assets/images/twitter.svg" alt="x">
+                                <span>X</span>
+                            </a>
+                            <a href="">
+                                <img src="assets/images/instagram.svg" alt="instagram">
+                                <span>Instagram</span>
+                            </a>
+                            <a href="">
+                                <img src="assets/images/telegram.svg" alt="telegram">
+                                <span>Telegram</span>
+                            </a>
+                            <a href="">
+                                <img src="assets/images/pinterest.svg" alt="pinterest">
+                                <span>Pinterest</span>
+                            </a>
+                            <a href="">
+                                <img src="assets/images/reddit.svg" alt="reddit">
+                                <span>Reddit</span>
+                            </a>
+                            <a href="">
+                                <img src="assets/images/linkedin.svg" alt="linkdin">
+                                <span>Linkedin</span>
+                            </a>
+                            <a href="">
+                                <img src="assets/images/snapchat.svg" alt="snapchat">
+                                <span>Snapchat</span>
+                            </a>
+                            <a href="">
+                                <img src="assets/images/mail.svg" alt="mail">
+                                <span>Mail</span>
+                            </a>
+                        </div>
+                        <button id="toggle-share" class="block mx-auto mt-8 text-sm w-fit">
+                            <span>More </span>
+                            <img src="assets/images/dropdown-arrow.svg" alt="dropdown" class="inline-block w-3 ml-1">
+                        </button>
+                    </div>
+                    <!-- input copy -->
+                    <div class="flex gap-2" data-select="copy_text">
+                        <input type="text" value="https://XYZ.com/en/classified/home-appliances/?keywor" class="input" disabled>
+                        <button class="primary-btn">Copy</button>
                     </div>
                 </div>
             </div>
